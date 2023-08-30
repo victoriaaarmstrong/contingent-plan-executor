@@ -106,3 +106,6 @@ If you have difficulties with package versions, you can view the text file `cond
 
 ## Run Simulation and Evaluation
 The best way to apply simulation and evaluation, is to use our user interface. With your simulation environment activated, you will run the command: `streamlit run local_simulate_evaluate_streamlit.py` and once the paths are correct, it will run these processes. 
+
+# Development
+If you want to make your own outcome determiner, start by looking at the [`DefaultSystemOutcomeDeterminer`](https://github.com/dialogue-planning/contingent-plan-executor/blob/main/contingent_plan_executor/hovor/outcome_determiners/default_system_outcome_determiner.py). You will need to return a list of tuples that each hold an outcome group and a confidence, as well as update the context with updated variable values (if any). Finally, you will need to specify the conditions for your action to run with [this function](https://github.com/dialogue-planning/contingent-plan-executor/blob/c0e6f497948dea46cfcdf6889b3fd3e1d8c55425/contingent_plan_executor/hovor/configuration/json_configuration_postprocessing.py#L207) and [this function](https://github.com/dialogue-planning/contingent-plan-executor/blob/c0e6f497948dea46cfcdf6889b3fd3e1d8c55425/contingent_plan_executor/hovor/configuration/json_configuration_provider.py#L219).
