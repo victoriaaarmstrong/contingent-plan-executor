@@ -5,8 +5,8 @@ flask-cors
 json2html
 jsonpickle
 nltk
-spacy
 textblob
+spacy[apple]
 graphviz
 docker
 rstr==3.2.0

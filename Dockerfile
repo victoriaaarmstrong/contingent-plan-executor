@@ -1,12 +1,20 @@
-FROM python:3.10
+FROM python:3.9
 
 WORKDIR /root/app
 
-COPY requirements.txt .
+RUN pip install requests
+RUN pip install Flask
+RUN pip install Flask-SQLAlchemy
+RUN pip install flask-cors
+RUN pip install json2html
+RUN pip install jsonpickle
+RUN pip install nltk
+RUN pip install textblob
+RUN BLIS_ARCH="generic" pip install spacy --no-binary blis
+RUN pip install graphviz
+RUN pip install rstr==3.2.0
 
-RUN pip install -r requirements.txt
-
-RUN python -m spacy download en_core_web_md
+#RUN python -m spacy download en_core_web_md
 
 COPY contingent_plan_executor/ ./contingent_plan_executor
 
