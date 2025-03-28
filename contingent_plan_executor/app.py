@@ -4,7 +4,7 @@ from hovor.core import initialize_session
 from hovor.configuration.direct_json_configuration_provider import DirectJsonConfigurationProvider
 from hovor.execution_monitor import EM
 from environment import initialize_remote_environment
-from local_run_utils import run_rasa_model_server
+from local_run_utils import run_model_server
 from flask import request, jsonify
 import json, jsonpickle
 import traceback
@@ -25,17 +25,21 @@ class ConversationDatabase(db.Model):
     node_id = db.Column(db.PickleType, nullable=True)
     history = db.Column(db.PickleType, nullable=True)
 
+
 with app.app_context():
     from app import ConversationDatabase
+
     db.create_all()
+
 
 def check_db(user_id):
     try:
         return db.session.execute(db.select(ConversationDatabase).filter_by(user_id=user_id)).scalar_one()
     except sqlalchemy.exc.NoResultFound:
         return
-    
-def accuHovorMsgs(raw_msg, accumulated_f = None):
+
+
+def accuHovorMsgs(raw_msg, accumulated_f=None):
     if not accumulated_f:
         accumulated_f = []
     # need to split up multiple messages (and remove any resulting empty strings)
@@ -49,6 +53,7 @@ def accuHovorMsgs(raw_msg, accumulated_f = None):
         else:
             accumulated_f.append({"HOVOR": msg})
     return accumulated_f
+
 
 # allow for the remote chat to initialize the message
 @app.route('/new-conversation', methods=['GET', 'POST'])
@@ -79,12 +84,12 @@ def new_conversation():
         plan_config = DirectJsonConfigurationProvider(plan_id,
                                                       plan_json_config,
                                                       hovor_config['plan'])
-        
+
         plan_config.check_all_action_builders()
 
         print("Plan fetched.")
 
-        run_rasa_model_server(out_path)
+        run_model_server(out_path)
 
         print("Creating a new trace.")
         temp_session = initialize_session(plan_config)
@@ -138,7 +143,7 @@ def new_conversation():
                 return jsonify({'status': "Plan complete!", "user_id": trace_id})
             else:
                 # NOTE: cannot json dumps the diagnostics because they have sets in them.
-                with open("diagnostics.txt","w") as f:
+                with open("diagnostics.txt", "w") as f:
                     f.write(str(diagnostics))
                 return jsonify(
                     {'status': "Plan complete!", 'msg': accumulated_messages, "user_id": trace_id})
@@ -164,14 +169,14 @@ def new_conversation():
         if action_result.get_field('type') == 'message':
             print("Returning message: %s" % action_result.get_field('msg'))
             # NOTE: cannot json dumps the diagnostics because they have sets in them.
-            with open("diagnostics.txt","w") as f:
+            with open("diagnostics.txt", "w") as f:
                 f.write(str(diagnostics))
             return jsonify({'status': 'success',
                             'msg': accuHovorMsgs(action_result.get_field('msg')),
                             "user_id": trace_id})
         else:
             print("Not sure what to do with action of type %s\n%s" % (action_result.get_field('type'),
-                                                                        str(action_result)))
+                                                                      str(action_result)))
             return jsonify({'status': 'error',
                             'msg': "Received unknown action type of %s" % action_result.get_field('type'),
                             'debug': action_result.json})
@@ -195,7 +200,7 @@ def new_message():
             plan_json_config = json.load(open(f"{out_path}/data.json", "r"))
             hovor_config = json.load(open(f"{out_path}/data.prp.json", "r"))
             plan_id = plan_json_config['name']
-        
+
         plan_config = DirectJsonConfigurationProvider(plan_id,
                                                       plan_json_config,
                                                       hovor_config['plan'])
@@ -204,7 +209,7 @@ def new_message():
 
         print("Plan fetched.")
 
-        run_rasa_model_server(out_path)
+        run_model_server(out_path)
 
         # Only proceed if the trace exists
         if not check_db(trace_id):
@@ -236,7 +241,7 @@ def new_message():
                                 'stickiness': 0})
             else:
                 # NOTE: cannot json dumps the diagnostics because they have sets in them.
-                with open("diagnostics.txt","w") as f:
+                with open("diagnostics.txt", "w") as f:
                     f.write(str(diagnostics))
                 return jsonify({'status': "Plan complete!",
                                 'action_name': previous_action,
@@ -275,7 +280,7 @@ def new_message():
     if last_execution_result.get_field('type') == 'message':
         print("Returning message: %s" % last_execution_result.get_field('msg'))
         # NOTE: cannot json dumps the diagnostics because they have sets in them.
-        with open("diagnostics.txt","w") as f:
+        with open("diagnostics.txt", "w") as f:
             f.write(str(diagnostics))
         return jsonify({'status': 'success',
                         'action_name': previous_action,
@@ -284,13 +289,14 @@ def new_message():
                         'stickiness': 1,
                         'msg': accuHovorMsgs(last_execution_result.get_field('msg')),
                         }
-                    )
+                       )
     else:
         print("Not sure what to do with action of type %s\n%s" % (last_execution_result.get_field('type'),
-                                                                    str(last_execution_result)))
+                                                                  str(last_execution_result)))
         return jsonify({'status': 'error',
                         'msg': "Received unknown action type of %s" % last_execution_result.get_field('type'),
                         'debug': last_execution_result.json})
+
 
 # entrypoint to execution monitor.
 @app.route('/load-conversation', methods=['POST'])
@@ -304,16 +310,16 @@ def load_conversation():
         plan_json_config = json.load(open(f"{out_path}/data.json", "r"))
         hovor_config = json.load(open(f"{out_path}/data.prp.json", "r"))
         plan_id = plan_json_config['name']
-    
+
     plan_config = DirectJsonConfigurationProvider(plan_id,
-                                                    plan_json_config,
-                                                    hovor_config['plan'])
+                                                  plan_json_config,
+                                                  hovor_config['plan'])
 
     plan_config.check_all_action_builders()
 
     print("Plan fetched.")
 
-    run_rasa_model_server(out_path)
+    run_model_server(out_path)
 
     # Only proceed if the trace exists
     if not check_db(trace_id):
@@ -335,7 +341,7 @@ def load_conversation():
         accumulated_messages = accuHovorMsgs(session.current_action_result.get_field("msg"), accumulated_messages)
         if session.current_action_result.get_field("input"):
             accumulated_messages.append({"USER": session.current_action_result.get_field("input")})
-    
+
     if not accumulated_messages:
         print("No execution result to return.")
         return jsonify({'status': 'success',
@@ -343,11 +349,13 @@ def load_conversation():
                         'msg': 'No execution result to return. All set!'})
     else:
         print("Returning messages: %s" % accumulated_messages)
-        return jsonify({'status': 'Plan complete!' if session.current_action.action_type == 'goal_achieved' else 'success',
-                        'action_name': previous_action,
-                        'msg': (accumulated_messages),
-                        }
-                    )
+        return jsonify(
+            {'status': 'Plan complete!' if session.current_action.action_type == 'goal_achieved' else 'success',
+             'action_name': previous_action,
+             'msg': (accumulated_messages),
+             }
+            )
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
