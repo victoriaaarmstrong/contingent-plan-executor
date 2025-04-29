@@ -10,3 +10,4 @@ spacy[apple]
 graphviz
 docker
 rstr==3.2.0
+uvicorn

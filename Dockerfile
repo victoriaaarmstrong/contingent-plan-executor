@@ -14,7 +14,7 @@ RUN BLIS_ARCH="generic" pip install spacy --no-binary blis
 RUN pip install graphviz
 RUN pip install rstr==3.2.0
 
-#RUN python -m spacy download en_core_web_md
+RUN python -m spacy download en_core_web_md
 
 COPY contingent_plan_executor/ ./contingent_plan_executor
 

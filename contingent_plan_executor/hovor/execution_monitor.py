@@ -23,6 +23,8 @@ def EM(session, action_execution_result):
 
     while not is_external_call:
         # incorporates state/context changes that happend after action execution
+
+        ## action execution result is a dict with {'input': 'what the user typed'}
         final_progress, confidence = run_outcome_determination(session, action_execution_result)
 
         # Add the diagnostics required

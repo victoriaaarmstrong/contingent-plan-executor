@@ -228,7 +228,8 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
             return DefaultSystemOutcomeDeterminer()
 
         if outcome_determiner_name == "disambiguation_outcome_determiner":
-            return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
 
         if outcome_determiner_name == "web_call_outcome_determiner":
             return WebCallOutcomeDeterminer()

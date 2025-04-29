@@ -159,6 +159,7 @@ class OutcomeDeterminationProgress(object):
 
     def get_determiner(self, outcome_group_name):
         info = self.get_outcome_determination_info(outcome_group_name)
+        print(info.description)
         return info.outcome_determiner
 
     def apply_effect(self, outcome_group_name):
