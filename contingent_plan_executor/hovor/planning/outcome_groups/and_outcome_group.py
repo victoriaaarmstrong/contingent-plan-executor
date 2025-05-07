@@ -8,4 +8,5 @@ class AndOutcomeGroup(OutcomeGroupBase):
         self._outcome_groups = list(outcome_groups)
 
     def update_progress(self, initial_progress):
+
         raise NotImplementedError("Determination for AndOutcomeGroup")

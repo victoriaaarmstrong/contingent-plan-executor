@@ -9,8 +9,13 @@ from hovor.planning.outcome_groups.deterministic_outcome_group import (
 from hovor import DEBUG
 import requests
 import json
-#import random
-from nltk.corpus import wordnet
+import random
+from nltk.corpus import wordnet, stopwords
+import nltk
+from nltk.tokenize import word_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk.classify import NaiveBayesClassifier
+
 from typing import Union
 from textblob import TextBlob
 import re
@@ -89,6 +94,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         """
         self.spacy_entities = {}
         self.nltk_entities = {}
+        self.extracted_entities = {}
+
         for extracted in entities:
             if extracted["entity"] in SPACY_LABELS:
                 if extracted["entity"] in self.spacy_entities:
@@ -96,7 +103,10 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 else:
                     self.spacy_entities[extracted["entity"]] = [extracted]
             else:
-                self.nltk_entities[extracted["entity"]] = extracted
+
+                ################# THIS LINE ISN'T IN THE RIGHT FORMAT
+                print("******************** START HERE -- THERE'S SOMETHING WRONG WITH THIS LINE *****************)
+                self.extracted_entities[extracted["entity"]] = extracted
                 #raise NotImplementedError("Implement this.")
 
     # TODO: replace with general "execute with ordering" function
@@ -121,8 +131,11 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         Returns (List[str]): List of strings that represents the ordering.
         """
-        # return [str]
-        raise NotImplementedError("Implement this function.")
+
+        return ["regex", "spacy"]
+
+        ## just always do regex for now
+        #raise NotImplementedError("Implement this function.")
 
     # TODO: turn into stub
     def extract_regex(self, entity):
@@ -132,7 +145,11 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         """
         extracted = None
 
-        pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
+        try:
+            pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
+        except:
+            pattern = "^[A-Z]*$"
+
         if self.spacy_entities:
             if "CARDINAL" in self.spacy_entities:
                 # iterate through all CARDINAL entities and see if any match
@@ -144,10 +161,10 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             else:
                 return None
         else:
-            raise NotImplementedError(
-                "Search other extraction types for numbers we \
-can check against the regex (optional)."
-            )
+            match = re.fullmatch(pattern, entity)
+            if match:
+                extracted = entity
+            #raise NotImplementedError( "Search other extraction types for numbers we \can check against the regex (optional).")
         return extracted
 
     def extract_entity(self, entity: str):
@@ -161,6 +178,8 @@ can check against the regex (optional)."
                 otherwise None.
         """
         ordering = self.determine_extraction_ordering(entity)
+        print(ordering)
+
         for i in range(len(ordering)):
             # attempt to extract the entity
             if ordering[i] == "regex":
@@ -172,12 +191,13 @@ can check against the regex (optional)."
                     ].upper()
                 )
             else:
+                extracted = "dummy-extraction"
                 ## Is this what we need to do with nltk?
-                extracted = self.find_nltk_entity(
-                    self.context_variables[entity]["config"]["extraction"][
-                        "config_method"
-                    ].upper()
-                )
+                #extracted = self.find_nltk_entity(
+                    #self.context_variables[entity]["config"]["extraction"][
+                        #"config_method"
+                    #].upper()
+                #)
                 #raise NotImplementedError("Implement this.")
             if extracted:
                 # certainty won't be "known" if we didn't extract with our first pick
@@ -204,7 +224,14 @@ can check against the regex (optional)."
         """
         entities = {}
         # get entity requirements
+
+        # iteratre through all of the intent requirements
         for entity in {f[0] for f in intent.entity_reqs}:
+
+            print(entity)
+            print(self.extracted_entities)
+
+            ###### ISSUE -- EXTRACTED ENTITIES LIST APPEARS TO BE EMPTY!
             if entity in self.extracted_entities:
                 entities[entity] = self.extracted_entities[entity]
             else:
@@ -220,6 +247,7 @@ can check against the regex (optional)."
                     if extracted_info["sample"] != None:
                         entities[entity] = extracted_info
                     self.extracted_entities[entity] = extracted_info
+
         return entities
 
     def filter_intents(self, r, outcome_groups):
@@ -298,6 +326,8 @@ can check against the regex (optional)."
         for intent in intents:
             # if this intent expects entities, make sure we extract them
             if intent.entity_reqs != None:
+
+                ## Then the error hits here
                 entities = self.extract_entities(intent)
                 if intent.entity_reqs == frozenset(
                     {
@@ -353,13 +383,50 @@ can check against the regex (optional)."
         Returns:
             intents (List[Intents]): The intent ranking.
         """
+        ## this is getting the intent rankings from the rasa model server, but this is what we want to replace
+        '''
         r = json.loads(
             requests.post(
                 "http://localhost:5006/model/parse", json={"text": input}
             ).text
         )
+        '''
+        ## this is the list of possible entities?
+        #print("*************** These are all of the possible intents ***************")
+        possible_intents = list(self.intents.keys())
+
+        ## TO DO
+        # Basic regex extraction so that you can use that for intent recognition and entity extraction
+        '''
+        ## problem - I don't know what the expected form of r is
+        # problem solved! This is what it looks like:
+        # https://rasa.com/docs/reference/api/pro/http-api/#tag/Model/operation/parseModelMessage
+        '''
+
+        ## randomly pick and rank an intent
+        # TO DO -- replace this when you have things working
+        random_intent = random.choice(possible_intents)
+
+        intents_entity_list = self.intents[random_intent]["entities"]
+
+        print(intents_entity_list)
+
+        r = {"intent_ranking": [
+                {"name": random_intent, "confidence": random.random()},
+            ],
+            "entities": []
+        }
+
+        for e in intents_entity_list:
+            r["entities"].append({
+                "entity": e,
+                "value": "stub"
+            })
+
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
+
+        ## CURRENT ERROR COMING FROM THIS STEP
         return self.extract_intents(intents)
 
     def rank_groups(self, outcome_groups, progress):
@@ -500,14 +567,14 @@ can check against the regex (optional)."
                                     extracted_info["sample"] = entity_config[hyp]
                                     return extracted_info
                             for hol in syn.member_holonyms():
-                                hol = NLUOutcomeDeterminer.parse_synset_name(
+                                hol = NLTKOutcomeDeterminer.parse_synset_name(
                                     hol
                                 ).lower()
                                 if hol in entity_config:
                                     extracted_info["sample"] = entity_config[hol]
                                     return extracted_info
                             for hol in syn.root_hypernyms():
-                                hol = NLUOutcomeDeterminer.parse_synset_name(
+                                hol = NLTKOutcomeDeterminer.parse_synset_name(
                                     hol
                                 ).lower()
                                 if hol in entity_config:
