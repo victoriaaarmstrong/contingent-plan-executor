@@ -60,7 +60,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             if self.spacy_entities[method]:
                 return self.spacy_entities[method].pop()
 
-    def find_nltk_entity(self, entity: str):
+    def find_randomly_selected_entity(self, entity: str):
         """
         **TODO: REPLACE THIS STUB**
 
@@ -74,8 +74,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         Returns:
             Optional[Dict]: The entity, if it exists, or None.
         """
-        if entity in self.nltk_entities:
-            return self.nltk_entities[entity]
+        if entity in self.randomly_selected_entities:
+            return self.randomly_selected_entities[entity]
         #raise NotImplementedError("Implement this function.")
 
     def initialize_extracted_entities(self, entities: Dict):
@@ -93,8 +93,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             entities (Dict): The raw entities extracted.
         """
         self.spacy_entities = {}
-        self.nltk_entities = {}
-        self.extracted_entities = {}
+        self.randomly_selected_entities = {}
 
         for extracted in entities:
             if extracted["entity"] in SPACY_LABELS:
@@ -103,10 +102,12 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 else:
                     self.spacy_entities[extracted["entity"]] = [extracted]
             else:
-
-                ################# THIS LINE ISN'T IN THE RIGHT FORMAT
-                print("******************** START HERE -- THERE'S SOMETHING WRONG WITH THIS LINE *****************)
-                self.extracted_entities[extracted["entity"]] = extracted
+                if extracted["entity"] in self.randomly_selected_entities:
+                    self.randomly_selected_entities[extracted["entity"]].append(extracted)
+                    #self.randomly_selected_entities[extracted["entity"]].append(extracted)# = extracted
+                else:
+                    self.randomly_selected_entities[extracted["entity"]] = extracted
+                    #self.randomly_selected_entities[extracted["entity"]] = [extracted]
                 #raise NotImplementedError("Implement this.")
 
     # TODO: replace with general "execute with ordering" function
@@ -132,7 +133,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         Returns (List[str]): List of strings that represents the ordering.
         """
 
-        return ["regex", "spacy"]
+        return ["regex", "random"]
 
         ## just always do regex for now
         #raise NotImplementedError("Implement this function.")
@@ -143,13 +144,19 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         ("regex" is its own category). Just try with all relevant extraction methods--
         results will always be "found" or "didnt-find".
         """
+
         extracted = None
 
         try:
             pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
         except:
-            pattern = "^[A-Z]*$"
+            pattern = r"\b\w+\s"
 
+        ## Extracted entities is Null here
+        # but I think that makes sense if this is the first loop
+
+        ## don't have spacy entities rn, so we can ignore this block, we enter the else
+        '''
         if self.spacy_entities:
             if "CARDINAL" in self.spacy_entities:
                 # iterate through all CARDINAL entities and see if any match
@@ -160,10 +167,24 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                         break
             else:
                 return None
+        '''
+
+        if self.randomly_selected_entities:
+            for ext_ent in self.randomly_selected_entities:
+                match = re.fullmatch(pattern, self.randomly_selected_entities[ext_ent]["value"])
+
+                if match:
+                    extracted = ext_ent
+                    break
+
         else:
+            ## I need the value, not the entity to extract here
             match = re.fullmatch(pattern, entity)
-            if match:
-                extracted = entity
+
+
+        if match:
+            extracted = entity
+
             #raise NotImplementedError( "Search other extraction types for numbers we \can check against the regex (optional).")
         return extracted
 
@@ -178,18 +199,22 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 otherwise None.
         """
         ordering = self.determine_extraction_ordering(entity)
-        print(ordering)
 
         for i in range(len(ordering)):
             # attempt to extract the entity
             if ordering[i] == "regex":
                 extracted = self.extract_regex(entity)
-            elif ordering[i] == "spacy":
-                extracted = self.find_spacy_entity(
-                    self.context_variables[entity]["config"]["extraction"][
-                        "config_method"
-                    ].upper()
-                )
+
+            ## Need to change this specifically for random
+            elif ordering[i] == "random":
+
+                ## this is not the right input
+                extracted = self.find_randomly_selected_entity(entity)
+
+                    #self.context_variables[entity]["config"]["extraction"][
+                        #"config_method"
+                    #].upper()
+
             else:
                 extracted = "dummy-extraction"
                 ## Is this what we need to do with nltk?
@@ -199,6 +224,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                     #].upper()
                 #)
                 #raise NotImplementedError("Implement this.")
+
+            ## But we will enter this
             if extracted:
                 # certainty won't be "known" if we didn't extract with our first pick
                 # ignore this with regexes though (don't really care where we get it
@@ -206,6 +233,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 certainty = ("known" if i == 0 else "maybe-known") \
                              if ordering != "regex" else "known"
                 break
+
+
         if extracted:
             return {
                 "extracted": extracted,
@@ -227,16 +256,14 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         # iteratre through all of the intent requirements
         for entity in {f[0] for f in intent.entity_reqs}:
-
-            print(entity)
-            print(self.extracted_entities)
-
-            ###### ISSUE -- EXTRACTED ENTITIES LIST APPEARS TO BE EMPTY!
             if entity in self.extracted_entities:
                 entities[entity] = self.extracted_entities[entity]
             else:
                 # raw extract single entity, then validate
+
+                ## So maybe this is the issue?
                 extracted_info = self.extract_entity(entity)
+
                 if extracted_info:
                     extracted_info = self._make_entity_type_sample(
                         entity,
@@ -246,6 +273,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                     )
                     if extracted_info["sample"] != None:
                         entities[entity] = extracted_info
+
                     self.extracted_entities[entity] = extracted_info
 
         return entities
@@ -271,10 +299,13 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         intents_detected = {
             ranking["name"]: ranking["confidence"] for ranking in r["intent_ranking"]
         }
+
         intents = []
+
         for out, out_cfg in self.full_outcomes.items():
             # check to make sure this intent was at least DETECTED
             if out_cfg["intent"] in intents_detected:
+
                 if self.intents[out_cfg["intent"]]["entities"]:
                     # we only want to consider assignments that are variables of the
                     # intent, as outcomes often have other updates for existing entities.
@@ -308,6 +339,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             elif out_cfg["intent"] == "fallback":
                 intents.append(Intent("fallback", None, outcome_groups[out], 0))
         intents.sort()
+
         return intents
 
     def extract_intents(self, intents):
@@ -329,6 +361,10 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
                 ## Then the error hits here
                 entities = self.extract_entities(intent)
+
+                for entity in entities:
+                    print(entities[entity]["certainty"])
+
                 if intent.entity_reqs == frozenset(
                     {
                         entity: entities[entity]["certainty"]
@@ -367,9 +403,6 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 )
                 break
 
-        # rearrange intent ranking
-        intents.sort()
-
         return intents
 
     def get_raw_rankings(self, input, outcome_groups):
@@ -383,6 +416,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         Returns:
             intents (List[Intents]): The intent ranking.
         """
+
         ## this is getting the intent rankings from the rasa model server, but this is what we want to replace
         '''
         r = json.loads(
@@ -393,6 +427,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         '''
         ## this is the list of possible entities?
         #print("*************** These are all of the possible intents ***************")
+
+        ## maybe I need to pick one that's associated w/ the last action
         possible_intents = list(self.intents.keys())
 
         ## TO DO
@@ -409,24 +445,26 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         intents_entity_list = self.intents[random_intent]["entities"]
 
-        print(intents_entity_list)
-
         r = {"intent_ranking": [
-                {"name": random_intent, "confidence": random.random()},
+                {"name": random_intent, "confidence": 1},#random.random()},
             ],
             "entities": []
         }
 
         for e in intents_entity_list:
+            e = e.replace('$','')
+
+            print(self.context_variables[e]["config"])
+
             r["entities"].append({
                 "entity": e,
-                "value": "stub"
+                "value": "val"
             })
+
+        ## TO DO -- Take a random value from the list of possible entity values
 
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
-
-        ## CURRENT ERROR COMING FROM THIS STEP
         return self.extract_intents(intents)
 
     def rank_groups(self, outcome_groups, progress):
@@ -448,6 +486,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             progress.json["action_result"]["fields"]["input"], outcome_groups
         )
         chosen_intent = intents[0]
+
         ranked_groups = [(intent.outcome, intent.confidence) for intent in intents]
         # entities required by the extracted intent
         if chosen_intent.entity_reqs:
@@ -462,6 +501,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                     value = update_config["value"]
                     # if value is not null
                     if value:
+
+                        ## We have value = True, not an actual value, why?
                         # if the value is a variable (check without the $)
                         if value[1:] in progress.actual_context.field_names:
                             value = value[1:]
