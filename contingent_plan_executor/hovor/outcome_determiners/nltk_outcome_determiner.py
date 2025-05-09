@@ -104,10 +104,8 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             else:
                 if extracted["entity"] in self.randomly_selected_entities:
                     self.randomly_selected_entities[extracted["entity"]].append(extracted)
-                    #self.randomly_selected_entities[extracted["entity"]].append(extracted)# = extracted
                 else:
                     self.randomly_selected_entities[extracted["entity"]] = extracted
-                    #self.randomly_selected_entities[extracted["entity"]] = [extracted]
                 #raise NotImplementedError("Implement this.")
 
     # TODO: replace with general "execute with ordering" function
@@ -338,6 +336,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                     )
             elif out_cfg["intent"] == "fallback":
                 intents.append(Intent("fallback", None, outcome_groups[out], 0))
+
         intents.sort()
 
         return intents
@@ -361,9 +360,6 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
                 ## Then the error hits here
                 entities = self.extract_entities(intent)
-
-                for entity in entities:
-                    print(entities[entity]["certainty"])
 
                 if intent.entity_reqs == frozenset(
                     {
@@ -425,11 +421,6 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             ).text
         )
         '''
-        ## this is the list of possible entities?
-        #print("*************** These are all of the possible intents ***************")
-
-        ## maybe I need to pick one that's associated w/ the last action
-        possible_intents = list(self.intents.keys())
 
         ## TO DO
         # Basic regex extraction so that you can use that for intent recognition and entity extraction
@@ -441,12 +432,11 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         ## randomly pick and rank an intent
         # TO DO -- replace this when you have things working
-        random_intent = random.choice(possible_intents)
-
+        random_intent = random.choice(list(self.intents.keys()))
         intents_entity_list = self.intents[random_intent]["entities"]
 
         r = {"intent_ranking": [
-                {"name": random_intent, "confidence": 1},#random.random()},
+                {"name": random_intent, "confidence": random.random()},
             ],
             "entities": []
         }
@@ -454,14 +444,25 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         for e in intents_entity_list:
             e = e.replace('$','')
 
-            print(self.context_variables[e]["config"])
+            try:
+                potential_options = self.context_variables[e]["config"]["options"]
+            except:
+                potential_options = self.context_variables[e]["config"]
+
+            if isinstance(potential_options, list):
+                random_option = random.choice(potential_options)
+            elif isinstance(potential_options, dict):
+                random_option = random.choice(list(potential_options.keys()))
+            else:
+                random_option = "val"
+
+            if random_option == "extraction":
+                random_option = "val"
 
             r["entities"].append({
                 "entity": e,
-                "value": "val"
+                "value": random_option
             })
-
-        ## TO DO -- Take a random value from the list of possible entity values
 
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
@@ -482,6 +483,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             List[tuple]: The ranked outcome groups.
             OutcomeDeterminationProgress: The updated progress.
         """
+
         intents = self.get_raw_rankings(
             progress.json["action_result"]["fields"]["input"], outcome_groups
         )
@@ -493,16 +495,17 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             ci_ent_reqs = [er[0] for er in chosen_intent.entity_reqs]
         # note we shouldn't only add samples for extracted entities; some outcomes don't
         # extract entities themselves but update the values of existing entities
+
         for update_var, update_config in progress.get_description(
             chosen_intent.outcome.name
         )["updates"].items():
             if "value" in update_config:
                 if progress.get_entity_type(update_var) in ["json", "enum"]:
                     value = update_config["value"]
+
                     # if value is not null
                     if value:
 
-                        ## We have value = True, not an actual value, why?
                         # if the value is a variable (check without the $)
                         if value[1:] in progress.actual_context.field_names:
                             value = value[1:]
@@ -594,14 +597,14 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                                         extracted_info["sample"] = entity_config[d]
                                         return extracted_info
                             for hyp in syn.hypernyms():
-                                hyp = NLUOutcomeDeterminer.parse_synset_name(
+                                hyp = NLTKOutcomeDeterminer.parse_synset_name(
                                     hyp
                                 ).lower()
                                 if hyp in entity_config:
                                     extracted_info["sample"] = entity_config[hyp]
                                     return extracted_info
                             for hyp in syn.hyponyms():
-                                hyp = NLUOutcomeDeterminer.parse_synset_name(
+                                hyp = NLTKOutcomeDeterminer.parse_synset_name(
                                     hyp
                                 ).lower()
                                 if hyp in entity_config:
