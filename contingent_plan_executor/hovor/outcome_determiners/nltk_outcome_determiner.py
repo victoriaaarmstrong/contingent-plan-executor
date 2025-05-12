@@ -76,6 +76,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         """
         if entity in self.randomly_selected_entities:
             return self.randomly_selected_entities[entity]
+
         #raise NotImplementedError("Implement this function.")
 
     def initialize_extracted_entities(self, entities: Dict):
