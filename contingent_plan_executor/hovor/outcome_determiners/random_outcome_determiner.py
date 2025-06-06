@@ -49,6 +49,7 @@ class RandomOutcomeDeterminer(OutcomeDeterminerBase):
             # todo what can we do here?
             return {}
         elif entity_type == "enum":
+            #return random.choice(entity_config)
             return random.choice(entity_config)
         elif entity_type == "sys-currency":
             return random.choice(["1$", "10$", "100 USD", "500 CZK"])

@@ -7,6 +7,7 @@ from hovor.planning.outcome_groups.deterministic_outcome_group import (
     DeterministicOutcomeGroup,
 )
 from hovor import DEBUG
+from hovor.outcome_determiners.random_outcome_determiner import RandomOutcomeDeterminer
 import requests
 import json
 import random
@@ -20,6 +21,7 @@ from typing import Union
 from textblob import TextBlob
 import re
 
+import rstr
 
 @dataclass
 class Intent:
@@ -97,6 +99,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         self.randomly_selected_entities = {}
 
         for extracted in entities:
+
             if extracted["entity"] in SPACY_LABELS:
                 if extracted["entity"] in self.spacy_entities:
                     self.spacy_entities[extracted["entity"]].append(extracted)
@@ -105,6 +108,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             else:
                 if extracted["entity"] in self.randomly_selected_entities:
                     self.randomly_selected_entities[extracted["entity"]].append(extracted)
+                    #self.randomly_selected_entities.append(extracted)
                 else:
                     self.randomly_selected_entities[extracted["entity"]] = extracted
                 #raise NotImplementedError("Implement this.")
@@ -132,7 +136,16 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         Returns (List[str]): List of strings that represents the ordering.
         """
 
-        return ["regex", "random"]
+        """
+        extracted = self.find_randomly_selected_entity(entity)
+        if not extracted:
+            return None, None
+        else:
+            certainty = "found"
+
+        return extracted, certainty
+        """
+        return ["random", "regex"]
 
         ## just always do regex for now
         #raise NotImplementedError("Implement this function.")
@@ -209,7 +222,6 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
                 ## this is not the right input
                 extracted = self.find_randomly_selected_entity(entity)
-
                     #self.context_variables[entity]["config"]["extraction"][
                         #"config_method"
                     #].upper()
@@ -229,8 +241,16 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                 # certainty won't be "known" if we didn't extract with our first pick
                 # ignore this with regexes though (don't really care where we get it
                 # from as long as we get a match)
-                certainty = ("known" if i == 0 else "maybe-known") \
-                             if ordering != "regex" else "known"
+
+                if ordering[i] == "regex":
+                    certainty = "found"
+                else:
+                    if i == 0:
+                        certainty = "found"
+                    else:
+                        certainty = "maybe-found"
+                #certainty = ("known" if i == 0 else "maybe-known") \
+                             #if ordering != "regex" else "known"
                 break
 
 
@@ -253,7 +273,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         entities = {}
         # get entity requirements
 
-        # iteratre through all of the intent requirements
+        # iterate through all of the intent requirements
         for entity in {f[0] for f in intent.entity_reqs}:
             if entity in self.extracted_entities:
                 entities[entity] = self.extracted_entities[entity]
@@ -355,11 +375,11 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         """
         entities = {}
         extracted_intent = None
+
         for intent in intents:
             # if this intent expects entities, make sure we extract them
             if intent.entity_reqs != None:
 
-                ## Then the error hits here
                 entities = self.extract_entities(intent)
 
                 if intent.entity_reqs == frozenset(
@@ -402,6 +422,16 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         return intents
 
+
+    ## From Jacob's code to randomly generate an example regex value
+    def example_regex_entity(self, regex):
+        """
+        This function uses the rstr library to generate a
+        random string matching the given regex.
+        """
+
+        return rstr.xeger(regex)
+
     def get_raw_rankings(self, input, outcome_groups):
         """Gets the raw intent rankings given the user input.
 
@@ -431,38 +461,61 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         # https://rasa.com/docs/reference/api/pro/http-api/#tag/Model/operation/parseModelMessage
         '''
 
-        ## randomly pick and rank an intent
-        # TO DO -- replace this when you have things working
-        random_intent = random.choice(list(self.intents.keys()))
+        possible_outcome_groups = []
+        for out in outcome_groups:
+            possible_outcome_groups.append(out.name)
+
+        randomly_selected_outcome_group = random.choice(possible_outcome_groups)
+        full_outcomes_info = self.full_outcomes
+        random_intent = full_outcomes_info[randomly_selected_outcome_group]['intent']
+
+        # Get the entities associated with the random intent
         intents_entity_list = self.intents[random_intent]["entities"]
 
+        # Make a data structure that tries to mimic 'r' from before
         r = {"intent_ranking": [
                 {"name": random_intent, "confidence": random.random()},
             ],
             "entities": []
         }
 
+        DEBUG(random_intent)
+
+        context_variables = self.context_variables
+
+        # Iterate over all of the entities and assign values to the variables
         for e in intents_entity_list:
             e = e.replace('$','')
 
-            try:
-                potential_options = self.context_variables[e]["config"]["options"]
-            except:
-                potential_options = self.context_variables[e]["config"]
+            random_value = ""
+            if context_variables[e]["type"] == 'enum':
+                if type(context_variables[e]["config"]) == list:
+                    random_value = random.choice(context_variables[e]["config"])
+                else:
+                    random_value = random.choice(list(context_variables[e]["config"].keys()))
 
-            if isinstance(potential_options, list):
-                random_option = random.choice(potential_options)
-            elif isinstance(potential_options, dict):
-                random_option = random.choice(list(potential_options.keys()))
+            elif context_variables[e]["type"] == 'json':
+                if context_variables[e]["config"]["extraction"]["method"] == 'spacy':
+
+                    if e == "location":
+                        random_value = random.choice(["Kingston", "Toronto"])
+                    else:
+                        random_value = "unsupported_rn"
+                elif context_variables[e]["config"]["extraction"]["method"] == 'regex':
+                    random_value = self.example_regex_entity(context_variables[e]['config']['extraction']['pattern'])
+                else:
+                    raise TypeError(
+                    "Tried to fill in a json var with an unknown method. Only spacy and regex extraction methods are currently supported.")
+
             else:
-                random_option = "val"
+                raise TypeError(
+                "Tried to fill in a non-enum or json var. Only enums and jsons are currently supported.")
 
-            if random_option == "extraction":
-                random_option = "val"
+            DEBUG(random_value)
 
             r["entities"].append({
                 "entity": e,
-                "value": random_option
+                "value": random_value,
             })
 
         intents = self.filter_intents(r, outcome_groups)
@@ -484,12 +537,10 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             List[tuple]: The ranked outcome groups.
             OutcomeDeterminationProgress: The updated progress.
         """
-
         intents = self.get_raw_rankings(
             progress.json["action_result"]["fields"]["input"], outcome_groups
         )
         chosen_intent = intents[0]
-
         ranked_groups = [(intent.outcome, intent.confidence) for intent in intents]
         # entities required by the extracted intent
         if chosen_intent.entity_reqs:
@@ -526,6 +577,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
                                         )
                     progress.add_detected_entity(update_var, value)
         DEBUG("\t top random ranking for group '%s'" % (chosen_intent.name))
+
         return ranked_groups, progress
 
     def _make_entity_type_sample(
