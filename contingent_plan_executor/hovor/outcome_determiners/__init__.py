@@ -9,3 +9,4 @@ nltk.download('omw-1.4')
 #nltk.download('words')
 
 SPACY_LABELS = spacy.load("en_core_web_md").get_pipe("ner").labels
+nlp = spacy.load("en_core_web_md")

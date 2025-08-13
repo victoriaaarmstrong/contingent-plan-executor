@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/graveyard/scrap_outcome_determiner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_info_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_info_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nltk_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nltk_outcome_determiner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/random_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/random_outcome_determiner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -212,7 +214,14 @@
       <workItem from="1747334175175" duration="3103000" />
       <workItem from="1747920759406" duration="25936000" />
       <workItem from="1748613440914" duration="17607000" />
-      <workItem from="1748959765120" duration="35958000" />
+      <workItem from="1748959765120" duration="36005000" />
+      <workItem from="1749561630797" duration="6030000" />
+      <workItem from="1753969267779" duration="6009000" />
+      <workItem from="1754054210733" duration="7540000" />
+      <workItem from="1754398264533" duration="7000" />
+      <workItem from="1754398330046" duration="1000" />
+      <workItem from="1754407409882" duration="5695000" />
+      <workItem from="1754510123019" duration="39434000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
@@ -335,6 +344,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main__1_.coverage" NAME="local_main (1) Coverage Results" MODIFIED="1746731521096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor" />
     <SUITE FILE_PATH="coverage/contingent_plan_executor$remote_main.coverage" NAME="local_main Coverage Results" MODIFIED="1744298702691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1749061164460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1754587591579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

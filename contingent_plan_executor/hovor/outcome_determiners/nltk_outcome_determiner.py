@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import Dict
 from operator import attrgetter
 from hovor.outcome_determiners import SPACY_LABELS
+from hovor.outcome_determiners import nlp
 from hovor.outcome_determiners.outcome_determiner_base import OutcomeDeterminerBase
 from hovor.planning.outcome_groups.deterministic_outcome_group import (
     DeterministicOutcomeGroup,
@@ -22,6 +23,7 @@ from textblob import TextBlob
 import re
 
 import rstr
+import spacy
 
 @dataclass
 class Intent:
@@ -52,6 +54,18 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         self.intents = intents
         # cache the extracted entities so we don't have to extract anything multiple times
         self.extracted_entities = {}
+        self._regex_providers = []
+
+    """
+    def configuration(self, action_name, name, intents, entities):
+        masked_intents = self._mask_intents(intents)
+
+        self._regex_providers = {}
+        for intent, utterances in intents.items():
+            self._regex_providers[intent] = self._parse_value_providers(utterances)
+
+        return super(OutcomeDeterminerBase, self).configuration(action_name, name, masked_intents, entities)
+    """
 
     @staticmethod
     def parse_synset_name(synset):
@@ -432,6 +446,25 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
 
         return rstr.xeger(regex)
 
+    def mask_utterance(self, utterance):
+        return re.sub(r'\$([a-zA-Z_]+)', r'(?P<\1>.+)', utterance)
+        #return re.sub(r"\$\w+", "something", utterance)
+        #return re.sub("(\[regex\]\{[^}]*\})", " something ", utterance)
+
+    def extract_values(self, patterns, input_sentence):
+        for pattern in patterns:
+            match = re.fullmatch(pattern, input_sentence)
+            if match:
+                return {k: v.strip() for k, v in match.groupdict().items() if v}
+        return {}
+
+    def match_intent_from_entities(self, requirements, extracted_values):
+        for intent, reqs in requirements.items():
+            # Check if all required entities are in values
+            if all(entity in extracted_values for entity in reqs):
+                return intent
+        return 'fallback'  # default if no match
+
     def get_raw_rankings(self, input, outcome_groups):
         """Gets the raw intent rankings given the user input.
 
@@ -444,79 +477,59 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             intents (List[Intents]): The intent ranking.
         """
 
-        ## this is getting the intent rankings from the rasa model server, but this is what we want to replace
-        '''
-        r = json.loads(
-            requests.post(
-                "http://localhost:5006/model/parse", json={"text": input}
-            ).text
-        )
-        '''
-
-        ## TO DO
-        # Basic regex extraction so that you can use that for intent recognition and entity extraction
-        '''
-        ## problem - I don't know what the expected form of r is
-        # problem solved! This is what it looks like:
-        # https://rasa.com/docs/reference/api/pro/http-api/#tag/Model/operation/parseModelMessage
-        '''
-
+        ## Get the intents first to play around with extracting stuff with regex
         possible_outcome_groups = []
         for out in outcome_groups:
             possible_outcome_groups.append(out.name)
 
-        randomly_selected_outcome_group = random.choice(possible_outcome_groups)
         full_outcomes_info = self.full_outcomes
-        random_intent = full_outcomes_info[randomly_selected_outcome_group]['intent']
 
-        # Get the entities associated with the random intent
-        intents_entity_list = self.intents[random_intent]["entities"]
+        ## for all possible outcomes, get the intent names to make a list of all of the utterances and all of the entity requirements
+        dummy_intents = {}
+        for out in possible_outcome_groups:
+            info = full_outcomes_info[out]
+            dummy_intents.update({info['intent'] : info['entity_requirements']})
 
-        # Make a data structure that tries to mimic 'r' from before
+        intents = self.intents
+
+        ## now that we have all of the possible intents from the outcomes, I want to get all of the utterances for each of those intents
+        utterances_to_check = []
+        for intent, utterances in intents.items():
+            if intent in dummy_intents:
+                utterances_to_check += utterances["utterances"]
+
+        patterns = [self.mask_utterance(u) for u in utterances_to_check]
+
+        values = self.extract_values(patterns, input)
+
+        ## Something for confirm and deny intents
+        confirm_utterances = intents['confirm']['utterances']
+        deny_utterances = intents['deny']['utterances']
+                                                        #deny] else "neither"
+        if len(values) != 0:
+            selected_intent = self.match_intent_from_entities(dummy_intents, values)
+
+        else:
+            ## Replace with something to see if it's confirm or deny in a more dynamic way
+            if input.lower() in [c.lower() for c in confirm_utterances]:
+                selected_intent = "confirm"
+            elif input.lower() in [d.lower() for d in deny_utterances]:
+                selected_intent = "deny"
+            else:
+                selected_intent = "fallback"
+
         r = {"intent_ranking": [
-                {"name": random_intent, "confidence": random.random()},
-            ],
+            {"name": selected_intent, "confidence": 0.99},
+        ],
             "entities": []
         }
 
-        DEBUG(random_intent)
-
-        context_variables = self.context_variables
-
-        # Iterate over all of the entities and assign values to the variables
-        for e in intents_entity_list:
-            e = e.replace('$','')
-
-            random_value = ""
-            if context_variables[e]["type"] == 'enum':
-                if type(context_variables[e]["config"]) == list:
-                    random_value = random.choice(context_variables[e]["config"])
-                else:
-                    random_value = random.choice(list(context_variables[e]["config"].keys()))
-
-            elif context_variables[e]["type"] == 'json':
-                if context_variables[e]["config"]["extraction"]["method"] == 'spacy':
-
-                    if e == "location":
-                        random_value = random.choice(["Kingston", "Toronto"])
-                    else:
-                        random_value = "unsupported_rn"
-                elif context_variables[e]["config"]["extraction"]["method"] == 'regex':
-                    random_value = self.example_regex_entity(context_variables[e]['config']['extraction']['pattern'])
-                else:
-                    raise TypeError(
-                    "Tried to fill in a json var with an unknown method. Only spacy and regex extraction methods are currently supported.")
-
-            else:
-                raise TypeError(
-                "Tried to fill in a non-enum or json var. Only enums and jsons are currently supported.")
-
-            DEBUG(random_value)
-
+        for key, value in values.items():
             r["entities"].append({
-                "entity": e,
-                "value": random_value,
+                "entity": key,
+                "value": value,
             })
+
 
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
@@ -601,6 +614,7 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
             (Dict): The extraction info for the entity.
         """
         entity_value = extracted_info["value"]
+
         # entity is extracted with spacy and has options specified
         spacy_w_opts = (
             (
@@ -687,3 +701,82 @@ class NLTKOutcomeDeterminer(OutcomeDeterminerBase):
         extracted_info["certainty"] = "didnt-find"
         extracted_info["sample"] = None
         return extracted_info
+
+    def _report_entities(self, response, progress):
+        super()._report_entities(response, progress)
+
+        for intent_info in response['intents']:
+            intent = intent_info["intent"]
+
+            for provider in self._regex_providers.get(intent, []):
+                updates = provider(progress.action_result.get_field("input"))
+                for entity_name, entity_value in updates.items():
+                    progress.add_detected_entity(entity_name, entity_value)
+
+    def _parse_value_providers(self, utterances):
+        value_providers = []
+        for utterance in utterances:
+            value_provider = self._parse_value_provider(utterance)
+            value_providers.append(value_provider)
+
+        return value_providers
+
+    def _parse_value_provider(self, utterance):
+        matchers = []
+
+        for groups in re.findall(r"(\$\w+)|([^\$]+)+", utterance):#"(\[regex\]\{[^}]*\})|([^\[\{]+)+", utterance):
+            regex = groups[0]
+            text = groups[1]
+
+            if regex:
+                match = re.search(r"\(\s*'([^']*)'\s*,\s*'([^']*)'\s*\)", regex)#"\{([^:]+):=([^}]+)\}", regex)
+
+                if match == None:
+                    pass
+                else:
+                    target = match.group(1)
+                    pattern = match.group(2)
+                    matchers.append((target, pattern))
+            else:
+                if text.strip() == "":
+                    continue
+
+                matchers.extend(text.split(' '))
+
+        def value_provider(input):
+            collected_values = {}
+
+            current_input = input.split(' ')
+            for matcher in matchers:
+                if isinstance(matcher, str):
+                    if len(current_input) and current_input[0].lower() == matcher.lower():
+                        current_input.pop(0)
+                else:
+                    regex_input = " ".join(current_input)
+                    target_var, regex_pattern = matcher
+                    match = re.search(regex_pattern, regex_input)
+
+                    if not match:
+                        continue
+
+                    value = match.group(0)
+                    collected_values[target_var] = value
+
+                    # remove the recognized part and continue for case multiple regexes is defined
+                    regex_input = regex_input[0:match.span(0)[0]] + regex_input[match.span(0)[1]:]
+                    current_input = regex_input.split(' ')
+
+            return collected_values
+
+        return value_provider
+
+    def _mask_intents(self, intents):
+        masked_intents = {}
+        for intent, utterances in intents.items():
+            masked_intents[intent] = masked_utterances = []
+            for utterance in utterances['utterances']:
+                masked_utterance = self._mask_utterance(utterance)
+                masked_utterances.append(masked_utterance)
+
+        return masked_intents
+
