@@ -8,5 +8,10 @@ nltk.download('omw-1.4')
 #nltk.download('maxent_ne_chunker_tab')
 #nltk.download('words')
 
-SPACY_LABELS = spacy.load("en_core_web_md").get_pipe("ner").labels
+#SPACY_LABELS = spacy.load("en_core_web_md").get_pipe("ner").labels
+# temporarily overwriting for testing:
+SPACY_LABELS = ('LOCATION', 'CUISINE', 'FOOD_RESTRICTION', 'BUDGET', 'OUTING_TYPE')
 nlp = spacy.load("en_core_web_md")
+
+intent_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intents/")
+entity_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/")

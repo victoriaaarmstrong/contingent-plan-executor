@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/graveyard/scrap_outcome_determiner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_spacy/entity_data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nltk_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nltk_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nltk_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/spacy_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +65,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.local_main (1).executor": "Run",
-    "Python.local_main.executor": "Debug",
-    "Python.remote_main.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.local_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.local_main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.remote_main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/training_spacy" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.local_main">
     <configuration name="local_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hovor-exec" />
@@ -221,7 +228,9 @@
       <workItem from="1754398264533" duration="7000" />
       <workItem from="1754398330046" duration="1000" />
       <workItem from="1754407409882" duration="5695000" />
-      <workItem from="1754510123019" duration="39434000" />
+      <workItem from="1754510123019" duration="39490000" />
+      <workItem from="1755176780176" duration="20101000" />
+      <workItem from="1755550136610" duration="22947000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
@@ -333,6 +342,16 @@
           <line>21</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py</url>
+          <line>615</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -344,6 +363,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main__1_.coverage" NAME="local_main (1) Coverage Results" MODIFIED="1746731521096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor" />
     <SUITE FILE_PATH="coverage/contingent_plan_executor$remote_main.coverage" NAME="local_main Coverage Results" MODIFIED="1744298702691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1754587591579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1755708441986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
