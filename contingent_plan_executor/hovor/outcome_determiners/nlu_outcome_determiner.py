@@ -60,10 +60,10 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
     def parse_synset_name(synset):
         return synset.name().split(".")[0]
 
-    def find_spacy_entity(self, method: str):
-        if method in self.spacy_entities:
-            if self.spacy_entities[method]:
-                return self.spacy_entities[method].pop()
+    #def find_spacy_entity(self, method: str):
+        #if method in self.spacy_entities:
+            #if self.spacy_entities[method]:
+                #return self.spacy_entities[method].pop()
 
     def find_spacy_entity(self, entity: str):
         """
@@ -104,13 +104,12 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
             ## We also need spacy not in spacy_labels -- how am I adding this in
             if extracted["entity"] in SPACY_LABELS:
-                print(f"We entered here with: {extracted['entity']}")
-
                 ## something funky is going on when I'm setting these I think -- the format is off when I'm trying to use it in extract_regex
                 if extracted["entity"] in self.spacy_entities:
+                    # I think there's something weird going on with these appends
                     self.spacy_entities[extracted["entity"]].append(extracted)
                 else:
-                    self.spacy_entities[extracted["entity"]] = [extracted]
+                    self.spacy_entities[extracted["entity"]] = extracted ## maybe need to remove []
             """
             else:
                 if extracted["entity"] in self.randomly_selected_entities:
@@ -195,6 +194,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         if self.spacy_entities: #self.randomly_selected_entities:
             for ext_ent in self.spacy_entities: #self.randomly_selected_entities:
                 ## this is what spacy_entities looks like: {'OUTING_TYPE':[{'entity':'OUTING_TYPE', 'value':'fun'}]}
+
                 match = re.fullmatch(pattern, self.spacy_entities[ext_ent]["value"])#self.randomly_selected_entities[ext_ent]["value"])
 
                 if match:
@@ -208,9 +208,25 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
         if match:
             extracted = entity
+            certainty = 1.0
 
             #raise NotImplementedError( "Search other extraction types for numbers we \can check against the regex (optional).")
-        return extracted
+        return extracted, certainty
+
+    def extract_spacy(self, entity: str):
+        extracted = self.find_spacy_entity(entity.upper()
+            # I don't know if this will always work, may need a try catch for enum versus json
+            #self.context_variables[entity].upper() #["config"]["extraction"]["spacy"]
+        )
+
+        if not extracted:
+            ## this is where you might want to try another method
+            return None, None
+        else:
+            certainty = "found"
+
+        return extracted, certainty
+
 
     def extract_entity(self, entity: str):
         """Extract an entity according to the extraction ordering.
@@ -222,51 +238,17 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             Optional[Dict]: Contains the extraction information if extracted;
                 otherwise None.
         """
-        ordering = self.determine_extraction_ordering(entity)
+        if self.context_variables[entity]["type"] == "json":
+            method = self.context_variables[entity]["config"]["extraction"]["method"]
 
-        for i in range(len(ordering)):
-            # attempt to extract the entity
-            if ordering[i] == "regex":
-                extracted = self.extract_regex(entity)
+            if method == "spacy":
+                extracted, certainty = self.extract_spacy(entity)
+            elif method == "regex":
+                extracted, certainty = self.extract_regex(entity)
 
-            ## Need to change this specifically for random
-            elif ordering[i] == "spacy":
-
-                ## this is not the right input
-                extracted = self.find_spacy_entity(entity)
-                    #self.context_variables[entity]["config"]["extraction"][
-                        #"config_method"
-                    #].upper()
-
-            else:
-                extracted = "dummy-extraction"
-                ## Is this what we need to do with nltk?
-                #extracted = self.find_nltk_entity(
-                    #self.context_variables[entity]["config"]["extraction"][
-                        #"config_method"
-                    #].upper()
-                #)
-                #raise NotImplementedError("Implement this.")
-
-            ## But we will enter this
-            if extracted:
-                # certainty won't be "known" if we didn't extract with our first pick
-                # ignore this with regexes though (don't really care where we get it
-                # from as long as we get a match)
-
-                if ordering[i] == "regex":
-                    certainty = "found"
-                else:
-                    if i == 0:
-                        certainty = "found"
-                    else:
-                        certainty = "maybe-found"
-
-                        ## Unknown
-                #certainty = ("known" if i == 0 else "maybe-known") \
-                             #if ordering != "regex" else "known"
-                break
-
+        ## this is if it is enum
+        else:
+            extracted, certainty = self.extract_spacy(entity)
 
         if extracted:
             return {
@@ -274,6 +256,46 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 "value": extracted["value"],
                 "certainty": certainty,
             }
+
+        """
+        ordering = self.determine_extraction_ordering(entity)
+
+        for i in range(len(ordering)):
+            # attempt to extract the entity
+            if ordering[i] == "regex":
+                extracted = self.extract_regex(entity)
+            ## Need to change this specifically for random
+            elif ordering[i] == "spacy":
+
+                ## this is not the right input
+                extracted = self.context_variables[entity]["config"]["extraction"][
+                        "config_method"
+                    ].upper()
+                    #self.find_spacy_entity(entity)
+            else:
+                raise NotImplementedError("Implement this.")
+
+            ## But we will enter this
+            if extracted:
+                # certainty won't be "known" if we didn't extract with our first pick
+                # ignore this with regexes though (don't really care where we get it
+                # from as long as we get a match)
+                
+                if ordering[i] == "regex":
+                    certainty = "known"#"found"
+                else:
+                    if i == 0:
+                        certainty = "known" #"found"
+                    else:
+                        certainty = "known" #"maybe-found"
+                
+                
+                        ## Unknown
+                certainty = ("known" if i == 0 else "maybe-known") \
+                             if ordering != "regex" else "known"
+                break
+        """
+
 
     def extract_entities(self, intent):
         """Attempts to extract all entities from an intent.
@@ -293,8 +315,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 entities[entity] = self.extracted_entities[entity]
             else:
                 # raw extract single entity, then validate
-
-                ## So maybe this is the issue?
                 extracted_info = self.extract_entity(entity)
 
                 if extracted_info:
@@ -339,9 +359,9 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             # check to make sure this intent was at least DETECTED
             intent_name = out_cfg["intent"] ## now you can replace nonsense
 
-            if out_cfg["intent"] in intents_detected:
+            if intent_name in intents_detected:
 
-                if self.intents[out_cfg["intent"]]["entities"]:
+                if self.intents[intent_name]["entities"]:
                     # we only want to consider assignments that are variables of the
                     # intent, as outcomes often have other updates for existing entities.
                     entity_reqs = {
@@ -352,23 +372,23 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
                     intents.append(
                         Intent(
-                            out_cfg["intent_cfg"]
+                            name = out_cfg["intent_cfg"]
                             if "intent_cfg" in out_cfg
                             else out_cfg["intent"],
                             # use the assignments key so we get the required certainty
                             # for each entity
-                            frozenset(entity_reqs.items()),
-                            outcome_groups[out],
-                            intents_detected[out_cfg["intent"]],
+                            entity_reqs = frozenset(entity_reqs.items()),
+                            outcome = outcome_groups[out],
+                            confidence = intents_detected[intent_name],
                         )
                     )
                 else:
                     intents.append(
                         Intent(
-                            name = out_cfg["intent"],
+                            name = intent_name,
                             entity_reqs = None,
                             outcome = outcome_groups[out],
-                            confidence = intents_detected[out_cfg["intent"]],
+                            confidence = intents_detected[intent_name],
                         )
                     )
             elif out_cfg["intent"] == "fallback":
@@ -444,6 +464,8 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 break
         ## guarantee that the one that you matched and broke for because you already sorted and zero-ed out everything
         ## add the sort back
+        intents.sort()
+
         return intents
 
 
@@ -594,6 +616,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         intents = self.get_raw_rankings(
             progress.json["action_result"]["fields"]["input"], outcome_groups
         )
+
         chosen_intent = intents[0]
         ranked_groups = [(intent.outcome, intent.confidence) for intent in intents]
         # entities required by the extracted intent
@@ -620,9 +643,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                             else:
                                 # if it is not part of the progress yet and we just extracted entities,
                                 if chosen_intent.entity_reqs:
-                                    print(f"chosen_intent.entity_reqs: {chosen_intent.entity_reqs}")
-                                    print(f"ci_ent_reqs: {ci_ent_reqs}")
-
                                     # check if we just extracted it
                                     if value in ci_ent_reqs:
                                         value = self.extracted_entities[value]["sample"]
@@ -668,16 +688,33 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             if entity_type == "json"
             else False
         )
+
+        ## will need to update this to handle location case?
+        if type(entity_config) != list:
+            variations = []
+            for entity, details in entity_config.items():
+                #print(details['variations'])
+                #config = details.get("config", {})
+                #if "options" in config:  # the 'location' style
+                    #for option in config["options"].values():
+                        #entity_config += [option.get("variations", [])]
+                #else:  # the 'outing_type' style
+                variations += details["variations"]
+
+            entity_config = variations
+
         if spacy_w_opts:
             entity_config = entity_config["options"]
         if spacy_w_opts or entity_type == "enum":
             # lowercase all strings in entity_config, map back to original casing
             entity_config = {e.lower(): e for e in entity_config}
             entity_value = entity_value.lower()
+
             if entity_value in entity_config:
                 extracted_info["sample"] = entity_config[entity_value]
                 return extracted_info
             else:
+                ## never going to enter this loop because we have known not found
                 if "known" in self.context_variables[entity]:
                     if self.context_variables[entity]["known"]["type"] == "fflag":
                         extracted_info["certainty"] = "maybe-found"
@@ -687,9 +724,11 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                         )
                         if spell_corrected_e_val != entity_value:
                             entity_value = spell_corrected_e_val
+
                             if entity_value in entity_config:
                                 extracted_info["sample"] = entity_config[entity_value]
                                 return extracted_info
+
                         # as a last ditch effort, try to use wordnet to decipher what the user meant
                         for syn in wordnet.synsets(entity_value):
                             for option in entity_config:
@@ -708,28 +747,28 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                                         extracted_info["sample"] = entity_config[d]
                                         return extracted_info
                             for hyp in syn.hypernyms():
-                                hyp = NLTKOutcomeDeterminer.parse_synset_name(
+                                hyp = NLUOutcomeDeterminer.parse_synset_name(
                                     hyp
                                 ).lower()
                                 if hyp in entity_config:
                                     extracted_info["sample"] = entity_config[hyp]
                                     return extracted_info
                             for hyp in syn.hyponyms():
-                                hyp = NLTKOutcomeDeterminer.parse_synset_name(
+                                hyp = NLUOutcomeDeterminer.parse_synset_name(
                                     hyp
                                 ).lower()
                                 if hyp in entity_config:
                                     extracted_info["sample"] = entity_config[hyp]
                                     return extracted_info
                             for hol in syn.member_holonyms():
-                                hol = NLTKOutcomeDeterminer.parse_synset_name(
+                                hol = NLUOutcomeDeterminer.parse_synset_name(
                                     hol
                                 ).lower()
                                 if hol in entity_config:
                                     extracted_info["sample"] = entity_config[hol]
                                     return extracted_info
                             for hol in syn.root_hypernyms():
-                                hol = NLTKOutcomeDeterminer.parse_synset_name(
+                                hol = NLUOutcomeDeterminer.parse_synset_name(
                                     hol
                                 ).lower()
                                 if hol in entity_config:
@@ -742,8 +781,10 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             return extracted_info
         else:
             raise NotImplementedError("Cant sample from type: " + entity_type)
+
         extracted_info["certainty"] = "didnt-find"
         extracted_info["sample"] = None
+
         return extracted_info
 
     def _report_entities(self, response, progress):

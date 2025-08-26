@@ -77,6 +77,7 @@ def run_outcome_determination(session, action_execution_result):
 
     initial_progress = OutcomeDeterminationProgress(session, action_execution_result)
     final_progress, confidence = action.outcome_group.update_progress(initial_progress)
+    print(final_progress, confidence)
 
     return final_progress, confidence
 
