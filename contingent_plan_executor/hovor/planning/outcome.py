@@ -10,6 +10,7 @@ class Outcome(object):
 
     def is_valid(self):
         """Determine whether the defined outcome is valid. E.g. has all required context fields present."""
+        print(f"is_valid, this is the new context: {self.new_context}")
 
         return self.new_state.is_context_valid(self.new_context)
 

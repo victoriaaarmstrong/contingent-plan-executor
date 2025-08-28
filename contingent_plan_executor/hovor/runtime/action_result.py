@@ -42,7 +42,6 @@ class ActionResult(FieldsContainer):
 
     def set_field(self, field, value):
         self._require_modification_rights()
-
         super().set_field(field, value)
 
     def _can_be_modified(self):

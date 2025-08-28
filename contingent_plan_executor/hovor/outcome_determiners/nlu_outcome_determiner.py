@@ -251,6 +251,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             extracted, certainty = self.extract_spacy(entity)
 
         if extracted:
+
             return {
                 "extracted": extracted,
                 "value": extracted["value"],
@@ -653,6 +654,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                                                         an unknown variable value."
                                         )
                     progress.add_detected_entity(update_var, value)
+
         DEBUG("\t top random ranking for group '%s'" % (chosen_intent.name))
 
         return ranked_groups, progress
@@ -787,6 +789,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
         return extracted_info
 
+    """
     def _report_entities(self, response, progress):
         super()._report_entities(response, progress)
 
@@ -805,7 +808,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             value_providers.append(value_provider)
 
         return value_providers
-
+   
     def _parse_value_provider(self, utterance):
         matchers = []
 
@@ -865,3 +868,4 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
         return masked_intents
 
+    """

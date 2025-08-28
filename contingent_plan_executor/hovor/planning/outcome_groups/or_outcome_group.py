@@ -17,14 +17,13 @@ class OrOutcomeGroup(OutcomeGroupBase):
         # every group can have some effect defined (e.g. assign determination result to context)
         updated_progress.apply_effect(self.name)
 
-        # find valid group with top confidence
         for group, confidence in sorted(ranked_groups, key=lambda r: -r[1]):
             final_progress, conf = group.update_progress(updated_progress.create_child())
+
             if final_progress is None or not final_progress.is_valid():
                 continue
-            ## it looks like final progress is not valid?
 
-            #DEBUG("\t OR group '%s' chooses child '%s' with confidence '%.2f'" % (self.name, group.name, confidence))
+            DEBUG("\t OR group '%s' chooses child '%s' with confidence '%.2f'" % (self.name, group.name, confidence))
             return final_progress, confidence
 
         raise AssertionError("No outcome group has valid outcome.")
