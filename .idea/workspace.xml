@@ -6,12 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/execution_monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/execution_monitor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome_groups/or_outcome_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome_groups/or_outcome_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/action_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/action_result.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/outcome_determination_progress.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/outcome_determination_progress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entities/meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entities/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/ner/moves" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entities/ner/moves" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tagger/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entities/tagger/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entities/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entity_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/entity_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/spacy_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,23 +76,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.local_main (1).executor": "Run",
-    "Python.local_main.executor": "Debug",
-    "Python.remote_main.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.local_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.local_main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.remote_main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/training_spacy" />
@@ -234,7 +245,8 @@
       <workItem from="1756214275075" duration="19798000" />
       <workItem from="1756246049055" duration="1059000" />
       <workItem from="1756295931367" duration="3586000" />
-      <workItem from="1756393442167" duration="12325000" />
+      <workItem from="1756393442167" duration="13411000" />
+      <workItem from="1756472560206" duration="40570000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
@@ -346,11 +358,6 @@
           <line>21</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome_groups/or_outcome_group.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -369,6 +376,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main__1_.coverage" NAME="local_main (1) Coverage Results" MODIFIED="1746731521096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor" />
     <SUITE FILE_PATH="coverage/contingent_plan_executor$remote_main.coverage" NAME="local_main Coverage Results" MODIFIED="1744298702691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1756411897531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1756482891962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -165,7 +165,6 @@ class OutcomeDeterminationProgress(object):
         info = self.get_outcome_determination_info(outcome_group_name)
 
         for context_effect in info.context_effects:
-            print(context_effect.entity)
             self.run_effect(context_effect)
 
     def run_effect(self, context_effect):

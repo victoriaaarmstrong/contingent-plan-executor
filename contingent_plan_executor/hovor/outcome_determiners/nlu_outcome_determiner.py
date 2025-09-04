@@ -106,19 +106,16 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             if extracted["entity"] in SPACY_LABELS:
                 ## something funky is going on when I'm setting these I think -- the format is off when I'm trying to use it in extract_regex
                 if extracted["entity"] in self.spacy_entities:
-                    # I think there's something weird going on with these appends
-                    self.spacy_entities[extracted["entity"]].append(extracted)
+                    self.spacy_entities[extracted["entity"]].update(extracted)
                 else:
                     self.spacy_entities[extracted["entity"]] = extracted ## maybe need to remove []
-            """
-            else:
-                if extracted["entity"] in self.randomly_selected_entities:
-                    self.randomly_selected_entities[extracted["entity"]].append(extracted)
+            #else:
+                #if extracted["entity"] in self.regex_entities:
+                    #self.regex_entities[extracted["entity"]].update(extracted)
                     #self.randomly_selected_entities.append(extracted)
-                else:
-                    self.randomly_selected_entities[extracted["entity"]] = extracted
+                #else:
+                    #self.regex_entities[extracted["entity"]] = extracted
                 #raise NotImplementedError("Implement this.")
-            """
 
 
     # TODO: replace with general "execute with ordering" function
@@ -168,28 +165,16 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         """
 
         extracted = None
+        certainty = None
 
-        try:
-            pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
-        except:
-            pattern = r"\b\w+\s"
+        pattern = r"^\d{3}[- ]?\d{3}[- ]?\d{4}$"
+        #try:
+            #pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
+        #except:
+            #pattern = r"\b\w+\s"
 
         ## Extracted entities is Null here
         # but I think that makes sense if this is the first loop
-
-        ## don't have spacy entities rn, so we can ignore this block, we enter the else
-        '''
-        if self.spacy_entities:
-            if "CARDINAL" in self.spacy_entities:
-                # iterate through all CARDINAL entities and see if any match
-                for ext_ent in self.spacy_entities["CARDINAL"]:
-                    match = re.fullmatch(pattern, ext_ent["value"])
-                    if match:
-                        extracted = ext_ent
-                        break
-            else:
-                return None
-        '''
 
         if self.spacy_entities: #self.randomly_selected_entities:
             for ext_ent in self.spacy_entities: #self.randomly_selected_entities:
@@ -202,13 +187,11 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                     break
 
         else:
-            ## I need the value, not the entity to extract here
             match = re.fullmatch(pattern, entity)
-
 
         if match:
             extracted = entity
-            certainty = 1.0
+            certainty = "found"
 
             #raise NotImplementedError( "Search other extraction types for numbers we \can check against the regex (optional).")
         return extracted, certainty
@@ -244,7 +227,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             if method == "spacy":
                 extracted, certainty = self.extract_spacy(entity)
             elif method == "regex":
-                extracted, certainty = self.extract_regex(entity)
+                extracted, certainty = self.extract_spacy(entity)
 
         ## this is if it is enum
         else:
@@ -257,45 +240,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 "value": extracted["value"],
                 "certainty": certainty,
             }
-
-        """
-        ordering = self.determine_extraction_ordering(entity)
-
-        for i in range(len(ordering)):
-            # attempt to extract the entity
-            if ordering[i] == "regex":
-                extracted = self.extract_regex(entity)
-            ## Need to change this specifically for random
-            elif ordering[i] == "spacy":
-
-                ## this is not the right input
-                extracted = self.context_variables[entity]["config"]["extraction"][
-                        "config_method"
-                    ].upper()
-                    #self.find_spacy_entity(entity)
-            else:
-                raise NotImplementedError("Implement this.")
-
-            ## But we will enter this
-            if extracted:
-                # certainty won't be "known" if we didn't extract with our first pick
-                # ignore this with regexes though (don't really care where we get it
-                # from as long as we get a match)
-                
-                if ordering[i] == "regex":
-                    certainty = "known"#"found"
-                else:
-                    if i == 0:
-                        certainty = "known" #"found"
-                    else:
-                        certainty = "known" #"maybe-found"
-                
-                
-                        ## Unknown
-                certainty = ("known" if i == 0 else "maybe-known") \
-                             if ordering != "regex" else "known"
-                break
-        """
 
 
     def extract_entities(self, intent):
@@ -421,7 +365,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         for intent in intents:
             # if this intent expects entities, make sure we extract them
             if intent.entity_reqs != None:
-
                 entities = self.extract_entities(intent)
 
                 if intent.entity_reqs == frozenset(
@@ -518,56 +461,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
 
         #print(f"What spacy got: {max(spacy_intent_doc.cats, key=spacy_intent_doc.cats.get)}, {[(ent.text, ent.label_) for ent in spacy_ents_doc.ents]}.")
 
-        """
-        ## Get the intents first to play around with extracting stuff with regex
-        possible_outcome_groups = []
-        for out in outcome_groups:
-            possible_outcome_groups.append(out.name)
-
-        full_outcomes_info = self.full_outcomes
-
-        ## for all possible outcomes, get the intent names to make a list of all of the utterances and all of the entity requirements
-        dummy_intents = {}
-        for out in possible_outcome_groups:
-            info = full_outcomes_info[out]
-            dummy_intents.update({info['intent'] : info['entity_requirements']})
-
-        intents = self.intents
-
-        ## now that we have all of the possible intents from the outcomes, I want to get all of the utterances for each of those intents
-        utterances_to_check = []
-        for intent, utterances in intents.items():
-            if intent in dummy_intents:
-                utterances_to_check += utterances["utterances"]
-
-        patterns = [self.mask_utterance(u) for u in utterances_to_check]
-
-        values = self.extract_values(patterns, input)
-
-        ## Something for confirm and deny intents
-        confirm_utterances = intents['confirm']['utterances']
-        deny_utterances = intents['deny']['utterances']
-                                                        #deny] else "neither"
-        if len(values) != 0:
-            selected_intent = self.match_intent_from_entities(dummy_intents, values)
-
-        else:
-            ## Replace with something to see if it's confirm or deny in a more dynamic way
-            if input.lower() in [c.lower() for c in confirm_utterances]:
-                selected_intent = "confirm"
-            elif input.lower() in [d.lower() for d in deny_utterances]:
-                selected_intent = "deny"
-            else:
-                selected_intent = "fallback"
-
-        ## This is what had matched the original rasa extraction
-        r = {"intent_ranking": [
-            {"name": selected_intent, "confidence": 0.99},
-        ],
-            "entities": []
-        }
-        """
-
         ## create an r datastructure to match what rasa had been giving us
         r = {"intent_ranking": [],
             "entities": []
@@ -586,14 +479,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 "entity": entity_tuple[1],
                 "value": entity_tuple[0],
             })
-
-        """
-        for key, value in values.items():
-            r["entities"].append({
-                "entity": key,
-                "value": value,
-            })
-        """
 
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
@@ -655,7 +540,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                                         )
                     progress.add_detected_entity(update_var, value)
 
-        DEBUG("\t top random ranking for group '%s'" % (chosen_intent.name))
+        #DEBUG("\t top random ranking for group '%s'" % (chosen_intent.name))
 
         return ranked_groups, progress
 
@@ -681,32 +566,24 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         """
         entity_value = extracted_info["value"]
 
-        # entity is extracted with spacy and has options specified
-        spacy_w_opts = (
-            (
-                entity_config["extraction"]["method"] == "spacy"
-                and "options" in entity_config
-            )
-            if entity_type == "json"
-            else False
-        )
+        ## if we have options/variations for our entity
+        spacy_w_opts = False
+        if type(entity_config) != list and entity_type != "json":
+            spacy_w_opts = True
 
-        ## will need to update this to handle location case?
-        if type(entity_config) != list:
-            variations = []
-            for entity, details in entity_config.items():
-                #print(details['variations'])
-                #config = details.get("config", {})
-                #if "options" in config:  # the 'location' style
-                    #for option in config["options"].values():
-                        #entity_config += [option.get("variations", [])]
-                #else:  # the 'outing_type' style
-                variations += details["variations"]
-
-            entity_config = variations
-
+        ## adjust the possible options and sort things into the appropriate master category if we have variations
         if spacy_w_opts:
-            entity_config = entity_config["options"]
+            try:
+                categories = entity_config["options"]
+                entity_config = entity_config["options"]
+            except:
+                categories = entity_config
+
+            for key, value in categories.items():
+                if entity_value in value["variations"]:
+                    entity_value = key
+
+        ## now we can make the sample types with the propety formatted configs & values
         if spacy_w_opts or entity_type == "enum":
             # lowercase all strings in entity_config, map back to original casing
             entity_config = {e.lower(): e for e in entity_config}
@@ -716,7 +593,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 extracted_info["sample"] = entity_config[entity_value]
                 return extracted_info
             else:
-                ## never going to enter this loop because we have known not found
                 if "known" in self.context_variables[entity]:
                     if self.context_variables[entity]["known"]["type"] == "fflag":
                         extracted_info["certainty"] = "maybe-found"
@@ -788,84 +664,3 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         extracted_info["sample"] = None
 
         return extracted_info
-
-    """
-    def _report_entities(self, response, progress):
-        super()._report_entities(response, progress)
-
-        for intent_info in response['intents']:
-            intent = intent_info["intent"]
-
-            for provider in self._regex_providers.get(intent, []):
-                updates = provider(progress.action_result.get_field("input"))
-                for entity_name, entity_value in updates.items():
-                    progress.add_detected_entity(entity_name, entity_value)
-
-    def _parse_value_providers(self, utterances):
-        value_providers = []
-        for utterance in utterances:
-            value_provider = self._parse_value_provider(utterance)
-            value_providers.append(value_provider)
-
-        return value_providers
-   
-    def _parse_value_provider(self, utterance):
-        matchers = []
-
-        for groups in re.findall(r"(\$\w+)|([^\$]+)+", utterance):#"(\[regex\]\{[^}]*\})|([^\[\{]+)+", utterance):
-            regex = groups[0]
-            text = groups[1]
-
-            if regex:
-                match = re.search(r"\(\s*'([^']*)'\s*,\s*'([^']*)'\s*\)", regex)#"\{([^:]+):=([^}]+)\}", regex)
-
-                if match == None:
-                    pass
-                else:
-                    target = match.group(1)
-                    pattern = match.group(2)
-                    matchers.append((target, pattern))
-            else:
-                if text.strip() == "":
-                    continue
-
-                matchers.extend(text.split(' '))
-
-        def value_provider(input):
-            collected_values = {}
-
-            current_input = input.split(' ')
-            for matcher in matchers:
-                if isinstance(matcher, str):
-                    if len(current_input) and current_input[0].lower() == matcher.lower():
-                        current_input.pop(0)
-                else:
-                    regex_input = " ".join(current_input)
-                    target_var, regex_pattern = matcher
-                    match = re.search(regex_pattern, regex_input)
-
-                    if not match:
-                        continue
-
-                    value = match.group(0)
-                    collected_values[target_var] = value
-
-                    # remove the recognized part and continue for case multiple regexes is defined
-                    regex_input = regex_input[0:match.span(0)[0]] + regex_input[match.span(0)[1]:]
-                    current_input = regex_input.split(' ')
-
-            return collected_values
-
-        return value_provider
-
-    def _mask_intents(self, intents):
-        masked_intents = {}
-        for intent, utterances in intents.items():
-            masked_intents[intent] = masked_utterances = []
-            for utterance in utterances['utterances']:
-                masked_utterance = self._mask_utterance(utterance)
-                masked_utterances.append(masked_utterance)
-
-        return masked_intents
-
-    """

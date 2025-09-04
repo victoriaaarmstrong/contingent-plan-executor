@@ -145,14 +145,19 @@ def train_intent_model(data_path):
     return nlp
 
 def train_custom():
-    nlp = train_intent_model("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intent_data.xlsx")
-    nlp.to_disk("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intents/")
+    print("Training Intent Model...")
+    nlp_1 = train_intent_model("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intent_data.xlsx")
+    nlp_1.to_disk("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intents/")
 
-    nlp = train_ner_model("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entity_data.xlsx")
-    nlp.to_disk("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/")
+    #print("\nTraining NER Model...")
+   # nlp_2 = train_ner_model("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entity_data.xlsx")
+   # nlp_2.to_disk("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/")
 
     return
 
+train_custom()
+
+"""
 intent_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intents/")
 entity_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/")
 
@@ -163,3 +168,4 @@ print(max(intent_doc.cats, key=intent_doc.cats.get))
 
 entity_doc = entity_nlp(test_text)
 print([(ent.text, ent.label_) for ent in entity_doc.ents])
+"""
