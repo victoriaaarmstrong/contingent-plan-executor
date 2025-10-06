@@ -8,9 +8,9 @@ def run_local_conversation(output_files_path):
 
 
 if __name__ == "__main__":
-    # if len(sys.argv) > 1:
-    #     arg = sys.argv[1]
-    # else:
-    #     raise ValueError("Please provide the directory to your plan4dial output files as a system argument.")
-    arg = "local_data/updated_gold_standard_bot"
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
+    else:
+        raise ValueError("Please provide the directory to your plan4dial output files as a system argument.")
+    #arg = "local_data/updated_gold_standard_bot"
     run_local_conversation(arg)

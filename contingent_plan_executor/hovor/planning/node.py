@@ -6,11 +6,12 @@ class Node(object):
     Other optional info can be added by ConfigurationProvider implementations
     """
 
-    def __init__(self, id, partial_state, is_initial, is_goal):
+    def __init__(self, id, partial_state, is_initial, is_goal, distance):
         self._is_initial = is_initial
         self._is_goal = is_goal
         self._id = id
         self._partial_state = partial_state
+        self._distance = distance
 
     @property
     def node_id(self):

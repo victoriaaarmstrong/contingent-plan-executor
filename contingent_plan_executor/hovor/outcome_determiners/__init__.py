@@ -1,15 +1,29 @@
-import nltk
 import spacy
-import en_core_web_sm
 
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-#nltk.download('averaged_perceptron_tagger_eng')
-#nltk.download('maxent_ne_chunker_tab')
-#nltk.download('words')
+## load all of the labels for entities
+SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
 
-SPACY_LABELS = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/").get_pipe("ner").labels
-nlp = spacy.load("en_core_web_md")
+## load entity model
+entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
 
-intent_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/intents/")
-entity_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/entities/")
+## load intent models and store
+intent_nlp = spacy.load("./training_spacy/gold-standard/intents/")
+confirm_intent_nlp = spacy.load("./training_spacy/gold-standard/confirm_intents/")
+deny_intent_nlp = spacy.load("./training_spacy/gold-standard/deny_intents/")
+share_all_outing_preferences_intent_nlp = spacy.load("./training_spacy/gold-standard/share_all_outing_preferences_intents/")
+share_allergies_intent_nlp = spacy.load("./training_spacy/gold-standard/share_allergies_intents/")
+share_budget_intent_nlp = spacy.load("./training_spacy/gold-standard/share_budget_intents/")
+share_cuisine_intent_nlp = spacy.load("./training_spacy/gold-standard/share_cuisine_intents/")
+share_location_intent_nlp = spacy.load("./training_spacy/gold-standard/share_location_intents/")
+share_outing_type_intent_nlp = spacy.load("./training_spacy/gold-standard/share_outing_type_intents/")
+share_phone_number_intent_nlp = spacy.load("./training_spacy/gold-standard/share_phone_number_intents/")
+
+intent_models = [confirm_intent_nlp,
+                 deny_intent_nlp,
+                 share_all_outing_preferences_intent_nlp,
+                 share_allergies_intent_nlp,
+                 share_budget_intent_nlp,
+                 share_cuisine_intent_nlp,
+                 share_location_intent_nlp,
+                 share_outing_type_intent_nlp,
+                 share_phone_number_intent_nlp]

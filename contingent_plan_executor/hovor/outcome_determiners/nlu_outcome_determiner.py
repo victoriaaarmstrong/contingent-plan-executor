@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Dict
 from operator import attrgetter
 from hovor.outcome_determiners import SPACY_LABELS
-from hovor.outcome_determiners import nlp, intent_nlp, entity_nlp
+from hovor.outcome_determiners import intent_models, entity_nlp #, model
 from hovor.outcome_determiners.outcome_determiner_base import OutcomeDeterminerBase
 from hovor.planning.outcome_groups.deterministic_outcome_group import (
     DeterministicOutcomeGroup,
@@ -24,6 +24,7 @@ import re
 
 import rstr
 import spacy
+import llm
 
 @dataclass
 class Intent:
@@ -167,19 +168,14 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         extracted = None
         certainty = None
 
-        pattern = r"^\d{3}[- ]?\d{3}[- ]?\d{4}$"
-        #try:
-            #pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
-        #except:
-            #pattern = r"\b\w+\s"
+        try:
+            pattern = self.context_variables[entity]["config"]["extraction"]["pattern"]
+        except:
+            pattern = r"\b\w+\s"
 
         ## Extracted entities is Null here
-        # but I think that makes sense if this is the first loop
-
         if self.spacy_entities: #self.randomly_selected_entities:
             for ext_ent in self.spacy_entities: #self.randomly_selected_entities:
-                ## this is what spacy_entities looks like: {'OUTING_TYPE':[{'entity':'OUTING_TYPE', 'value':'fun'}]}
-
                 match = re.fullmatch(pattern, self.spacy_entities[ext_ent]["value"])#self.randomly_selected_entities[ext_ent]["value"])
 
                 if match:
@@ -190,10 +186,9 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             match = re.fullmatch(pattern, entity)
 
         if match:
-            extracted = entity
+            extracted = {'entity': entity, 'value': match[0]}
             certainty = "found"
 
-            #raise NotImplementedError( "Search other extraction types for numbers we \can check against the regex (optional).")
         return extracted, certainty
 
     def extract_spacy(self, entity: str):
@@ -227,7 +222,7 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
             if method == "spacy":
                 extracted, certainty = self.extract_spacy(entity)
             elif method == "regex":
-                extracted, certainty = self.extract_spacy(entity)
+                extracted, certainty = self.extract_regex(entity)#self.extract_spacy(entity)
 
         ## this is if it is enum
         else:
@@ -452,14 +447,10 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
         Returns:
             intents (List[Intents]): The intent ranking.
         """
-        ## Just testing to see what spacy says at each time step...
         spacy_intent_doc = intent_nlp(input)
         spacy_ents_doc = entity_nlp(input)
 
         labeled_ents = [(ent.text, ent.label_) for ent in spacy_ents_doc.ents]
-        #print(labeled_ents)
-
-        #print(f"What spacy got: {max(spacy_intent_doc.cats, key=spacy_intent_doc.cats.get)}, {[(ent.text, ent.label_) for ent in spacy_ents_doc.ents]}.")
 
         ## create an r datastructure to match what rasa had been giving us
         r = {"intent_ranking": [],
@@ -480,7 +471,13 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                 "value": entity_tuple[0],
             })
 
-        intents = self.filter_intents(r, outcome_groups)
+        #response = model.prompt(PROMPT + input) #, key="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")
+        #print(response.text())
+
+        print(r["intent_ranking"])
+        print(r["entities"])
+
+        intents = self.filter_intents(r, outcome_groups) ## check filtering
         self.initialize_extracted_entities(r["entities"])
         return self.extract_intents(intents)
 
@@ -541,7 +538,6 @@ class NLUOutcomeDeterminer(OutcomeDeterminerBase):
                     progress.add_detected_entity(update_var, value)
 
         #DEBUG("\t top random ranking for group '%s'" % (chosen_intent.name))
-
         return ranked_groups, progress
 
     def _make_entity_type_sample(

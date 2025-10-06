@@ -31,7 +31,7 @@
             "config": {
                 "extraction": {
                     "method": "regex",
-                    "pattern": "\\d{10}"
+                    "pattern": "\\d{3}-?\\d{3}-?\\d{4}"
                 }
             },
             "known": {

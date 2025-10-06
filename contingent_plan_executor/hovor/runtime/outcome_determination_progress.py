@@ -197,6 +197,10 @@ class OutcomeDeterminationProgress(object):
     def add_detected_entity(self, entity, value):
         self._actual_determination_result.set_field(entity, value)
 
+    ## Use if there are extra entities that you detected that aren't in the
+    def add_extra_entity(self, entity, value):
+        self._actual_context.set_field(entity, value)
+
     def finalize(self, outcome_name):
         self._final_outcome_name = outcome_name
 

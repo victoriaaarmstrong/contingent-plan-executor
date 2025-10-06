@@ -1,0 +1,16 @@
+{
+  "labels":[
+    "confirm",
+    "deny",
+    "share_account",
+    "share_transfer_settings",
+    "share_e_transfer",
+    "share_request",
+    "share_bill",
+    "share_create",
+    "share_done",
+    "fallback"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}

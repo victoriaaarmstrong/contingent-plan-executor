@@ -9,6 +9,7 @@ from hovor.outcome_determiners.default_system_outcome_determiner import DefaultS
 from hovor.outcome_determiners.outcome_determination_info import OutcomeDeterminationInfo
 from hovor.outcome_determiners.random_outcome_determiner import RandomOutcomeDeterminer
 from hovor.outcome_determiners.nlu_outcome_determiner import NLUOutcomeDeterminer
+from hovor.outcome_determiners.spacy_ac_outcome_determiner import SpacyDynamicOutcomeDeterminer
 from hovor.outcome_determiners.web_call_outcome_determiner import WebCallOutcomeDeterminer
 from hovor.planning import controller
 from hovor.planning.controller.edge import ControllerEdge
@@ -106,12 +107,14 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
             state_fluents = plan_data["states"][state_id]
             action_name = plan_data["nodes"][node_id]["action"]
 
+            distance = plan_data["nodes"][node_id]["distance"]
+
             # build a node with its partial state
             is_initial_state = node_id == self._sanitize_node_id(plan_data["init"])
             is_goal_state = node_id == self._sanitize_node_id(plan_data["goal"])
 
             partial_state = PartialState(state_fluents)
-            node = ControllerNode(node_id, partial_state, is_initial_state, is_goal_state)
+            node = ControllerNode(node_id, partial_state, is_initial_state, is_goal_state, distance)
 
             # set action name performed at the node
             node.action_name = action_name
@@ -229,7 +232,8 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
             return DefaultSystemOutcomeDeterminer()
 
         if outcome_determiner_name == "disambiguation_outcome_determiner":
-            return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            #return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            return SpacyDynamicOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
             #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
 
         if outcome_determiner_name == "web_call_outcome_determiner":

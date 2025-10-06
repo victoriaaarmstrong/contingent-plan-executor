@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "share_all_outing_preferences",
+    "fallback"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
