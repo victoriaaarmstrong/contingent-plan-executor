@@ -45,8 +45,12 @@ class Plan(PlanBase):
 
         return children
 
-    def basic_atomify(self, entities):
-
+    def atomify(self, entities):
+        """
+        Takes a list of detected entities and returns the atomified (i.e. "Atom know__) version.
+        It only cares about detected entities, so any entities that still have a value of None are ignored
+        (which is why we only care about Atom not NegatedAtom)
+        """
         atoms = []
 
         only_known_entities = {k: v for k, v in entities.items() if v is not None}
@@ -59,7 +63,6 @@ class Plan(PlanBase):
 
 
     def get_next_node(self, next_state, outcome_name):
-
 
         candidates = []
         for child_name, child in next_state.named_children:
@@ -82,16 +85,20 @@ class Plan(PlanBase):
 
 
     def get_better_node(self, progress):
-
+        """
+        Iterates over all nodes in the Controller and builds a list of candidate nodes entailed by the complete state.
+        Candidate nodes are sorted from closest to further from the goal, and the closest node is returned.
+        If there are no candidates, None is returned, and a fallback can occur.
+        Our current node is in the possible list of candidate nodes, so if the current node is indeed the best, it is selected.
+        """
         ## translate context to a ps
-        fluents = PartialState(self.basic_atomify(progress.actual_context.__dict__['_fields']))
+        fluents = PartialState(self.atomify(progress.actual_context.__dict__['_fields']))
         updated_complete_states = progress.actual_state.update_by(fluents)
 
         ## build a list of possible candidates if they are a subset of the complete_state
         new_EM_candidates = {}
         for node in self.nodes:
             node_fluents = set(node.partial_state.fluents)
-            #print(f"missing fluents: {node_fluents - (node_fluents.intersection(atoms))}")
             if node_fluents.issubset(set(updated_complete_states.fluents)):
                 new_EM_candidates.update({node:node._distance})
 

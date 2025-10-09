@@ -62,15 +62,8 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
     def parse_synset_name(synset):
         return synset.name().split(".")[0]
 
-    #def find_spacy_entity(self, method: str):
-        #if method in self.spacy_entities:
-            #if self.spacy_entities[method]:
-                #return self.spacy_entities[method].pop()
-
     def find_spacy_entity(self, entity: str):
         """
-        **TODO: REPLACE THIS STUB**
-
         Return the entity if it exists.
 
         Create one of these for every extraction type (i.e. spacy) used
@@ -84,12 +77,8 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         if entity in self.spacy_entities:
             return self.spacy_entities[entity]
 
-        #raise NotImplementedError("Implement this function.")
-
     def initialize_extracted_entities(self, entities: Dict):
         """
-        **TODO: REPLACE THIS STUB**
-
         Initialize the entities into their respective categories.
         You want to do this so you can extract entities according to their extraction
         specifications, as well as set "orderings" for extraction types. for example,
@@ -104,61 +93,13 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
         for extracted in entities:
 
-            ## We also need spacy not in spacy_labels -- how am I adding this in
             if extracted["entity"] in SPACY_LABELS:
-                ## something funky is going on when I'm setting these I think -- the format is off when I'm trying to use it in extract_regex
                 if extracted["entity"] in self.spacy_entities:
                     self.spacy_entities[extracted["entity"]].update(extracted)
                 else:
-                    self.spacy_entities[extracted["entity"]] = extracted ## maybe need to remove []
-
-            #else:
-                #if extracted["entity"] in self.regex_entities:
-                    #self.regex_entities[extracted["entity"]].update(extracted)
-                    #self.randomly_selected_entities.append(extracted)
-                #else:
-                    #self.regex_entities[extracted["entity"]] = extracted
-                #raise NotImplementedError("Implement this.")
-
-
-    # TODO: replace with general "execute with ordering" function
-    def determine_extraction_ordering(self, entity: str):
-        """Determines the extraction ordering of the entity based on its
-        extraction settings.
-
-        For reference, these were the orderings previously used when Rasa
-        was used for NLU (feel free to use these or make your own).
-        - if specified to use "spacy":
-            - try extracting with spacy, then rasa.
-        - if there is no specification (i.e. rasa):
-            - try extracting with rasa, then spacy.
-        - if it is a regex:
-            - try extracting with rasa first and checking the pattern.
-              otherwise, try with spacy and checking the pattern against
-              any extracted CARDINAL values. (since this extraction is
-              different, it has its own function, so specify this with "regex").
-
-        Args:
-            entity (str): The name of the entity.
-
-        Returns (List[str]): List of strings that represents the ordering.
-        """
-
-        """
-        extracted = self.find_randomly_selected_entity(entity)
-        if not extracted:
-            return None, None
-        else:
-            certainty = "found"
-
-        return extracted, certainty
-        """
-
-        ## YOU CAN HARD CODE This
-        return ["spacy", "regex"]
-
-        ## just always do regex for now
-        #raise NotImplementedError("Implement this function.")
+                    self.spacy_entities[extracted["entity"]] = extracted
+            else:
+                raise AssertionError("We managed to extract an entity that Spacy doesn't recognize")
 
     # TODO: turn into stub
     def extract_regex(self, entity):
@@ -175,10 +116,9 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         except:
             pattern = r"\b\w+\s"
 
-        ## Extracted entities is Null here
-        if self.spacy_entities: #self.randomly_selected_entities:
-            for ext_ent in self.spacy_entities: #self.randomly_selected_entities:
-                match = re.fullmatch(pattern, self.spacy_entities[ext_ent]["value"])#self.randomly_selected_entities[ext_ent]["value"])
+        if self.spacy_entities:
+            for ext_ent in self.spacy_entities:
+                match = re.fullmatch(pattern, self.spacy_entities[ext_ent]["value"])
 
                 if match:
                     extracted = ext_ent
@@ -200,7 +140,6 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         )
 
         if not extracted:
-            ## this is where you might want to try another method
             return None, None
         else:
             certainty = "found"
@@ -251,14 +190,11 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         entities = {}
         # get entity requirements
 
-        #print(self.context_variables.keys())
-
         ## updated version where I actually iterate over all possible entities to add what has been updated
         for entity in self.context_variables.keys():
 
         # this is the original where I want to iterate through all of the intent requirements
         #for entity in {f[0] for f in intent.entity_reqs}:
-            #print(entity)
             if entity in self.extracted_entities:
                 entities[entity] = self.extracted_entities[entity]
             else:
@@ -396,7 +332,6 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
             # cuisine is "found" and the sister intent share_cuisine where cuisine is "maybe-found" will
             # have the same confidence, but we only want the right one to be chosen.
 
-            ## we DONT hit here
             for intent in intents:
                 if intent.entity_reqs == None:
                     pass
@@ -415,39 +350,10 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                 )
                 break
         ## guarantee that the one that you matched and broke for because you already sorted and zero-ed out everything
-        ## add the sort back
+
         intents.sort()
 
         return intents
-
-
-    ## From Jacob's code to randomly generate an example regex value
-    def example_regex_entity(self, regex):
-        """
-        This function uses the rstr library to generate a
-        random string matching the given regex.
-        """
-
-        return rstr.xeger(regex)
-
-    def mask_utterance(self, utterance):
-        return re.sub(r'\$([a-zA-Z_]+)', r'(?P<\1>.+)', utterance)
-        #return re.sub(r"\$\w+", "something", utterance)
-        #return re.sub("(\[regex\]\{[^}]*\})", " something ", utterance)
-
-    def extract_values(self, patterns, input_sentence):
-        for pattern in patterns:
-            match = re.fullmatch(pattern, input_sentence)
-            if match:
-                return {k: v.strip() for k, v in match.groupdict().items() if v}
-        return {}
-
-    def match_intent_from_entities(self, requirements, extracted_values):
-        for intent, reqs in requirements.items():
-            # Check if all required entities are in values
-            if all(entity in extracted_values for entity in reqs):
-                return intent
-        return 'fallback'  # default if no match
 
     def get_raw_rankings(self, input, outcome_groups):
         """Gets the raw intent rankings given the user input.

@@ -83,11 +83,11 @@ class InMemorySession(SessionBase):
         progress.apply_state_update(n2.partial_state)
         progress.associate_edge(n1)
 
-        ## does a better node exists?
+        ## does a better node exist?
         better_node = self.plan.get_better_node(progress)
 
         ## if we do in fact find a better node, we want to progress to it.
-        ## this could also mean that we reselect our current node, but then we are extra sure it works
+        ## this could also mean that we reselect our current node, but that's okay!
         if better_node:
             self._current_node = better_node
             nb = self._current_node
