@@ -3,7 +3,7 @@ from copy import deepcopy
 from hovor.runtime.action_result import ActionResult
 from hovor.runtime.outcome_determination_result import OutcomeDeterminationResult
 from hovor.session.session_base import SessionBase
-
+from hovor.planning.partial_state import PartialState
 
 class OutcomeDeterminationProgress(object):
     """
@@ -19,7 +19,7 @@ class OutcomeDeterminationProgress(object):
         self._final_outcome_name = None
         self._edge = None
 
-        self._actual_state = session.current_state
+        self._actual_state = self.ensure_complete_state(session.current_state)
         self._actual_context = session.get_context_copy()
         self._actual_determination_result = OutcomeDeterminationResult()
         self._force_invalidation = False
@@ -37,6 +37,7 @@ class OutcomeDeterminationProgress(object):
         # keep initial execution info, so deltas can be computed
         self._initial_state = self._actual_state  # state is immutable - no copies are required
         self._initial_context = deepcopy(self._actual_context)
+
 
     def create_child(self):
         return OutcomeDeterminationProgress(self._session, self._action_result, self)
@@ -193,6 +194,25 @@ class OutcomeDeterminationProgress(object):
 
     def get_entity_config(self, entity):
         return self._session.plan.domain["entity_configs"][entity]
+
+    def ensure_complete_state(self, existing_complete_state):
+        context_variables = self._session.configuration._configuration_data["context_variables"]
+
+        complete_state = []
+
+        ## set up two or three valued variables
+        for variable in context_variables:
+            try:
+                type_info = context_variables[variable]['known']
+            except:
+                type_info = context_variables[variable]
+
+            if type_info['type'] == 'flag':
+                complete_state += ["NegatedAtom know__" + variable]
+            if type_info['type'] == 'fflag':
+                complete_state += ["NegatedAtom know__" + variable, "NegatedAtom maybe-know__" + variable]
+
+        return PartialState(complete_state)
 
     def add_detected_entity(self, entity, value):
         self._actual_determination_result.set_field(entity, value)

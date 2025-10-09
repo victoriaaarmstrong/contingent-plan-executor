@@ -76,19 +76,22 @@ class InMemorySession(SessionBase):
         # update the current state, context, and node
         self._current_state = next_state
         self._current_context = deepcopy(next_context)
-        #print(f"this is the current context: {self._current_context}")
-        #print(f"this is the current node: {self._current_node.partial_state}")
-        ## complete state fluents isn't actually meant to be in there, you can delete when you're done debugging (unless you need to use it)
-        print(progress.actual_context)
-
-        self._current_node = self.plan.get_next_node(self._current_node, progress.final_outcome_name, progress.actual_context) #self._current_state,
+        self._current_node = self.plan.get_next_node(self._current_node, progress.final_outcome_name)
 
         n2 = self._current_node
 
         progress.apply_state_update(n2.partial_state)
         progress.associate_edge(n1)
 
-        ## progress doesn't reflect the correct state of the world until here, after things have been updated
+        ## does a better node exists?
+        better_node = self.plan.get_better_node(progress)
+
+        ## if we do in fact find a better node, we want to progress to it.
+        ## this could also mean that we reselect our current node, but then we are extra sure it works
+        if better_node:
+            self._current_node = better_node
+            nb = self._current_node
+            progress.apply_state_update(nb.partial_state)
 
         if self._current_action:
             if self._current_node.action_name == "dialogue_statement":
@@ -103,7 +106,6 @@ class InMemorySession(SessionBase):
                             break
         self._update_action()
         self._delta_history.append(progress)
-        #print(f"This is the candidate complete state?: {progress.actual_state.fluents}")
         #self._print_update_report()
 
     def update_action_result(self, result):

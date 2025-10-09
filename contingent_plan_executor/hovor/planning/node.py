@@ -5,6 +5,7 @@ class Node(object):
     Only the stated fields are mandatory.
     Other optional info can be added by ConfigurationProvider implementations
     """
+    _distance: object
 
     def __init__(self, id, partial_state, is_initial, is_goal, distance):
         self._is_initial = is_initial

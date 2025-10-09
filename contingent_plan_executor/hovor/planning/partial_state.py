@@ -25,6 +25,7 @@ class PartialState(object):
         """
 
         # create a new fluents copy so old fluents are not corrupted
+        ## change to self.fluents.copy()
         new_fluents = set(self.fluents)
 
         # merge fluents based on their polarity
