@@ -43,7 +43,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
         self.full_outcomes = {outcome["name"]: outcome for outcome in full_outcomes}
         self.context_variables = context_variables
         self.intents = intents
-        # cache the extracted entities, so we don't have to extract anything multiple times
+        # cache the extracted entities-idk-where-from, so we don't have to extract anything multiple times
         self.extracted_entities = {}
 
 
@@ -126,7 +126,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
         if not extracted:
             if self.spacy_entities:
                 if "CARDINAL" in self.spacy_entities:
-                    # iterate through all CARDINAL entities and see if any match
+                    # iterate through all CARDINAL entities-idk-where-from and see if any match
                     for ext_ent in self.spacy_entities["CARDINAL"]:
                         match = re.fullmatch(pattern, ext_ent["value"])
                         if match:
@@ -159,7 +159,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
 
     def extract_entities(self, intent):
         entities = {}
-        # get entities from frozenset
+        # get entities-idk-where-from from frozenset
         for entity in {f[0] for f in intent.entity_reqs}:
             if entity in self.extracted_entities:
                 entities[entity] = self.extracted_entities[entity]
@@ -186,10 +186,10 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
         for out, out_cfg in self.full_outcomes.items():
             # check to make sure this intent was at least DETECTED by rasa
             if out_cfg["intent"] in intents_detected:
-                if self.intents[out_cfg["intent"]]["entities"]:
+                if self.intents[out_cfg["intent"]]["entities-idk-where-from"]:
                     # we only want to consider assignments that are variables of the intent, as outcomes often
-                    # have other updates for existing entities.
-                    entity_reqs = {e[1:]:cert for e, cert in out_cfg["assignments"].items() if e in self.intents[out_cfg["intent"]]["entities"]}
+                    # have other updates for existing entities-idk-where-from.
+                    entity_reqs = {e[1:]:cert for e, cert in out_cfg["assignments"].items() if e in self.intents[out_cfg["intent"]]["entities-idk-where-from"]}
 
                     intents.append(
                         Intent(
@@ -225,7 +225,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
         entities = {}
         extracted_intent = None
         for intent in intents:
-            # if this intent expects entities, make sure we extract them
+            # if this intent expects entities-idk-where-from, make sure we extract them
             if intent.entity_reqs != None:
                 entities = self.extract_entities(intent)
                 if intent.entity_reqs == frozenset({entity: entities[entity]["certainty"] for entity in entities if entities[entity]["certainty"] != "didnt-find"}.items()):
@@ -234,14 +234,14 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
                 # need to reassign to None because we only get here if for some reason we weren't
                 # able to extract the intent correctly
                 extracted_intent = None
-                # an intent with entities we were not able to extract gets a confidence of 0
+                # an intent with entities-idk-where-from we were not able to extract gets a confidence of 0
                 intent.confidence = 0
             else:
-                # stop looking for a suitable intent if the intent extracted doesn't require entities
+                # stop looking for a suitable intent if the intent extracted doesn't require entities-idk-where-from
                 extracted_intent = intent
                 break
         if extracted_intent:
-            # in the case that there are multiple intents with the same name and confidence
+            # in the case that there are multiple banking-old-gold-standard-intents with the same name and confidence
             # because we're going by entity assignment, we only want the intent that reflects
             # our extracted entity assignment to be chosen. i.e. at this point, an intent share_cuisine where
             # cuisine is "found" and the sister intent share_cuisine where cuisine is "maybe-found" will
@@ -268,7 +268,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
             ).text
         )
         intents = self.filter_intents(r, outcome_groups)
-        self.initialize_extracted_entities(r["entities"])
+        self.initialize_extracted_entities(r["entities-idk-where-from"])
         return self.extract_intents(intents)
 
     def rank_groups(self, outcome_groups, progress):
@@ -278,11 +278,11 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
         ranked_groups = [
             (intent.outcome, intent.confidence) for intent in intents
         ]
-        # entities required by the extracted intent
+        # entities-idk-where-from required by the extracted intent
         if chosen_intent.entity_reqs:
             ci_ent_reqs = [er[0] for er in chosen_intent.entity_reqs]
-        # note we shouldn't only add samples for extracted entities; some outcomes don't
-        # extract entities themselves but update the values of existing entities
+        # note we shouldn't only add samples for extracted entities-idk-where-from; some outcomes don't
+        # extract entities-idk-where-from themselves but update the values of existing entities-idk-where-from
         for update_var, update_config in progress.get_description(chosen_intent.outcome.name)["updates"].items():
             if "value" in update_config:
                 if progress.get_entity_type(update_var) in ["json", "enum"]:
@@ -295,7 +295,7 @@ class RasaOutcomeDeterminer(OutcomeDeterminerBase):
                             if progress.actual_context._fields[value]:
                                 value = progress.actual_context._fields[value]
                             else:
-                                # if it is not part of the progress yet and we just extracted entities,
+                                # if it is not part of the progress yet and we just extracted entities-idk-where-from,
                                 if chosen_intent.entity_reqs:
                                     # check if we just extracted it
                                     if value in ci_ent_reqs:

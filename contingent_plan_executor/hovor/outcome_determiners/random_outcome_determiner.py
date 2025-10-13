@@ -64,7 +64,7 @@ class RandomOutcomeDeterminer(OutcomeDeterminerBase):
     def _report_sampled_entities(self, outcome_groups, progress):
         collected_entities = self.find_required_present_entities(outcome_groups)
 
-        # add the entities like they were really detected during the determination
+        # add the entities-idk-where-from like they were really detected during the determination
         for entity in collected_entities:
             entity_sample = RandomOutcomeDeterminer._make_entity_sample(entity, progress)
             progress.add_detected_entity(entity, entity_sample)

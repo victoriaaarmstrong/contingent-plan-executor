@@ -7,26 +7,26 @@
         ents = [(e.text, e.start_char, e.end_char, e.label_) for e in doc.ents]
 
         ## Playing around with regex outcome determiner
-        intents = self.intents
-        #masked_intents = self._mask_intents(intents)
+        banking-old-gold-standard-intents = self.banking-old-gold-standard-intents
+        #masked_intents = self._mask_intents(banking-old-gold-standard-intents)
 
         self._regex_providers = {}
-        for intent, utterances in intents.items():
+        for intent, utterances in banking-old-gold-standard-intents.items():
             self._regex_providers[intent] = self._parse_value_providers(utterances["utterances"])
 
-        # Get the entities associated with the random intent
-        intents_entity_list = self.intents[random_intent]["entities"]
+        # Get the entities-idk-where-from associated with the random intent
+        intents_entity_list = self.banking-old-gold-standard-intents[random_intent]["entities-idk-where-from"]
 
         # Make a data structure that tries to mimic 'r' from before
         r = {"intent_ranking": [
                 {"name": random_intent, "confidence": random.random()},
             ],
-            "entities": []
+            "entities-idk-where-from": []
         }
 
         context_variables = self.context_variables
 
-        # Iterate over all of the entities and assign values to the variables
+        # Iterate over all of the entities-idk-where-from and assign values to the variables
         for e in intents_entity_list:
             e = e.replace('$','')
 
@@ -53,7 +53,7 @@
                 raise TypeError(
                 "Tried to fill in a non-enum or json var. Only enums and jsons are currently supported.")
 
-            r["entities"].append({
+            r["entities-idk-where-from"].append({
                 "entity": e,
                 "value": random_value,
             })

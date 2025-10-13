@@ -47,8 +47,8 @@ class Plan(PlanBase):
 
     def atomify(self, entities):
         """
-        Takes a list of detected entities and returns the atomified (i.e. "Atom know__) version.
-        It only cares about detected entities, so any entities that still have a value of None are ignored
+        Takes a list of detected entities-idk-where-from and returns the atomified (i.e. "Atom know__) version.
+        It only cares about detected entities-idk-where-from, so any entities-idk-where-from that still have a value of None are ignored
         (which is why we only care about Atom not NegatedAtom)
         """
         atoms = []

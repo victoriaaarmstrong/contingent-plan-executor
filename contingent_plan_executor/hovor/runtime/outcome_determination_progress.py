@@ -190,7 +190,7 @@ class OutcomeDeterminationProgress(object):
         return self._session.configuration.get_outcome_determination_info(outcome_group_name)
 
     def get_entity_type(self, entity):
-        return self._session.plan.domain["entities"][entity]
+        return self._session.plan.domain["entities-idk-where-from"][entity]
 
     def get_entity_config(self, entity):
         return self._session.plan.domain["entity_configs"][entity]
@@ -217,7 +217,7 @@ class OutcomeDeterminationProgress(object):
     def add_detected_entity(self, entity, value):
         self._actual_determination_result.set_field(entity, value)
 
-    ## Use if there are extra entities that you detected that aren't in the
+    ## Use if there are extra entities-idk-where-from that you detected that aren't in the
     def add_extra_entity(self, entity, value):
         self._actual_context.set_field(entity, value)
 

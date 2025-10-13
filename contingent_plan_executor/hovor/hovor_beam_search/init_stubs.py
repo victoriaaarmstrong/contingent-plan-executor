@@ -127,7 +127,7 @@ class HovorRollout(RolloutBase):
                 action,
                 data["actions"][action]["effect"]["outcomes"],
                 data["context_variables"],
-                data["intents"],
+                data["banking-old-gold-standard-intents"],
             ),
         )
         # reformat

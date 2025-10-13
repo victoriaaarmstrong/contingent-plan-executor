@@ -24,7 +24,7 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
         """
         Since Spacy won't generate a given entity type from nothing,
         I made this function which can generate a random example for
-        each category of named entities.
+        each category of named entities-idk-where-from.
         """
         examples = {
             "GPE": ['Kingston', 'Toronto'],
@@ -95,17 +95,17 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
         A function that picks a random outcome group from self,
         and uses the information in data.json to find an appropriate response.
         It will see if the intent is named directly, otherwise it will look at
-        the required entities and select an intent that has those entities.
+        the required entities-idk-where-from and select an intent that has those entities-idk-where-from.
 
-        This works well and produces a reasonable conversation. It works for intents
-        which don't have entities too. 
+        This works well and produces a reasonable conversation. It works for banking-old-gold-standard-intents
+        which don't have entities-idk-where-from too.
         """
         current_action_name = self.name
         possible_outcomes = self.data_for_sim['actions'][current_action_name]['effect']['outcomes']
         outcome_intent_names = [outcome['intent']
                                 for outcome in possible_outcomes]
         possible_intent_names = [
-            intent_name for intent_name in outcome_intent_names if self.data_for_sim['intents'][intent_name]['type'] != 'fallback']
+            intent_name for intent_name in outcome_intent_names if self.data_for_sim['banking-old-gold-standard-intents'][intent_name]['type'] != 'fallback']
         random_outcome_intent_name = random.choice(possible_intent_names)
         if isinstance(random_outcome_intent_name, str):
             # get the intent name and find the intent in data.json
@@ -113,7 +113,7 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
             # use regex to replace variable with random variable from enum values
             # in data.json
             # done
-            random_intent = self.data_for_sim['intents'][random_outcome_intent_name]
+            random_intent = self.data_for_sim['banking-old-gold-standard-intents'][random_outcome_intent_name]
             if len(random_intent['utterances']) != 0:
                 random_utterance = random.choice(random_intent['utterances'])
                 simulated_input = self.fill_dollar_vars(random_utterance)

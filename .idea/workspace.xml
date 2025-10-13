@@ -4,11 +4,98 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="">
+    <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="removing wa micro workspace credentials for open source purposes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_postprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_postprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/data_structs.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/data_structs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/init_stubs.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/hovor_beam_search/init_stubs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/nlu_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/random_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/random_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/rasa_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/rasa_outcome_determiner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/controller/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/controller/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome_groups/deterministic_outcome_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/outcome_groups/deterministic_outcome_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/outcome_determination_progress.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/runtime/outcome_determination_progress.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graveyard/scrap_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/graveyard/scrap_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/config.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/ner/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/ner/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/ner/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/parser/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/parser/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/parser/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/senter/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/senter/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/tagger/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/tagger/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/textcat/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/textcat/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/tok2vec/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/tok2vec/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/tokenizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/vocab/key2row" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/vocab/lookups.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/vocab/strings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/vocab/vectors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/intents/vocab/vectors.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/old_banking_entity_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/old_intent_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/old_old_banking_intent_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/attribute_ruler/patterns" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/config.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/lemmatizer/lookups/lookups.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/ner/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/ner/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/ner/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/parser/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/parser/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/parser/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/senter/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/senter/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tagger/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tagger/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tok2vec/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tok2vec/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/tokenizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/key2row" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/lookups.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/strings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/vectors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/entities/vocab/vectors.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/entity_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/entity_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intent_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/config.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/ner/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/ner/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/ner/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/parser/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/parser/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/parser/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/senter/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/senter/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/tagger/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/tagger/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/textcat/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/textcat/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/tok2vec/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/tok2vec/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/tokenizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/vocab/key2row" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/vocab/lookups.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/vocab/strings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/vocab/vectors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/intents/vocab/vectors.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/old_entity_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/old_intent_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/spacy_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +149,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.local_main (1).executor": "Run",
-    "Python.local_main.executor": "Debug",
-    "Python.remote_main.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/contingent_plan_executor/hovor/planning",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.local_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.local_main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.remote_main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/victoriaarmstrong/Desktop/contingent-plan-executor/contingent_plan_executor/hovor/planning&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/contingent_plan_executor/hovor/planning" />
@@ -252,7 +339,9 @@
       <workItem from="1757693959528" duration="25054000" />
       <workItem from="1758024907932" duration="19876000" />
       <workItem from="1758203424137" duration="9666000" />
-      <workItem from="1758722816084" duration="143112000" />
+      <workItem from="1758722816084" duration="143325000" />
+      <workItem from="1760023284620" duration="11168000" />
+      <workItem from="1760106373325" duration="12075000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
@@ -385,6 +474,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main__1_.coverage" NAME="local_main (1) Coverage Results" MODIFIED="1746731521096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor" />
     <SUITE FILE_PATH="coverage/contingent_plan_executor$remote_main.coverage" NAME="local_main Coverage Results" MODIFIED="1744298702691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1759943090821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1760024544306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

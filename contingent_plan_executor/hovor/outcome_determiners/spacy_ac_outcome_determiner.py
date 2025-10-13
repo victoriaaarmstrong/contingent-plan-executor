@@ -54,7 +54,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         self.full_outcomes = {outcome["name"]: outcome for outcome in full_outcomes}
         self.context_variables = context_variables
         self.intents = intents
-        # cache the extracted entities so we don't have to extract anything multiple times
+        # cache the extracted entities-idk-where-from so we don't have to extract anything multiple times
         self.extracted_entities = {}
         self._regex_providers = []
 
@@ -79,15 +79,15 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
     def initialize_extracted_entities(self, entities: Dict):
         """
-        Initialize the entities into their respective categories.
-        You want to do this so you can extract entities according to their extraction
+        Initialize the entities-idk-where-from into their respective categories.
+        You want to do this so you can extract entities-idk-where-from according to their extraction
         specifications, as well as set "orderings" for extraction types. for example,
         for a "number" entity (with allowed "maybe" knowledge) set to be extracted with
         rasa, it was extracted with rasa, and if that failed an extraction was
         attempted with spacy's "CARDINAL" with the "maybe" knowledge setting.
 
         Args:
-            entities (Dict): The raw entities extracted.
+            entities (Dict): The raw entities-idk-where-from extracted.
         """
         self.spacy_entities = {}
 
@@ -179,18 +179,18 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
 
     def extract_entities(self, intent):
-        """Attempts to extract all entities from an intent.
+        """Attempts to extract all entities-idk-where-from from an intent.
 
         Args:
             intent (Intent): The intent to extract from.
 
         Returns:
-            Dict: The entities extracted.
+            Dict: The entities-idk-where-from extracted.
         """
         entities = {}
         # get entity requirements
 
-        ## updated version where I actually iterate over all possible entities to add what has been updated
+        ## updated version where I actually iterate over all possible entities-idk-where-from to add what has been updated
         for entity in self.context_variables.keys():
 
         # this is the original where I want to iterate through all of the intent requirements
@@ -216,9 +216,9 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         return entities
 
     def filter_intents(self, r, outcome_groups):
-        """Filters the intents based on the entities extracted.
+        """Filters the banking-old-gold-standard-intents based on the entities-idk-where-from extracted.
         We do this because we don't want to waste computation validating an intent
-        if any of the entities it needs were not extracted in any capacity and it
+        if any of the entities-idk-where-from it needs were not extracted in any capacity and it
         will ultimately be thrown out.
 
         Note that we only look at the raw extractions in this step.
@@ -226,7 +226,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         Args:
             r (Dict): The JSON response from the NLU call
             outcome_groups (List): The outcome groups for this action (these determine
-                which intents are in our scope).
+                which banking-old-gold-standard-intents are in our scope).
 
         Returns:
             (List[Intent]): The list of filtered Intents to attempt extractions from.
@@ -247,7 +247,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
                 if self.intents[intent_name]["entities"]:
                     # we only want to consider assignments that are variables of the
-                    # intent, as outcomes often have other updates for existing entities.
+                    # intent, as outcomes often have other updates for existing entities-idk-where-from.
                     entity_reqs = {
                         e[1:]: cert
                         for e, cert in out_cfg["assignments"].items()
@@ -286,14 +286,14 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         return intents
 
     def extract_intents(self, intents):
-        """Extracts the intents by iterating through the filtered intents and selecting
-        the first one where all entities are extracted correctly.
+        """Extracts the banking-old-gold-standard-intents by iterating through the filtered banking-old-gold-standard-intents and selecting
+        the first one where all entities-idk-where-from are extracted correctly.
 
         Args:
-            intents (List[Intents]): The filtered intents.
+            intents (List[Intents]): The filtered banking-old-gold-standard-intents.
 
         Returns:
-            intents (List[Intents]): The intent ranking, adjusted by the updated
+            banking-old-gold-standard-intents (List[Intents]): The intent ranking, adjusted by the updated
                 confidences.
         """
 
@@ -302,7 +302,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         extracted_intent = None
 
         for intent in intents:
-            # if this intent expects entities, make sure we extract them
+            # if this intent expects entities-idk-where-from, make sure we extract them
             if intent.entity_reqs != None:
                 entities = self.extract_entities(intent)
 
@@ -319,14 +319,14 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                     # need to reassign to None because we only get here if for some reason we weren't
                     # able to extract the intent correctly
                     extracted_intent = None
-                    # an intent with entities we were not able to extract gets a confidence of 0
+                    # an intent with entities-idk-where-from we were not able to extract gets a confidence of 0
                     intent.confidence = 0 ## slam confidence to 0
             else:
-                # stop looking for a suitable intent if the intent extracted doesn't require entities
+                # stop looking for a suitable intent if the intent extracted doesn't require entities-idk-where-from
                 extracted_intent = intent
                 break
         if extracted_intent:
-            # in the case that there are multiple intents with the same name and confidence
+            # in the case that there are multiple banking-old-gold-standard-intents with the same name and confidence
             # because we're going by entity assignment, we only want the intent that reflects
             # our extracted entity assignment to be chosen. i.e. at this point, an intent share_cuisine where
             # cuisine is "found" and the sister intent share_cuisine where cuisine is "maybe-found" will
@@ -361,10 +361,10 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         Args:
             input (str): The user utterance.
             outcome_groups (List): The outcome groups for this action (these determine
-                which intents are in our scope).
+                which banking-old-gold-standard-intents are in our scope).
 
         Returns:
-            intents (List[Intents]): The intent ranking.
+            banking-old-gold-standard-intents (List[Intents]): The intent ranking.
         """
         predicted_intents = []
         for nlp in intent_models:
@@ -380,7 +380,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
             "entities": []
         }
 
-        ## fill in the spacy-detected intents -- no longer sums to 0!
+        ## fill in the spacy-detected banking-old-gold-standard-intents -- no longer sums to 0!
         for pred_i in predicted_intents:
             for key, value in pred_i.items():
                 if key != "fallback":
@@ -389,7 +389,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                         "confidence": value,
                     })
 
-        ## fill in the spacy-detected entities
+        ## fill in the spacy-detected entities-idk-where-from
         for entity_tuple in labeled_ents:
             r["entities"].append({
                 "entity": entity_tuple[1],
@@ -405,7 +405,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
         Args:
             outcome_groups (List): The outcome groups for this action (these determine
-                which intents are in our scope).
+                which banking-old-gold-standard-intents are in our scope).
             progress (OutcomeDeterminationProgress): Keeps track of the context.
 
         Raises:
@@ -421,13 +421,13 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
 
         chosen_intent = intents[0]
         ranked_groups = [(intent.outcome, intent.confidence) for intent in intents]
-        # entities required by the extracted intent
+        # entities-idk-where-from required by the extracted intent
         if chosen_intent.entity_reqs:
             ci_ent_reqs = [er[0] for er in chosen_intent.entity_reqs]
-        # note we shouldn't only add samples for extracted entities; some outcomes don't
+        # note we shouldn't only add samples for extracted entities-idk-where-from; some outcomes don't
 
         already_updated = []
-        # extract entities themselves but update the values of existing entities
+        # extract entities-idk-where-from themselves but update the values of existing entities-idk-where-from
         for update_var, update_config in progress.get_description(
             chosen_intent.outcome.name
         )["updates"].items():
@@ -442,7 +442,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                             if progress.actual_context._fields[value]:
                                 value = progress.actual_context._fields[value]
                             else:
-                                # if it is not part of the progress yet and we just extracted entities,
+                                # if it is not part of the progress yet and we just extracted entities-idk-where-from,
                                 if chosen_intent.entity_reqs:
                                     # check if we just extracted it
                                     if value in ci_ent_reqs:

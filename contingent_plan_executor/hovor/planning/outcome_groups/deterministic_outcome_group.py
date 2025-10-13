@@ -24,7 +24,7 @@ class DeterministicOutcomeGroup(OutcomeGroupBase):
         # todo this requires correct config semantic
         """
         for entity in self.required_present_entities:
-            # check whether all required entities are present
+            # check whether all required entities-idk-where-from are present
             if not initial_progress.action_result.has_field(entity):
                 initial_progress.invalidate()
                 return initial_progress

@@ -58,7 +58,7 @@ class RolloutBase(ABC):
     @abstractmethod
     def get_intent_confidences(self, *args, **kwargs) -> List[Dict]:
         """Returns: (all) the intent confidences that match a user utterance.
-        NOTE: Do not just return the k highest intents, because the top k are
+        NOTE: Do not just return the k highest banking-old-gold-standard-intents, because the top k are
         selected based on overall score, not just the singular confidence.
 
         Returns:
@@ -230,7 +230,7 @@ class Beam:
             Can be None upon initiation.
         last_intent (Optional[Intent]): The last intent that occurred.
             Can be None upon initiation.
-        rankings (List[Output]): The list of actions or intents in the beam.
+        rankings (List[Output]): The list of actions or banking-old-gold-standard-intents in the beam.
         rollout (RolloutBase): Handles retrieving action and intent
             confidences, updating the state/applicable actions, etc. This
             stub class should be implemented with functions that reflect your

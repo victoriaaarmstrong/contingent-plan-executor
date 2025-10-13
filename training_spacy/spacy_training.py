@@ -33,10 +33,11 @@ def prep_entity_data(data):
     formatted_data = []
 
     for index, row in df.iterrows():
+        ## double check this, some have a weird ", trailing at the end
         utterance = row['utterance'].strip('"')
         values = row['values']
 
-        if row['entities']:
+        if row["entities"]:
             keys = list(values.keys())
 
             for combo in itertools.product(*[values[k] for k in keys]):
@@ -51,19 +52,19 @@ def prep_entity_data(data):
                     # replace the placeholder with the value
                     sentence = sentence[:start] + v + sentence[start + len(k):]
 
-                    # grab the entity label from your row['entities'] dict
+                    # grab the entity label from your row["entities"] dict
                     #print(k)
-                    #label = row['entities'][k]
+                    #label = row["entities"][k]
                     entities.append((start, end, k))
 
                 filled_sentences += [sentence]
                 formatted_data.append((sentence, {"entities": entities}))
 
         else:
-            formatted_data.append((utterance, {'entities': []}))
+            formatted_data.append((utterance, {"entities": []}))
 
-    #for sentence in filled_sentences:
-        #print(sentence)
+    for sentence in filled_sentences:
+        print(sentence)
 
     return entity_labels, formatted_data
 
@@ -79,7 +80,7 @@ def old_prep_entity_data(data):
         utterance = row['utterance'].strip('"')
         values = row['values'].split(",")
 
-        if row['entities']:
+        if row["entities"]:
 
             if "(" not in values[0]:
 
@@ -88,7 +89,7 @@ def old_prep_entity_data(data):
                     start = utterance.index('$')
                     end = start + len(value)
 
-                    formatted_data.append((utterance.replace("$", value), {'entities': [(start, end, row['entities'])]}))
+                    formatted_data.append((utterance.replace("$", value), {"entities": [(start, end, row["entities"])]}))
 
             else:
                 for value in values:
@@ -98,7 +99,7 @@ def old_prep_entity_data(data):
 
                     value_1 = value_tuple[0]
                     value_2 = value_tuple[1]
-                    entities = row['entities'].split(",")
+                    entities = row["entities"].split(",")
 
                     entity_1 = entities[0]
                     start_1 = utterance.index('$1')
@@ -111,10 +112,10 @@ def old_prep_entity_data(data):
                     end_2 = start_2 + len(value_2)
                     entity_2 = entities[1]
 
-                    formatted_data.append((temp.replace("$2", value_2), {'entities': [(start_1, end_1, entity_1), (start_2, end_2, entity_2)]}))
+                    formatted_data.append((temp.replace("$2", value_2), {"entities": [(start_1, end_1, entity_1), (start_2, end_2, entity_2)]}))
 
         else:
-            formatted_data.append((utterance, {'entities': []}))
+            formatted_data.append((utterance, {"entities": []}))
 
     return entities, formatted_data
 
@@ -201,6 +202,45 @@ def train_custom_entity(data_path, storage_path):
     nlp_2.to_disk(storage_path)
 
     return
+
+train_custom_entity("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/banking_entity_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/entities/")
+"""
+## Train All Intent Models
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/deny_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/deny_intents/")
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_account_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_account_intents/")
+
+## high losses for this guy -- check!!
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_bill_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_bill_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_create_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_create_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_done_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_done_intents/")
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_e_transfer_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_e_transfer_intents/")
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_request_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_request_intents/")
+
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intents/")
+"""
 
 """
 ## Train All Intent Models
@@ -300,7 +340,7 @@ print(f"\t{max(share_phone_number_intent_doc.cats, key=share_phone_number_intent
 """
 
 """
-intent_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/intents/")
+intent_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/banking-old-gold-standard-intents/")
 entity_nlp = spacy.load("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/entities/")
 
 test_text = "I am located in Kingston."

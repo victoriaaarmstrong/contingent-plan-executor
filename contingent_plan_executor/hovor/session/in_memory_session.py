@@ -3,6 +3,7 @@ from hovor.runtime.context import Context
 from hovor.session.session_base import SessionBase
 from hovor import DEBUG
 
+import time
 
 class InMemorySession(SessionBase):
     def __init__(self, configuration_provider):
@@ -83,9 +84,12 @@ class InMemorySession(SessionBase):
         progress.apply_state_update(n2.partial_state)
         progress.associate_edge(n1)
 
+        start = time.time()
         ## does a better node exist?
         better_node = self.plan.get_better_node(progress)
+        end = time.time()
 
+        print(end - start)
         ## if we do in fact find a better node, we want to progress to it.
         ## this could also mean that we reselect our current node, but that's okay!
         if better_node:

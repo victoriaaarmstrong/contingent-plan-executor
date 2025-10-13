@@ -232,9 +232,9 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
             return DefaultSystemOutcomeDeterminer()
 
         if outcome_determiner_name == "disambiguation_outcome_determiner":
-            #return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
-            return SpacyDynamicOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
-            #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            #return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
+            return SpacyDynamicOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
+            #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
 
         if outcome_determiner_name == "web_call_outcome_determiner":
             return WebCallOutcomeDeterminer()
@@ -244,7 +244,7 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
 
     def _get_entity_type_specification(self, entity):
         domain = self._collect_domain()
-        type = domain["entities"][entity]
+        type = domain["entities-idk-where-from"][entity]
 
         if type == "enum":
             return domain["entity_configs"][entity]
@@ -282,7 +282,7 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
         entity_initial_assignments = {}
         domain = {
             "types": domain_types,
-            "entities": domain_entities,
+            "entities-idk-where-from": domain_entities,
             "entity_configs": entity_configs,
             "entity_initial_assignments": entity_initial_assignments
         }

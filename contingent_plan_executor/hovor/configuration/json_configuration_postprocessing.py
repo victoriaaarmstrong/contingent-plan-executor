@@ -81,15 +81,15 @@ def fix_disambiguation_outcome_determiner_configuration(config):
         if effect["outcome_determiner"] != "disambiguation_outcome_determiner":
             continue
 
-        if "intents" in effect:
+        if "banking-old-gold-standard-intents" in effect:
             raise ValueError("Intents were added to configuration on the right place. Remove this.")
 
         intents = {}
-        intent_configs = action["intents"]
+        intent_configs = action["banking-old-gold-standard-intents"]
         for intent, intent_config in intent_configs.items():
             intents[intent] = intent_config["utterances"]
 
-        effect["intents"] = intents
+        effect["banking-old-gold-standard-intents"] = intents
 
         entities_to_recognize = set()
         for outcome in effect["outcomes"]:
@@ -234,7 +234,7 @@ def fix_regex_outcome_determiner(config):
         if action["effect"]["outcome_determiner"] != "disambiguation_outcome_determiner":
             continue
 
-        for intent_definition in action["intents"].values():
+        for intent_definition in action["banking-old-gold-standard-intents"].values():
             for utterance in intent_definition["utterances"]:
                 if "[regex]{" in utterance:
                     action["effect"]["outcome_determiner"] = "regex_disambiguation_outcome_determiner"

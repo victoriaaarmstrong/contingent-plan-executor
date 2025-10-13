@@ -243,7 +243,7 @@ class ConversationAlignmentExecutor:
         A "message action" occurs when an action only has one possible outcome.
         In that case, that outcome should be immediately executed as the action
         doesn't take (or need) any user input to execute that outcome.
-        NOTE: message actions don't have intents (like dialogue actions) or meaningful
+        NOTE: message actions don't have banking-old-gold-standard-intents (like dialogue actions) or meaningful
         outcomes (like system/api actions) so we don't add these to the graph.
         """
         # iterate through all the beams
@@ -305,7 +305,7 @@ class ConversationAlignmentExecutor:
                 score=self._sum_scores(beam, 1.0),
             )
 
-            # get the intents from the ranked group (outcome, confidence) tuples
+            # get the banking-old-gold-standard-intents from the ranked group (outcome, confidence) tuples
             # note that we use the outcome name for system/api actions as they have no intent (note that we use a shortened version)
             all_intents = [
                 Intent(
@@ -377,7 +377,7 @@ class ConversationAlignmentExecutor:
 
         Args:
             outputs (List[Union[Action, Intent]]): The top k actions or
-                intents that match the last utterance.
+                banking-old-gold-standard-intents that match the last utterance.
 
         Returns:
             List[Beam]: The new Beams with the outputs added.
@@ -468,7 +468,7 @@ class ConversationAlignmentExecutor:
                 # beam_id must be > than the head to prevent referencing
                 # previous nodes with the same name
 
-                # exclude the intents of message actions (and anything else that we decided
+                # exclude the banking-old-gold-standard-intents of message actions (and anything else that we decided
                 # to ignore in the graph)
                 if node.name in self.graph_gen.beams[beam].parent_nodes_id_map:
                     head = (
@@ -550,7 +550,7 @@ class ConversationAlignmentExecutor:
                 # a message action or simple state update can result in the goal being added
                 # if self.beams[beam].rollout.get_reached_goal():
                 #     self._append_ending_node(beam, "GOAL REACHED")
-                # if this is a user utterance, get the k highest intents by
+                # if this is a user utterance, get the k highest banking-old-gold-standard-intents by
                 # observing the utterance in the context of the last action
                 if user:
                     all_intent_confs = self.beams[
@@ -580,7 +580,7 @@ class ConversationAlignmentExecutor:
                 # and convert those into beam search "Actions"
                 else:
                     # first handle system actions if we can. need to put this here
-                    # because user intents should only be extracted directly after
+                    # because user banking-old-gold-standard-intents should only be extracted directly after
                     # dialogue actions!
                     system_result = self._handle_system_actions(beam)
                     # returned error (or reached the goal)
@@ -621,7 +621,7 @@ class ConversationAlignmentExecutor:
                         )
             if not outputs:
                 return
-            # sort the outputs (k highest actions or intents) by score
+            # sort the outputs (k highest actions or banking-old-gold-standard-intents) by score
             outputs.sort()
             # store all the outputs (only to use in graph creation) before
             # splicing the top k
@@ -647,7 +647,7 @@ class ConversationAlignmentExecutor:
                             output.score = self._sum_scores(output.beam, EPSILON)
                 graph_beam_chosen_map[output.beam].append(output)
             for beam, chosen in graph_beam_chosen_map.items():
-                # don't add message action intents/outcomes to the graph
+                # don't add message action banking-old-gold-standard-intents/outcomes to the graph
                 last_action_message = HovorRollout.is_message_action(
                     self.beams[beam].last_action.name
                 )
@@ -655,7 +655,7 @@ class ConversationAlignmentExecutor:
                     self.graph_gen.create_nodes_from_beams(
                         # filter ALL outputs by outputs belonging to the
                         # current beam
-                        # using the filtered outputs, map intents to
+                        # using the filtered outputs, map banking-old-gold-standard-intents to
                         # probabilities to use in the graph
                         {
                             output.name: (
@@ -712,7 +712,7 @@ class ConversationAlignmentExecutor:
 
         NOTE: We assume that the provided conversation begins with an action,
         due to the fact that in dialogue-as-planning, agents use actions and
-        users respond to those actions with one of a set of given intents.
+        users respond to those actions with one of a set of given banking-old-gold-standard-intents.
 
         Beam search is executed on all the conversations provided.
         A JSON with statistics that indicates which conversations failed/passed
