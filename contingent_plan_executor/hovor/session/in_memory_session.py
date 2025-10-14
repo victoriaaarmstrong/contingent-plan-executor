@@ -89,10 +89,12 @@ class InMemorySession(SessionBase):
         better_node = self.plan.get_better_node(progress)
         end = time.time()
 
-        print(end - start)
+        print(f"\tTIME SEARCHING: {end - start}")
+
         ## if we do in fact find a better node, we want to progress to it.
         ## this could also mean that we reselect our current node, but that's okay!
-        if better_node:
+        if better_node and (better_node != self._current_node):
+            print(f"\tBETTER NODE FOUND: \n\t\toriginal: {self._current_node}\n\t\tnew node: {better_node} ")
             self._current_node = better_node
             nb = self._current_node
             progress.apply_state_update(nb.partial_state)

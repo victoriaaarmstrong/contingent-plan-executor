@@ -232,9 +232,9 @@ class JsonConfigurationProvider(ConfigurationProviderBase):
             return DefaultSystemOutcomeDeterminer()
 
         if outcome_determiner_name == "disambiguation_outcome_determiner":
-            #return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
-            return SpacyDynamicOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
-            #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["banking-old-gold-standard-intents"])
+            #return NLUOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            return SpacyDynamicOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
+            #return RasaOutcomeDeterminer(action_name, outcome_config["outcomes"], self._configuration_data["context_variables"], self._configuration_data["intents"])
 
         if outcome_determiner_name == "web_call_outcome_determiner":
             return WebCallOutcomeDeterminer()
