@@ -1,0 +1,38 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I live in k-town. I have a low budget and I would prefer a high-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Do you have restaurants of type Mexican? My number is 263 749 0563.
+AGENT: Sorry, that isn't a valid number.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have a low budget. My number is 263-749-0563.
+AGENT: Do you have any allergies? (Y/N)
+USER: mhm
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are dairy-free. I am located in downtown.
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I am allergic to any foods that are not dairy-free Can you help me find things to do in k-town?
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Are there any Mexican restaurants in the area? I can only eat foods that are dairy-free.
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. I have a high budget.
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I have to eat dairy-free. My phone number is 6133992081.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER: yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to go to a high-energy place. I can only eat foods that are dairy-free.
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I am allergic to any foods that are not dairy-free I have a low budget.
+AGENT: Sorry, I don't recognize that type of allergy.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can do activities with a low budget. I have to eat gluten-free.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Chinese restaurants in the area? I want to go to a low-energy place.
+AGENT: Sorry, that isn't a valid cuisine.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stages in k-town.

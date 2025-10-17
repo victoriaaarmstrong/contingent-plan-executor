@@ -6,6 +6,7 @@ from hovor.session.in_memory_session import InMemorySession
 import datetime
 import json
 import os
+import random
 
 def run_interaction(configuration_provider):
     print("RUNNING INTERACTION")
@@ -52,6 +53,9 @@ class SimpleTextConversationLog(ConversationLogInterface):
         if user_message:
             self.messages.append('USER: ' + user_message) 
 
+    def write_stats(self, times, jumps):
+        pass
+
     def save_conversation_to_file(self, file_path):
         if file_path.split('.')[-1]!='txt':
             file_path = file_path + '.txt'
@@ -76,7 +80,8 @@ class JsonConversationLog(ConversationLogInterface):
             'agent_message': agent_message,
             'user_message': user_message
         })
-
+    def write_stats(self, times, jumps):
+        pass
     def save_conversation_to_file(self, file_path):
         if file_path.split('.')[-1]!='json':
             file_path = file_path + '.json'
@@ -91,6 +96,7 @@ class DetailedJsonConversationLog(ConversationLogInterface):
             "time_created":datetime.datetime.now().strftime(r"%d-%m-%Y-%H-%M-%S-%f"),
             "bot_name": bot_name
         }
+        self.stats = {}
     
     def write_message(self, entity, message):
         self.messages.append({
@@ -108,17 +114,25 @@ class DetailedJsonConversationLog(ConversationLogInterface):
             'action_type': action_type
         })
 
+    def write_stats(self, times, jumps):
+        self.stats = {
+            'times': str(times),
+            'jumps': str(jumps)
+        }
+
     def save_conversation_to_file(self, file_path):
         if file_path.split('.')[-1]!='json':
             file_path = file_path + '.json'
 
         output_dict = {
             "metadata": self.metadata,
-            "messages": self.messages
+            "messages": self.messages,
+            "stats": self.stats
         }
 
         with open(file_path, "w") as fout:
             json.dump(output_dict, fout)
+
 
 def simulate_interaction(configuration_provider, output_dir):
     print("SIMULATING INTERACTION")
@@ -140,7 +154,10 @@ def simulate_interaction(configuration_provider, output_dir):
         agent_message = None
 
     try:
+        ## this is where I want to add the AC and permute the location
         user_message = last_execution_result._fields['input']
+        #user_message = last_execution_result._fields['input'] + "This is some added additional context!"
+        #user_message = add_additional_context(last_execution_result, last_execution_result._fields['input'], 1)
     except KeyError:
         # No user input for this action result. 
         user_message=None
@@ -162,6 +179,8 @@ def simulate_interaction(configuration_provider, output_dir):
         last_execution_result = action.start_execution()
         action.end_execution(last_execution_result)
         if action.action_type == "goal_achieved":
+            for convo_log in convo_logs:
+                convo_log.write_stats(session._time_history, session._jump_history)
             break
 
     print("\n" + "-" * 20)

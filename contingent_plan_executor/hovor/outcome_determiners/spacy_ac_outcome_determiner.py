@@ -396,8 +396,6 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                 "value": entity_tuple[0],
             })
 
-        #print(r["entities"])
-
         intents = self.filter_intents(r, outcome_groups)
         self.initialize_extracted_entities(r["entities"])
         return self.extract_intents(intents)

@@ -1,9 +1,12 @@
 import random
 import re
 import rstr
+import json
 
 from hovor.actions.local_dialogue_action import LocalDialogueAction
 
+with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/updated_gold_standard_bot/filled_utterance_bank.json", "r") as file:
+    AC_DATA = json.load(file)
 
 class LocalDialogueActionSimulated(LocalDialogueAction):
     """Dialogue type of action - simulated version."""
@@ -90,12 +93,31 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
             s = s.replace('$'+var_names[i], random_var_values[i], 1)
         return s
 
+    def add_additional_context(self, intent_name, amount):
+        phrases = [random.choice(AC_DATA[intent_name]["filled_utterances"])]
+
+        try:
+            additional_context = random.sample(AC_DATA[intent_name]["possible_ac_intents"], amount)
+        except:
+            return phrases[0]
+        #phrases = phrases + additional_context
+
+        for ac in additional_context:
+            phrases += [random.choice(AC_DATA[ac]["filled_utterances"])]
+
+        random.shuffle(phrases)
+
+        final_utterance = ""
+        for phrase in phrases:
+            final_utterance += " " + phrase
+
+        return final_utterance
     def generate_response_by_data(self):
         """
         A function that picks a random outcome group from self,
         and uses the information in data.json to find an appropriate response.
         It will see if the intent is named directly, otherwise it will look at
-        the required entities-idk-where-from and select an intent that has those entities-idk-where-from.
+        the required entities and select an intent that has those entities.
 
         This works well and produces a reasonable conversation. It works for banking-old-gold-standard-intents
         which don't have entities-idk-where-from too.
@@ -105,7 +127,7 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
         outcome_intent_names = [outcome['intent']
                                 for outcome in possible_outcomes]
         possible_intent_names = [
-            intent_name for intent_name in outcome_intent_names if self.data_for_sim['banking-old-gold-standard-intents'][intent_name]['type'] != 'fallback']
+            intent_name for intent_name in outcome_intent_names if self.data_for_sim['intents'][intent_name]['type'] != 'fallback']
         random_outcome_intent_name = random.choice(possible_intent_names)
         if isinstance(random_outcome_intent_name, str):
             # get the intent name and find the intent in data.json
@@ -113,17 +135,18 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
             # use regex to replace variable with random variable from enum values
             # in data.json
             # done
-            random_intent = self.data_for_sim['banking-old-gold-standard-intents'][random_outcome_intent_name]
+            random_intent = self.data_for_sim['intents'][random_outcome_intent_name]
             if len(random_intent['utterances']) != 0:
-                random_utterance = random.choice(random_intent['utterances'])
-                simulated_input = self.fill_dollar_vars(random_utterance)
+                #print(self.add_additional_context(random_outcome_intent_name, 1))
+                random_utterance = self.add_additional_context(random_outcome_intent_name, 2) #random.choice(random_intent['utterances'])
+                #simulated_input = self.fill_dollar_vars(random_utterance)
             else:
                 # must be fallback, there are no utterances for this intent
                 simulated_input = "I'm not sure."
         else:
             raise TypeError('Expected the intent to be string.')
 
-        return simulated_input
+        return random_utterance #simulated_input
 
     def _end_execution_callback(self, action_result, info):
         if self.action_type == "dialogue":

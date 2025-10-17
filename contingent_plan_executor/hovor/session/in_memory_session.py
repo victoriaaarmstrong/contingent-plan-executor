@@ -16,6 +16,8 @@ class InMemorySession(SessionBase):
         self._current_context = None
         self._delta_history = []
         self._action_names = {node.action_name for node in self.plan.nodes}
+        self._time_history = []
+        self._jump_history = []
 
     @property
     def plan(self):
@@ -89,15 +91,17 @@ class InMemorySession(SessionBase):
         better_node = self.plan.get_better_node(progress)
         end = time.time()
 
-        print(f"\tTIME SEARCHING: {end - start}")
+        self._time_history.append(end - start)
+        #print(f"\tTIME SEARCHING: {end - start}")
 
         ## if we do in fact find a better node, we want to progress to it.
         ## this could also mean that we reselect our current node, but that's okay!
         if better_node and (better_node != self._current_node):
-            print(f"\tBETTER NODE FOUND: \n\t\toriginal: {self._current_node}\n\t\tnew node: {better_node} ")
+            #print(f"\tBETTER NODE FOUND: \n\t\toriginal: {self._current_node}\n\t\tnew node: {better_node} ")
             self._current_node = better_node
-            nb = self._current_node
-            progress.apply_state_update(nb.partial_state)
+            bn = self._current_node
+            progress.apply_state_update(bn.partial_state)
+            self._jump_history.append(bn._id)
 
         if self._current_action:
             if self._current_node.action_name == "dialogue_statement":

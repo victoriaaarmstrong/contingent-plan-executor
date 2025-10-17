@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "share_phone_number",
+    "fallback"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}

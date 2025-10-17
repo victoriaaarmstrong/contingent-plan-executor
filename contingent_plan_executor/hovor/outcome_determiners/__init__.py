@@ -1,13 +1,14 @@
 import spacy
 
 ## load all of the labels for entities-idk-where-from
-#SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
-SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
+SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
+#SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
 
 ## load entity model
-#entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
-entity_nlp = spacy.load("./training_spacy/banking/entities/")
+entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
+#entity_nlp = spacy.load("./training_spacy/banking/entities/")
 
+"""
 ## load intent models and store
 intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
 confirm_intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
@@ -31,7 +32,7 @@ intent_models = [confirm_intent_nlp,
                  share_transfer_settings_nlp]
 
 """
-intent_nlp = spacy.load("./training_spacy/gold-standard/banking-old-gold-standard-intents/")
+intent_nlp = spacy.load("./training_spacy/gold-standard/confirm_intents/")
 confirm_intent_nlp = spacy.load("./training_spacy/gold-standard/confirm_intents/")
 deny_intent_nlp = spacy.load("./training_spacy/gold-standard/deny_intents/")
 share_all_outing_preferences_intent_nlp = spacy.load("./training_spacy/gold-standard/share_all_outing_preferences_intents/")
@@ -51,4 +52,3 @@ intent_models = [confirm_intent_nlp,
                  share_location_intent_nlp,
                  share_outing_type_intent_nlp,
                  share_phone_number_intent_nlp]
-"""

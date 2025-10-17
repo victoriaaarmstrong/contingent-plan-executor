@@ -1,0 +1,189 @@
+{
+  "share_location": {
+    "filled_utterances": [
+      "I live in Toronto.",
+      "I live in Kingston.",
+      "I live in k-town.",
+      "I live in downtown.",
+      "I am located in Toronto.",
+      "I am located in Kingston.",
+      "I am located in k-town.",
+      "I am located in downtown.",
+      "Can you help me find things to do in Toronto?",
+      "Can you help me find things to do in Kingston?",
+      "Can you help me find things to do in k-town?",
+      "Can you help me find things to do in downtown?"
+    ],
+    "possible_ac_intents": ["share_cuisine", "share_allergies", "share_budget", "share_outing_type", "share_phone_number"]
+  },
+  "share_cuisine": {
+    "filled_utterances": [
+      "I want to eat Mexican.",
+      "I want to eat Italian.",
+      "I want to eat Chinese.",
+      "I want to eat dessert.",
+      "Do you have restaurants of type Mexican?",
+      "Do you have restaurants of type Italian?",
+      "Do you have restaurants of type Chinese?",
+      "Do you have restaurants of type dessert?",
+      "Are there any Mexican restaurants in the area?",
+      "Are there any Italian restaurants in the area?",
+      "Are there any Chinese restaurants in the area?",
+      "Are there any dessert restaurants in the area?"
+    ],
+    "possible_ac_intents": ["share_location", "share_allergies", "share_budget", "share_outing_type", "share_phone_number"]
+  },
+  "share_allergies": {
+    "filled_utterances": [
+      "I have to eat dairy-free.",
+      "I have to eat gluten-free.",
+      "I can only eat foods that are dairy-free.",
+      "I can only eat foods that are gluten-free.",
+      "I am allergic to any foods that are not dairy-free",
+      "I am allergic to any foods that are not gluten-free"
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_budget", "share_outing_type", "share_phone_number"]
+  },
+  "share_all_outing_preferences": {
+    "filled_utterances": [
+      "I have a low budget and I would prefer a low-energy atmosphere today.",
+      "I have a low budget and I would prefer a high-energy atmosphere today.",
+      "I have a high budget and I would prefer a low-energy atmosphere today.",
+      "I have a high budget and I would prefer a high-energy atmosphere today.",
+      "I am operating within a low budget and I want to go to a low-energy place.",
+      "I am operating within a low budget and I want to go to a high-energy place.",
+      "I am operating within a high budget and I want to go to a low-energy place.",
+      "I am operating within a high budget and I want to go to a high-energy place.",
+      "I can do activities with a low budget and I want to find the most low-energy place in the city.",
+      "I can do activities with a low budget and I want to find the most high-energy place in the city.",
+      "I can do activities with a high budget and I want to find the most low-energy place in the city.",
+      "I can do activities with a high budget and I want to find the most high-energy place in the city."
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_phone_number"]
+  },
+  "share_budget": {
+    "filled_utterances": [
+      "I have a low budget.",
+      "I have a high budget.",
+      "I am operating within a low budget.",
+      "I am operating within a high budget.",
+      "I can do activities with a low budget.",
+      "I can do activities with a high budget."
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_outing_type", "share_phone_number"]
+  },
+  "share_outing_type": {
+    "filled_utterances": [
+      "I would prefer a low-energy atmosphere today.",
+      "I would prefer a high-energy atmosphere today.",
+      "I want to go to a low-energy place.",
+      "I want to go to a high-energy place.",
+      "What is the most low-energy place in the city?",
+      "What is the most high-energy place in the city?"
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_budget", "share_phone_number"]
+  },
+  "share_phone_number": {
+    "filled_utterances": [
+      "My phone number is 6133992081.",
+      "My phone number is 2137584930.",
+      "My phone number is 2637490563.",
+      "My phone number is 2635478152.",
+      "My phone number is 613 399 2081.",
+      "My phone number is 213 758 4930.",
+      "My phone number is 263 749 0563.",
+      "My phone number is 263 547 8152.",
+      "My phone number is 613-399-2081.",
+      "My phone number is 213-758-4930.",
+      "My phone number is 263-749-0563.",
+      "My phone number is 263-547-8152.",
+      "My number is 6133992081.",
+      "My number is 2137584930.",
+      "My number is 2637490563.",
+      "My number is 2635478152.",
+      "My number is 613 399 2081.",
+      "My number is 213 758 4930.",
+      "My number is 263 749 0563.",
+      "My number is 263 547 8152.",
+      "My number is 613-399-2081.",
+      "My number is 213-758-4930.",
+      "My number is 263-749-0563.",
+      "My number is 263-547-8152.",
+      "6133992081",
+      "2137584930",
+      "2637490563",
+      "2635478152",
+      "613 399 2081",
+      "213 758 4930",
+      "263 749 0563",
+      "263 547 8152",
+      "613-399-2081",
+      "213-758-4930",
+      "263-749-0563",
+      "263-547-8152"
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_budget", "share_outing_type"]
+  },
+  "confirm": {
+    "filled_utterances": [
+      "yes",
+      "yeah",
+      "Y",
+      "mhm",
+      "confirm"
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_budget", "share_outing_type", "share_phone_number"]
+  },
+  "deny": {
+    "filled_utterances": [
+      "no",
+      "not at all",
+      "absolutely not",
+      "nah",
+      "no thanks",
+      "no thank you",
+      "N"
+    ],
+    "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_budget", "share_outing_type", "share_phone_number"]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

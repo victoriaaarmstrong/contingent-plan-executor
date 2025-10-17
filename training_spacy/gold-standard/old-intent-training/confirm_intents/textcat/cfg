@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "confirm",
+    "fallback"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}

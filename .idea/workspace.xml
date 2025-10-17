@@ -5,19 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="removing wa micro workspace credentials for open source purposes">
+      <change afterPath="$PROJECT_DIR$/experiments/analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_data/updated_gold_standard_bot/filled_utterance_bank.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_spacy/additional_context_intent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_postprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_postprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/configuration/json_configuration_provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/core.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/data.prp.json" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/data.prp.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/domain.pddl" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/domain.pddl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/nlu.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/nlu_model.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/nlu_model.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/problem.pddl" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/problem.pddl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_data/medical_bot/output_files/rollout_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/medical_bot/rollout_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/local_main_simulated_many.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/local_main_simulated_many.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/spacy_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,23 +123,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.local_main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.local_main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.remote_main.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/victoriaarmstrong/Desktop/contingent-plan-executor/contingent_plan_executor/hovor/planning&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.core.executor": "Debug",
+    "Python.local_main (1).executor": "Run",
+    "Python.local_main.executor": "Debug",
+    "Python.remote_main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/contingent_plan_executor/hovor/planning",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/contingent_plan_executor/hovor/planning" />
@@ -96,14 +149,14 @@
       <recent name="$PROJECT_DIR$/training_spacy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-dynamic-oct-16/1-level" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-dynamic-oct-16/no-ac" />
       <recent name="$PROJECT_DIR$/local_data/medical_bot" />
       <recent name="$PROJECT_DIR$/graveyard" />
-      <recent name="$PROJECT_DIR$/training_spacy/gold-standard" />
-      <recent name="$PROJECT_DIR$/local_data/bank_bot" />
-      <recent name="$PROJECT_DIR$/training_spacy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.local_main">
+  <component name="RunManager">
     <configuration name="local_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hovor-exec" />
       <option name="ENV_FILES" value="" />
@@ -177,8 +230,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.local_main" />
       <item itemvalue="Python.local_main (1)" />
+      <item itemvalue="Python.local_main" />
     </list>
     <recent_temporary>
       <list>
@@ -264,7 +317,10 @@
       <workItem from="1758203424137" duration="9666000" />
       <workItem from="1758722816084" duration="143325000" />
       <workItem from="1760023284620" duration="11168000" />
-      <workItem from="1760106373325" duration="27669000" />
+      <workItem from="1760106373325" duration="27685000" />
+      <workItem from="1760546182818" duration="23000" />
+      <workItem from="1760547787011" duration="4709000" />
+      <workItem from="1760627010741" duration="29883000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
@@ -397,6 +453,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main__1_.coverage" NAME="local_main (1) Coverage Results" MODIFIED="1746731521096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor" />
     <SUITE FILE_PATH="coverage/contingent_plan_executor$remote_main.coverage" NAME="local_main Coverage Results" MODIFIED="1744298702691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1760024544306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$local_main.coverage" NAME="local_main Coverage Results" MODIFIED="1760632681215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/contingent_plan_executor$core.coverage" NAME="core Coverage Results" MODIFIED="1760635806613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contingent_plan_executor/hovor" />
   </component>
 </project>
