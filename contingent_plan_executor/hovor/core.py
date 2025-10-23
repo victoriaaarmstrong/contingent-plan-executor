@@ -6,7 +6,7 @@ from hovor.session.in_memory_session import InMemorySession
 import datetime
 import json
 import os
-import random
+import copy
 
 def run_interaction(configuration_provider):
     print("RUNNING INTERACTION")
@@ -53,7 +53,7 @@ class SimpleTextConversationLog(ConversationLogInterface):
         if user_message:
             self.messages.append('USER: ' + user_message) 
 
-    def write_stats(self, times, jumps):
+    def write_stats(self, times, jumps, complete_state):
         pass
 
     def save_conversation_to_file(self, file_path):
@@ -67,7 +67,7 @@ class JsonConversationLog(ConversationLogInterface):
     def __init__(self):
         self.messages = []
     
-    def write_message(self, entity, message):
+    def write_message(self, entity, message, complete_state):
         self.messages.append({
             'entity': entity,
             'message': message
@@ -80,7 +80,7 @@ class JsonConversationLog(ConversationLogInterface):
             'agent_message': agent_message,
             'user_message': user_message
         })
-    def write_stats(self, times, jumps):
+    def write_stats(self, times, jumps, complete_state):
         pass
     def save_conversation_to_file(self, file_path):
         if file_path.split('.')[-1]!='json':
@@ -114,10 +114,11 @@ class DetailedJsonConversationLog(ConversationLogInterface):
             'action_type': action_type
         })
 
-    def write_stats(self, times, jumps):
+    def write_stats(self, times, jumps, complete_state):
         self.stats = {
             'times': str(times),
-            'jumps': str(jumps)
+            'jumps': str(jumps),
+            'complete_state': complete_state
         }
 
     def save_conversation_to_file(self, file_path):
@@ -154,14 +155,11 @@ def simulate_interaction(configuration_provider, output_dir):
         agent_message = None
 
     try:
-        ## this is where I want to add the AC and permute the location
         user_message = last_execution_result._fields['input']
-        #user_message = last_execution_result._fields['input'] + "This is some added additional context!"
-        #user_message = add_additional_context(last_execution_result, last_execution_result._fields['input'], 1)
     except KeyError:
         # No user input for this action result. 
         user_message=None
-    
+
     # write the dialogue pair to each conversation log
     for convo_log in convo_logs:
         convo_log.write_dialogue_pair(agent_message=agent_message, 
@@ -180,7 +178,7 @@ def simulate_interaction(configuration_provider, output_dir):
         action.end_execution(last_execution_result)
         if action.action_type == "goal_achieved":
             for convo_log in convo_logs:
-                convo_log.write_stats(session._time_history, session._jump_history)
+                convo_log.write_stats(session._time_history, session._jump_history, session.complete_state)
             break
 
     print("\n" + "-" * 20)

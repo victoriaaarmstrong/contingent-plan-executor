@@ -1,14 +1,14 @@
 import spacy
 
 ## load all of the labels for entities-idk-where-from
-SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
-#SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
+#SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
+SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
 
 ## load entity model
-entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
-#entity_nlp = spacy.load("./training_spacy/banking/entities/")
+#entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
+entity_nlp = spacy.load("./training_spacy/banking/entities/")
 
-"""
+
 ## load intent models and store
 intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
 confirm_intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
@@ -52,3 +52,4 @@ intent_models = [confirm_intent_nlp,
                  share_location_intent_nlp,
                  share_outing_type_intent_nlp,
                  share_phone_number_intent_nlp]
+"""

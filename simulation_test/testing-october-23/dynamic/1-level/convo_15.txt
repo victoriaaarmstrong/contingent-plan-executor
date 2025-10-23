@@ -1,0 +1,29 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  yeah Please create a retirement fund account.
+AGENT: What account type would you like to create?
+USER:  I want to transfer 65 to Nancy. Please create a college fund account.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to select for this task?
+USER:  I want to pay off my utility payment. use savings for this task
+AGENT: A retirement fund account was successfully created with starter funds transferred from savings.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  I need to request that Bob pays me 65. yeah
+AGENT: Ok! How much would you like to send and to who?
+USER:  I want to transfer 54 to Mark. I want to transfer 67 from savings to college fund.
+AGENT: Which account would you like to select for this task?
+USER:  I want to send 45 to retirement fund from savings. use chequing for this task
+AGENT: E-transferring 45 to Bob from savings... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  N Use chequing
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  yeah I'm finished
+AGENT: How much money would you like to request and from who?
+USER:  use savings for this task Please request that Bob to send me 5000 dollars.
+AGENT: Ok, I asked Bob to send you 5000. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  done yeah
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  I want to transfer 89 from savings to college fund. I want to send 45 to retirement fund from savings.
+AGENT: Ok! I successfully transferred your requested amount of 45 from savings to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

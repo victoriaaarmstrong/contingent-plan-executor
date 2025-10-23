@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in Toronto. My phone number is 263 547 8152. Are there any Chinese restaurants in the area? I have a low budget and I would prefer a high-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I want to eat Italian. Can you help me find things to do in k-town? I have to eat gluten-free. 2635478152
+AGENT: Do you have any allergies? (Y/N)
+USER:  Do you have restaurants of type Italian? I am operating within a high budget. Can you help me find things to do in downtown? no
+AGENT: Where are you located?
+USER:  Do you have restaurants of type Mexican? My number is 2637490563. I have to eat gluten-free. I am located in k-town.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I live in k-town. What is the most low-energy place in the city? I have a high budget. Are there any Mexican restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stages in k-town.

@@ -1,0 +1,23 @@
+AGENT: Would you like to create a new account?
+USER:  confirm i don't have anything else i want to do I want to pay off my car payment.
+AGENT: What type of account would you like me to make for you?
+USER:  I want to create a retirement fund account for my son. I really need a retirement fund account please create one. I want to pay off my lights bill.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  I want to pay off my utility bill. use chequing for this task I don't want to do anything else today.
+AGENT: A retirement fund account was successfully created with starter funds transferred from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  not at all I really need a retirement fund account please create one. I'm finished
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please request that Bob to send me 5000 dollars. confirm Bob is expecting 23 from me.
+AGENT: Which bill would you like to pay off?
+USER:  Please select savings. I want to transfer 12 to Mark. Please pay my utility payment.
+AGENT: Ok, I'm paying your utility bill from your savings account.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  use chequing for this task I want to pay off my credit card payment. yes
+AGENT: Ok, I asked Mark to send you 12. I'll notify you when the payment is received.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  no thank you Can I transfer 23 to Sandra? I want to pay off my mortgage payment.
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

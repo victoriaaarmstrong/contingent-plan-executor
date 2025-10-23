@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My phone number is 213-758-4930. I would prefer a low-energy atmosphere today. I am allergic to any foods that are not dairy-free Do you have restaurants of type Mexican?
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  My phone number is 213-758-4930. I have a low budget. Can you help me find things to do in k-town? Do you have restaurants of type Mexican?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a low budget. What is the most low-energy place in the city? My phone number is 613-399-2081. I have to eat dairy-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  Can you help me find things to do in Toronto? yeah I can only eat foods that are dairy-free. Do you have restaurants of type Chinese?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  What is the most low-energy place in the city? I have to eat gluten-free. Can you help me find things to do in Toronto? I have a high budget.
+AGENT: Where are you located?
+USER:  My phone number is 263-547-8152. I can do activities with a low budget. I have to eat dairy-free. Can you help me find things to do in Toronto?
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am located in k-town. I am allergic to any foods that are not dairy-free I would prefer a high-energy atmosphere today. I want to eat dessert.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stauffer Library in k-town.

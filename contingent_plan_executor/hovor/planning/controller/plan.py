@@ -45,6 +45,12 @@ class Plan(PlanBase):
 
         return children
 
+    def get_known_entities(self, entities):
+
+        only_known_entities = {k: v for k, v in entities.items() if v is not None}
+
+        return only_known_entities
+
     def atomify(self, entities):
         """
         Takes a list of detected entities-idk-where-from and returns the atomified (i.e. "Atom know__) version.
@@ -53,7 +59,7 @@ class Plan(PlanBase):
         """
         atoms = []
 
-        only_known_entities = {k: v for k, v in entities.items() if v is not None}
+        only_known_entities = self.get_known_entities(entities)#{k: v for k, v in entities.items() if v is not None}
 
         for key, value in only_known_entities.items():
             know_atom = 'Atom know__' + key + '()'
@@ -84,16 +90,21 @@ class Plan(PlanBase):
         return candidate
 
 
-    def get_better_node(self, progress):
+    def get_better_node(self, progress, mode):
         """
         Iterates over all nodes in the Controller and builds a list of candidate nodes entailed by the complete state.
         Candidate nodes are sorted from closest to further from the goal, and the closest node is returned.
         If there are no candidates, None is returned, and a fallback can occur.
         Our current node is in the possible list of candidate nodes, so if the current node is indeed the best, it is selected.
         """
+
         ## translate context to a ps
         fluents = PartialState(self.atomify(progress.actual_context.__dict__['_fields']))
         updated_complete_states = progress.actual_state.update_by(fluents)
+        known_entities = self.get_known_entities(progress.actual_context.__dict__['_fields'])
+
+        if mode == 'static':
+            return None, known_entities #self.get_known_entities(progress.actual_context.__dict__['_fields'])#updated_complete_states
 
         ## build a list of possible candidates if they are a subset of the complete_state
         new_EM_candidates = {}
@@ -107,8 +118,8 @@ class Plan(PlanBase):
 
         ## return our better node -- if our current node is the better node, it will get returned in the else
         if len(new_EM_candidates) == 0:
-            return None
+            return None, known_entities
         else:
             ## return the first node -- we've sorted it so we don't have to worry about splitting it further, we know it's closest
             first_key, first_value = next(iter(sorted_EM_candidates.items()))
-            return first_key
+            return first_key, known_entities #self.get_known_entities(progress.actual_context.__dict__['_fields'])#updated_complete_states

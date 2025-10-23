@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  613-399-2081 I have to eat dairy-free. I would prefer a low-energy atmosphere today. I am operating within a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  My phone number is 263-749-0563. I want to eat Italian. I can only eat foods that are gluten-free. I would prefer a low-energy atmosphere today.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I want to eat Mexican. My phone number is 213-758-4930. What is the most low-energy place in the city? I have to eat dairy-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  My number is 213-758-4930. confirm I want to go to a low-energy place. Do you have restaurants of type Mexican?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Italian. I have to eat gluten-free. What is the most low-energy place in the city? My phone number is 263-547-8152.
+AGENT: Where are you located?
+USER:  My phone number is 613-399-2081. I am operating within a high budget. I am located in Kingston. I am allergic to any foods that are not dairy-free
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I can only eat foods that are gluten-free. I would prefer a low-energy atmosphere today. My number is 263-749-0563. Are there any Mexican restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stauffer Library in Kingston.

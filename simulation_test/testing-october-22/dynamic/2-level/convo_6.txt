@@ -1,0 +1,14 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I live in Toronto. I want to go to a high-energy place. I am allergic to any foods that are not gluten-free
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  My phone number is 213-758-4930. I would prefer a low-energy atmosphere today. I have a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am operating within a low budget. mhm I would prefer a high-energy atmosphere today.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to go to a low-energy place. I can do activities with a high budget. I can only eat foods that are dairy-free.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Chinese restaurants in the area? I have a low budget. I would prefer a low-energy atmosphere today.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stauffer Library in Toronto.

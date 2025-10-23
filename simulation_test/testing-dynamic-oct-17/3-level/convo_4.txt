@@ -1,0 +1,12 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have to eat gluten-free. I am located in Toronto. Do you have restaurants of type Italian? I can do activities with a high budget and I want to find the most high-energy place in the city.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My number is 213 758 4930. I can only eat foods that are dairy-free. Can you help me find things to do in Kingston? I can do activities with a low budget.
+AGENT: Sorry, that isn't a valid number.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Can you help me find things to do in downtown? I have to eat dairy-free. 213-758-4930 Are there any Mexican restaurants in the area?
+AGENT: Do you have any allergies? (Y/N)
+USER:  Can you help me find things to do in Toronto? My phone number is 2635478152. yeah I can only eat foods that are gluten-free.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I would prefer a high-energy atmosphere today. Are there any dessert restaurants in the area? I am allergic to any foods that are not dairy-free I can do activities with a low budget.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Smith's Golfing Club in Toronto.

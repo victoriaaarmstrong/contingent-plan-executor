@@ -1,0 +1,18 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  no thank you I don't want to do anything else.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to send any funds to a contact today?
+USER:  nah Please pay my internet payment.
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  absolutely not Bob is expecting 13 from me.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  i'm all done here Y
+AGENT: Ok, I asked Bob to send you 13. I'll notify you when the payment is received.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I want to pay off my mortgage bill. yes
+AGENT: Ok! Please specify the funds you which to transfer and the accounts to transfer between.
+USER:  Please pay my utility payment. I want to send 45 to retirement fund from savings.
+AGENT: Ok! I successfully transferred your requested amount of 45 from savings to retirement fund.
+AGENT: All done. Have a nice day!

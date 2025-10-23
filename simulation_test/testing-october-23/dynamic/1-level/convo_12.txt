@@ -1,0 +1,18 @@
+AGENT: Would you like to create a new account?
+USER:  not at all Please request that Sandra to send me 25 dollars.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to send any funds to a contact today?
+USER:  N Please send 5000 to Mark.
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  chequing yeah
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my mortgage bill. Please request that Bob to send me 25 dollars.
+AGENT: Paying your mortgage bill from your chequing account...
+AGENT: Would you like to request money from a contact?
+USER:  no Please pay my gas payment.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  absolutely not I need to request that Nancy pays me 37.
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

@@ -1,0 +1,9 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have a low budget and I would prefer a low-energy atmosphere today. I live in k-town.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My number is 263-749-0563. I am allergic to any foods that are not dairy-free
+AGENT: Do you have any allergies? (Y/N)
+USER:  Are there any Mexican restaurants in the area? confirm
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. My phone number is 213-758-4930.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stauffer Library in k-town.

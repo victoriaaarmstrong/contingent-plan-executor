@@ -72,6 +72,6 @@ def construct_intent_file(file_name, out_file, primary_intent):
 
     return
 
-construct_intent_file("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/updated_gold_standard_bot/filled_utterance_bank.json",
-                      "./training_spacy/share_location_intent_data",
-                      "share_location")
+construct_intent_file("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bank_bot/filled_utterance_bank.json",
+                      "./training_spacy/deny_intent_data",
+                      "deny")

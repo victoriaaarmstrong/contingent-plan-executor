@@ -1,0 +1,16 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My number is 2635478152. I would prefer a low-energy atmosphere today. I have a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  Are there any dessert restaurants in the area? I would prefer a high-energy atmosphere today. I live in Kingston.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My number is 263 547 8152. I am operating within a high budget. I am allergic to any foods that are not dairy-free
+AGENT: Sorry, that isn't a valid number.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a low budget. My number is 6133992081. Can you help me find things to do in Toronto?
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am operating within a high budget. I want to eat Chinese. mhm
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  My phone number is 613-399-2081. I can only eat foods that are gluten-free. What is the most high-energy place in the city?
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in Toronto.

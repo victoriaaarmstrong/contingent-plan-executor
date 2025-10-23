@@ -5,6 +5,8 @@ from hovor import DEBUG
 
 import time
 
+MODE = "dynamic"
+
 class InMemorySession(SessionBase):
     def __init__(self, configuration_provider):
         super(InMemorySession, self).__init__()
@@ -18,6 +20,7 @@ class InMemorySession(SessionBase):
         self._action_names = {node.action_name for node in self.plan.nodes}
         self._time_history = []
         self._jump_history = []
+        self._complete_state = []
 
     @property
     def plan(self):
@@ -44,6 +47,14 @@ class InMemorySession(SessionBase):
     def delta_history(self):
         return self._delta_history
 
+    @property
+    def complete_state(self):
+        return self._complete_state
+
+    @complete_state.setter
+    def complete_state(self, complete_state):
+        self._complete_state = complete_state
+
     def load_initial_plan_data(self):
         if self._current_node is not None:
             raise ValueError("It is too late for initial data loading.")
@@ -67,6 +78,31 @@ class InMemorySession(SessionBase):
         self._delta_history.append(progress)
         # self._print_update_report()
 
+    def filter_positive(self, state):
+
+        positive_fluents = []
+
+        for fluent in state.fluents:
+            if "NegatedAtom" not in fluent:
+                positive_fluents.append(fluent)
+
+        return positive_fluents
+
+    def check_redundant(self, new_cs):
+
+        new_cs_positives = self.filter_positive(new_cs)
+        current_node_positives = self.filter_positive(self._current_node.partial_state)
+
+        ## if it's a get action
+        if "get-" in self._current_node.action_name:
+            name = self._current_node.action_name.replace("get-", "")
+
+            print(name)
+            print(new_cs)
+
+        return False
+
+
     def update_by(self, progress):
         if self != progress._session:
             raise ValueError("Inconsistent session access detected.")
@@ -88,20 +124,20 @@ class InMemorySession(SessionBase):
 
         start = time.time()
         ## does a better node exist?
-        better_node = self.plan.get_better_node(progress)
+        better_node, new_cs = self.plan.get_better_node(progress, MODE)
         end = time.time()
 
         self._time_history.append(end - start)
-        #print(f"\tTIME SEARCHING: {end - start}")
 
         ## if we do in fact find a better node, we want to progress to it.
         ## this could also mean that we reselect our current node, but that's okay!
-        if better_node and (better_node != self._current_node):
+        if (MODE == 'dynamic') and better_node and (better_node != self._current_node):
             #print(f"\tBETTER NODE FOUND: \n\t\toriginal: {self._current_node}\n\t\tnew node: {better_node} ")
             self._current_node = better_node
             bn = self._current_node
             progress.apply_state_update(bn.partial_state)
             self._jump_history.append(bn._id)
+
 
         if self._current_action:
             if self._current_node.action_name == "dialogue_statement":
@@ -116,6 +152,8 @@ class InMemorySession(SessionBase):
                             break
         self._update_action()
         self._delta_history.append(progress)
+
+        self._complete_state.append({self._current_node.action_name: new_cs})
         #self._print_update_report()
 
     def update_action_result(self, result):
@@ -123,6 +161,9 @@ class InMemorySession(SessionBase):
 
     def get_context_copy(self):
         return deepcopy(self._current_context)
+
+    def get_complete_state(self):
+        return deepcopy(self._complete_state)
 
     def _update_action(self):
         self._current_action = self._configuration_provider.create_action(self._current_node, self._current_state,

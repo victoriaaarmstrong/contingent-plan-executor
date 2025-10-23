@@ -1,0 +1,21 @@
+AGENT: Would you like to create a new account?
+USER:  Y Can I transfer 30 to Mark?
+AGENT: What type of account would you like me to make for you?
+USER:  I really need a retirement fund account please create one. I'm good to go thanks
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  use chequing for this task done
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I really need a retirement fund account please create one. absolutely not
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  N Please pay my gas payment.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  nah I want to send 89 to retirement fund from chequing.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  yeah I want to create a retirement fund account.
+AGENT: Got it. I've completed the transfer of 89 from chequing to retirement fund.
+AGENT: All done. Have a nice day!

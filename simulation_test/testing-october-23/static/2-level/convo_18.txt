@@ -1,0 +1,29 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  yes I don't want to do anything else today. I want to create a retirement fund account.
+AGENT: What account type would you like to create?
+USER:  I don't want to do anything else today. Can I transfer 23 to Mark? I want to create a college fund account.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  I need to use savings Can I transfer 99 from chequing to retirement fund? I want to transfer 30 to Mark.
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  exit Can I transfer 23 to Bob? Y
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I want to transfer 23 to Sandra. Use savings bye
+AGENT: Which account would you like to use?
+USER:  I need to use chequing I really need a retirement fund account please create one. Mark is expecting 47 from me.
+AGENT: All done! I just e-transferred 47 to Mark from savings.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  not at all Use chequing I want to send 16 to retirement fund from savings.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  confirm I want to create a retirement fund account for my son. I need to request that Mark pays me 47.
+AGENT: Which contact would you like to request money from and how much?
+USER:  I need to request that Nancy pays me 37. Please send 21 to Bob. I need to request that Sandra pays me 23.
+AGENT: Ok, I asked Mark to send you 47. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  Can I transfer 5000 from chequing to retirement fund? Please request that Sandra to send me 76 dollars. yeah
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  Can I transfer 67 from savings to college fund? I really need a retirement fund account please create one. I want to pay off my internet bill.
+AGENT: Ok! I successfully transferred your requested amount of 76 from chequing to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

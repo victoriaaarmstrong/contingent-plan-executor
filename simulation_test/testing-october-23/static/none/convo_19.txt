@@ -1,0 +1,22 @@
+AGENT: Would you like to create a new account?
+USER:  not at all
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  N
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  mhm
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my electricity payment.
+AGENT: Which account would you like to select for this task?
+USER:  Use savings
+AGENT: Paying your electricity bill from your savings account...
+AGENT: Would you like to request money from a contact?
+USER:  confirm
+AGENT: How much money would you like to request and from who?
+USER:  I need to request that Mark pays me 13.
+AGENT: Ok, I'm requesting a payment of 13 from Mark. I will let you know when the transfer goes through.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  absolutely not
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

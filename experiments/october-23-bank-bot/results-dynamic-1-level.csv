@@ -1,0 +1,21 @@
+goal_reached,convo_length,average_search_time,number_jumps,number_redundant
+True,9,0.04 ms,1,0
+True,8,0.04 ms,0,0
+True,9,0.04 ms,1,0
+True,5,0.04 ms,2,0
+True,5,0.04 ms,1,0
+True,8,0.04 ms,1,0
+True,6,0.03 ms,1,0
+True,7,0.04 ms,1,0
+True,6,0.03 ms,0,0
+True,7,0.04 ms,1,0
+True,7,0.03 ms,0,0
+True,6,0.04 ms,2,0
+True,8,0.04 ms,1,0
+True,7,0.04 ms,0,0
+True,6,0.05 ms,1,0
+True,8,0.04 ms,1,2
+True,5,0.03 ms,1,0
+True,8,0.04 ms,2,2
+True,9,0.04 ms,2,0
+True,11,0.04 ms,0,2

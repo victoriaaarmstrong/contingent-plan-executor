@@ -1,0 +1,87 @@
+,goal_reached,convo_length,average_search_time,number_jumps,number_redundant
+None,TRUE,7,0.02 ms,0,0
+,TRUE,6,0.03 ms,0,0
+,TRUE,6,0.02 ms,0,1
+,TRUE,5,0.02 ms,0,0
+,TRUE,7,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,1
+,TRUE,5,0.02 ms,0,0
+,TRUE,10,0.02 ms,0,0
+,TRUE,10,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+,TRUE,7,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,1
+,TRUE,6,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,1
+,TRUE,5,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,0
+1 Level,TRUE,5,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,1
+,TRUE,6,0.02 ms,0,2
+,TRUE,5,0.02 ms,0,0
+,TRUE,6,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,2
+,TRUE,5,0.02 ms,0,2
+,TRUE,9,0.02 ms,0,2
+,TRUE,7,0.02 ms,0,1
+,TRUE,6,0.04 ms,0,2
+,TRUE,7,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,1
+,TRUE,5,0.02 ms,0,2
+,TRUE,5,0.02 ms,0,1
+,TRUE,7,0.02 ms,0,2
+,TRUE,7,0.02 ms,0,0
+,TRUE,10,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,1
+2 Level,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,2
+,TRUE,9,0.02 ms,0,3
+,TRUE,11,0.02 ms,0,2
+,TRUE,6,0.03 ms,0,2
+,TRUE,7,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,2
+,TRUE,7,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,2
+,TRUE,10,0.02 ms,0,3
+3 Level,TRUE,7,0.02 ms,0,3
+,TRUE,9,0.02 ms,0,4
+,TRUE,7,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,2
+,TRUE,6,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,3
+,TRUE,7,0.02 ms,0,3
+,TRUE,6,0.02 ms,0,3
+,TRUE,9,0.02 ms,0,4
+,TRUE,5,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,3
+,TRUE,5,0.02 ms,0,3
+,,,,,
+,,,,,
+,AVERAGE,6.4375,,0,1.8375
+,STDEV,1.339220915,,0,1.205932068
+,MIN,5,,0,0
+,MAX,11,,0,4

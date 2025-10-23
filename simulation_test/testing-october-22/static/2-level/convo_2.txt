@@ -1,0 +1,25 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in downtown. I am operating within a high budget. I am allergic to any foods that are not gluten-free
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am operating within a high budget. I would prefer a low-energy atmosphere today. Do you have restaurants of type Mexican?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I would prefer a high-energy atmosphere today. I am allergic to any foods that are not dairy-free My phone number is 613-399-2081.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am located in Kingston. mhm Do you have restaurants of type Italian?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I am operating within a high budget. I can only eat foods that are dairy-free. Are there any Mexican restaurants in the area?
+AGENT: Where are you located?
+USER:  I am operating within a low budget. I am allergic to any foods that are not dairy-free Can you help me find things to do in Kingston?
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Do you have restaurants of type Italian? I live in Toronto. I am allergic to any foods that are not gluten-free
+AGENT: Cuisine preference has been logged.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I want to eat dessert. What is the most low-energy place in the city? nah
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I would prefer a low-energy atmosphere today. I want to eat Mexican. I have to eat dairy-free.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Broadway Theater in Toronto.

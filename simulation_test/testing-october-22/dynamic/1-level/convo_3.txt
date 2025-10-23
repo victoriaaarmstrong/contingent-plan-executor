@@ -1,0 +1,18 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Are there any Chinese restaurants in the area? I can do activities with a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  Are there any dessert restaurants in the area? I would prefer a low-energy atmosphere today.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  213-758-4930 I have a low budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not dairy-free yeah
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I have to eat dairy-free. I live in k-town.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  Are there any dessert restaurants in the area? Y
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Mexican. I am allergic to any foods that are not dairy-free
+AGENT: Booked a reservation at Guac Grill as well as a spot at Broadway Theater in k-town.

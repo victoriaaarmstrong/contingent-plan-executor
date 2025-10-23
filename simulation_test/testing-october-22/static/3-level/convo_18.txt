@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to eat Italian. Can you help me find things to do in Toronto? My phone number is 263-749-0563. I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I want to eat dessert. 213-758-4930 I can do activities with a high budget. What is the most low-energy place in the city?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am located in downtown. My phone number is 263-547-8152. I am allergic to any foods that are not dairy-free I want to go to a high-energy place.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I want to go to a high-energy place. I have a low budget. yeah I want to eat Chinese.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Can you help me find things to do in Toronto? I am operating within a low budget. I have to eat gluten-free. My phone number is 263-749-0563.
+AGENT: Where are you located?
+USER:  I have to eat dairy-free. I can do activities with a high budget. I want to go to a low-energy place. I live in k-town.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I can only eat foods that are gluten-free. I live in downtown. Do you have restaurants of type Chinese? I would prefer a low-energy atmosphere today.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in downtown.

@@ -1,0 +1,25 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  absolutely not savings Please request that Sandra to send me 25 dollars. Please pay my utility payment.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to send any funds to a contact today?
+USER:  Please pay my gas payment. Sandra is expecting 13 from me. I really need a college fund account please create one. yeah
+AGENT: Ok! How much would you like to send and to who?
+USER:  Nancy is expecting 23 from me. Mark is expecting 37 from me. I want to transfer 16 from savings to retirement fund. I'm finished
+AGENT: Which account would you like to use?
+USER:  chequing Please request that Nancy to send me 5000 dollars. Please create a college fund account. I want to pay off my electricity payment.
+AGENT: Sorry, that isn't a valid account.
+AGENT: Please specify the account you want to select.
+USER:  i'm all done here Please create a retirement fund account. Can I transfer 11 to Sandra? I need to use savings
+AGENT: E-transferring 11 to Sandra from chequing... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Can I transfer 11 to Bob? Please create a college fund account. I want to transfer 67 from savings to college fund. nah
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please pay my car payment. Please create a college fund account. confirm use savings for this task
+AGENT: Which contact would you like to request money from and how much?
+USER:  I want to create a college fund account. Please request that Bob to send me 91 dollars. Please send 45 to Nancy. I need to request that Sandra pays me 37.
+AGENT: Ok, I'm requesting a payment of 67 from Bob. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  I want to send 44 to college fund from chequing. savings no thanks Please send 5000 to Nancy.
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

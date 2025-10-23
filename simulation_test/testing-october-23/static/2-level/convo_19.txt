@@ -1,0 +1,27 @@
+AGENT: Would you like to create a new account?
+USER:  mhm Please pay my car payment. I need to request that Bob pays me 13.
+AGENT: What account type would you like to create?
+USER:  Please request my contact Nancy to send the 5000 they owe. I want to create a retirement fund account for my son. Bob is expecting 23 from me.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to select for this task?
+USER:  I need to use chequing I want to pay off my credit card payment. I want to create a college fund account.
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  no Please select savings. done
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please create a college fund account. yes I want to send 9 to retirement fund from savings.
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my car payment. Please request my contact Nancy to send the 12 they owe. I want to transfer 50 from savings to college fund.
+AGENT: Which account would you like to use?
+USER:  I need to use savings Please send 23 to Mark. I'm all done.
+AGENT: Ok, I'm paying your credit card bill from your savings account.
+AGENT: Would you like to request money from a contact?
+USER:  I want to transfer 67 from savings to retirement fund. nah Please request my contact Bob to send the 91 they owe.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I want to pay off my internet bill. yeah i'm good
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  I want to send 5000 to college fund from chequing. I want to create a college fund account for my son. Please send 5000 to Nancy.
+AGENT: Ok! I successfully transferred your requested amount of 91 from savings to retirement fund.
+AGENT: All done. Have a nice day!

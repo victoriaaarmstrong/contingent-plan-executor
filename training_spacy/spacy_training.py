@@ -207,7 +207,7 @@ def train_custom_entity(data_path, storage_path):
 train_custom_entity("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/banking_entity_data.xlsx",
                     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/entities/")
 """
-"""
+
 ## Train All Intent Models
 train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intent_data.xlsx",
                     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intents/")
@@ -242,9 +242,9 @@ train_custom_intent(
 train_custom_intent(
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intent_data.xlsx",
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intents/")
+
+
 """
-
-
 ## Train All Intent Models
 train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/gold-standard/confirm_intent_data.xlsx",
                     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/gold-standard/confirm_intents/")
@@ -283,6 +283,7 @@ train_custom_intent(
 #"/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/gold-standard/entities/")
 
 
+"""
 """
 test_text = "My phone number is 6139216005. I have a low budget and would prefer a fun atmosphere. "
 

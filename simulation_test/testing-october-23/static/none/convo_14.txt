@@ -1,0 +1,22 @@
+AGENT: Would you like to create a new account?
+USER:  no
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  no thank you
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  mhm
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my credit card bill.
+AGENT: Which account would you like to use?
+USER:  Please select savings.
+AGENT: Paying your credit card bill from your savings account...
+AGENT: Would you like to request money from a contact?
+USER:  no thanks
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  yeah
+AGENT: Ok, how much money do you want to send and between which accounts?
+USER:  Can I transfer 67 from chequing to college fund?
+AGENT: Got it. I've completed the transfer of 67 from chequing to college fund.
+AGENT: All done. Have a nice day!

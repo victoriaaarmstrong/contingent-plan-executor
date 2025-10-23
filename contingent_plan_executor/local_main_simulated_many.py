@@ -14,13 +14,11 @@ def simulate_local_conversation(output_files_path, sample_convos_out):
 
 
 if __name__ == "__main__":
-    # bot = "gold_standard_bot"
-    #out = "/home/rebecca/conversation-alignment/beam_search/eval/1/1_unmodified_run/json_convos"
     out = "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/simulation_test/"
-    for i in range(5):#20):
+    for i in range(20):#20):
         print(i)
         simulate_local_conversation(
-            "./local_data/updated_gold_standard_bot",
+            "./local_data/bank_bot",
             out
             )
         time.sleep(1)

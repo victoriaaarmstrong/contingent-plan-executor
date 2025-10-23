@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  What is the most low-energy place in the city? Do you have restaurants of type dessert? My number is 213-758-4930.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I can only eat foods that are gluten-free. I want to eat Chinese. I can do activities with a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I can do activities with a low budget. My number is 213-758-4930. I can only eat foods that are dairy-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  no thanks Can you help me find things to do in downtown? My phone number is 263-547-8152.
+AGENT: Where are you located?
+USER:  I would prefer a low-energy atmosphere today. My phone number is 263-749-0563. I live in Kingston.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  My phone number is 263-547-8152. I am located in k-town. Are there any Italian restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stauffer Library in k-town.

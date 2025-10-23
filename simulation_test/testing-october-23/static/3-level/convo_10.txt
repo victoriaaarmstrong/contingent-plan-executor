@@ -1,0 +1,27 @@
+AGENT: Would you like to create a new account?
+USER:  confirm I want to use chequing for this. Please create a retirement fund account. Can I transfer 23 to Bob?
+AGENT: What type of account would you like me to make for you?
+USER:  Please create a retirement fund account. Please request my contact Mark to send the 5000 they owe. Mark is expecting 25 from me. I want to send 11 to college fund from chequing.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  I need to use chequing Please request my contact Mark to send the 13 they owe. Can I transfer 23 from savings to retirement fund? done
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I want to pay off my lights payment. Can I transfer 30 to Nancy? Please select chequing. nah
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  mhm I want to transfer 5000 to Sandra. I want to create a college fund account. I need to request that Mark pays me 23.
+AGENT: Which bill would you like to pay off?
+USER:  Please pay my mortgage payment. I want to pay off my car payment. I want to transfer 23 from savings to retirement fund. chequing
+AGENT: Which account would you like to use?
+USER:  I want to pay off my mortgage bill. Please create a college fund account. Please request that Bob to send me 47 dollars. Use savings
+AGENT: Paying your mortgage bill from your chequing account...
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  I want to send 5000 to retirement fund from savings. I'm finished I want to pay off my electricity payment. absolutely not
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I want to pay off my mortgage payment. Please select chequing. I want to send 65 to retirement fund from savings. yeah
+AGENT: Ok! Please specify the funds you which to transfer and the accounts to transfer between.
+USER:  I want to create a retirement fund account for my son. Nancy is expecting 5000 from me. I want to send 76 to college fund from savings. Please pay my gas payment.
+AGENT: Ok! I successfully transferred your requested amount of 65 from savings to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

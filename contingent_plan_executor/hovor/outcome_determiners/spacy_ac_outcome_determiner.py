@@ -361,10 +361,10 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         Args:
             input (str): The user utterance.
             outcome_groups (List): The outcome groups for this action (these determine
-                which banking-old-gold-standard-intents are in our scope).
+                which intents are in our scope).
 
         Returns:
-            banking-old-gold-standard-intents (List[Intents]): The intent ranking.
+            intents (List[Intents]): The intent ranking.
         """
         predicted_intents = []
         for nlp in intent_models:
@@ -424,7 +424,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
         # entities-idk-where-from required by the extracted intent
         if chosen_intent.entity_reqs:
             ci_ent_reqs = [er[0] for er in chosen_intent.entity_reqs]
-        # note we shouldn't only add samples for extracted entities-idk-where-from; some outcomes don't
+        # note we shouldn't only add samples for extracted entities; some outcomes don't
 
         already_updated = []
         # extract entities-idk-where-from themselves but update the values of existing entities-idk-where-from
@@ -442,7 +442,7 @@ class SpacyDynamicOutcomeDeterminer(OutcomeDeterminerBase):
                             if progress.actual_context._fields[value]:
                                 value = progress.actual_context._fields[value]
                             else:
-                                # if it is not part of the progress yet and we just extracted entities-idk-where-from,
+                                # if it is not part of the progress yet and we just extracted entities
                                 if chosen_intent.entity_reqs:
                                     # check if we just extracted it
                                     if value in ci_ent_reqs:

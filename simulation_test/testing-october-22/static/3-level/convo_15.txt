@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Are there any Mexican restaurants in the area? 263-749-0563 I am allergic to any foods that are not dairy-free I have a low budget and I would prefer a high-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am allergic to any foods that are not dairy-free My number is 613-399-2081. I am located in Toronto. I am operating within a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am operating within a low budget. My number is 263-749-0563. N I would prefer a high-energy atmosphere today.
+AGENT: Where are you located?
+USER:  Can you help me find things to do in k-town? I would prefer a high-energy atmosphere today. I am allergic to any foods that are not dairy-free 213-758-4930
+AGENT: Tailoring your results to what's available in N...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I can only eat foods that are gluten-free. 263-547-8152 I want to eat Mexican. Can you help me find things to do in Kingston?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stages in Kingston.

@@ -1,0 +1,27 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  I want to pay off my mortgage bill. I want to use savings for this. yes
+AGENT: What account type would you like to create?
+USER:  I want to create a college fund account. Bob is expecting 13 from me. I'm all done.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  I need to use savings I want to pay off my lights bill. I really need a retirement fund account please create one.
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from savings.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I don't want to do anything else today. yes I want to use savings for this.
+AGENT: Ok! How much would you like to send and to who?
+USER:  Nancy is expecting 5000 from me. use chequing for this task Please send 23 to Bob.
+AGENT: Which account would you like to use?
+USER:  I want to create a college fund account for my son. i'm good I want to use savings for this.
+AGENT: E-transferring 13 to Bob from chequing... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  bye N Can I transfer 16 from savings to college fund?
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  yeah Can I transfer 99 from chequing to college fund? Please create a college fund account.
+AGENT: Which contact would you like to request money from and how much?
+USER:  Can I transfer 67 from savings to retirement fund? I need to request that Sandra pays me 23. I need to use savings
+AGENT: Ok, I asked Sandra to send you 99. I'll notify you when the payment is received.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  i'm all done here mhm Please request that Bob to send me 5000 dollars.
+AGENT: Ok! I successfully transferred your requested amount of 5000 from savings to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

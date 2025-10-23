@@ -5,7 +5,7 @@ import json
 
 from hovor.actions.local_dialogue_action import LocalDialogueAction
 
-with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/updated_gold_standard_bot/filled_utterance_bank.json", "r") as file:
+with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bank_bot/filled_utterance_bank.json", "r") as file:
     AC_DATA = json.load(file)
 
 class LocalDialogueActionSimulated(LocalDialogueAction):
@@ -100,7 +100,6 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
             additional_context = random.sample(AC_DATA[intent_name]["possible_ac_intents"], amount)
         except:
             return phrases[0]
-        #phrases = phrases + additional_context
 
         for ac in additional_context:
             phrases += [random.choice(AC_DATA[ac]["filled_utterances"])]
@@ -138,7 +137,7 @@ class LocalDialogueActionSimulated(LocalDialogueAction):
             random_intent = self.data_for_sim['intents'][random_outcome_intent_name]
             if len(random_intent['utterances']) != 0:
                 #print(self.add_additional_context(random_outcome_intent_name, 1))
-                random_utterance = self.add_additional_context(random_outcome_intent_name, 2) #random.choice(random_intent['utterances'])
+                random_utterance = self.add_additional_context(random_outcome_intent_name, 3) #random.choice(random_intent['utterances'])
                 #simulated_input = self.fill_dollar_vars(random_utterance)
             else:
                 # must be fallback, there are no utterances for this intent

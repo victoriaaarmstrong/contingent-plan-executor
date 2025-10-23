@@ -1,0 +1,20 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  confirm I want to create a college fund account for my son. Use chequing
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Can I transfer 5000 from savings to college fund? yeah Please create a retirement fund account.
+AGENT: Ok. How much money do you want to send and to who?
+USER:  done I want to send 5000 to college fund from chequing. Bob is expecting 25 from me.
+AGENT: All done! I just e-transferred 5000 to Bob from chequing.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  yeah Please pay my car payment. Please send 21 to Bob.
+AGENT: Which bill would you like to pay off?
+USER:  I need to request that Bob pays me 13. Can I transfer 67 from chequing to college fund? I want to pay off my electricity payment.
+AGENT: Paying your car bill from your chequing account...
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  confirm I want to transfer 43 from savings to retirement fund. I want to create a retirement fund account.
+AGENT: Ok, I asked Bob to send you 43. I'll notify you when the payment is received.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  I want to send 12 to college fund from savings. I want to pay off my mortgage payment. N
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

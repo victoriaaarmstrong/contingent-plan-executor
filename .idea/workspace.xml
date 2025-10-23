@@ -5,70 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d24ea5b-6237-40ac-91e4-ba193a28ecb3" name="Default Changelist" comment="removing wa micro workspace credentials for open source purposes">
-      <change afterPath="$PROJECT_DIR$/experiments/analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local_data/updated_gold_standard_bot/filled_utterance_bank.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_spacy/additional_context_intent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/visualisations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_data/bank_bot/filled_utterance_bank.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/actions/local_dialogue_action_simulated.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/core.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/outcome_determiners/spacy_ac_outcome_determiner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/controller/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/planning/controller/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/hovor/session/in_memory_session.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contingent_plan_executor/local_main_simulated_many.py" beforeDir="false" afterPath="$PROJECT_DIR$/contingent_plan_executor/local_main_simulated_many.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/confirm_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/deny_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_all_outing_preferences_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_allergies_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_budget_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_cuisine_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_location_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_outing_type_intents/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intent_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/ner/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/parser/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/textcat/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/tok2vec/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/gold-standard/share_phone_number_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_data/updated_gold_standard_bot/filled_utterance_bank.json" beforeDir="false" afterPath="$PROJECT_DIR$/local_data/updated_gold_standard_bot/filled_utterance_bank.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/additional_context_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/additional_context_intent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/banking_entity_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/banking_entity_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/banking_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/banking_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/confirm_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/confirm_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/deny_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/deny_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/deny_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/deny_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/deny_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/deny_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/deny_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_account_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_account_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_bill_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_bill_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_create_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_create_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_done_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_done_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_e_transfer_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_e_transfer_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_request_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_request_intents/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intent_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/old_intent_data/share_transfer_settings_intent_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/ner/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/ner/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/parser/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/parser/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/textcat/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/textcat/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/tok2vec/model" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/tok2vec/model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/banking/share_transfer_settings_intents/vocab/strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/training_spacy/spacy_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_spacy/spacy_training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +142,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -149,11 +154,11 @@
       <recent name="$PROJECT_DIR$/training_spacy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/simulation_test/testing-dynamic-oct-16/1-level" />
-      <recent name="$PROJECT_DIR$/simulation_test/testing-dynamic-oct-16/no-ac" />
-      <recent name="$PROJECT_DIR$/local_data/medical_bot" />
-      <recent name="$PROJECT_DIR$/graveyard" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-october-23/dynamic/3-level" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-october-23/dynamic/2-level" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-october-23/dynamic/1-level" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-october-23/dynamic/none" />
+      <recent name="$PROJECT_DIR$/simulation_test/testing-october-23/static/none" />
     </key>
   </component>
   <component name="RunManager">
@@ -320,7 +325,7 @@
       <workItem from="1760106373325" duration="27685000" />
       <workItem from="1760546182818" duration="23000" />
       <workItem from="1760547787011" duration="4709000" />
-      <workItem from="1760627010741" duration="29883000" />
+      <workItem from="1760627010741" duration="105507000" />
     </task>
     <task id="LOCAL-00001" summary="fixing import from wrong module">
       <created>1581899682434</created>
