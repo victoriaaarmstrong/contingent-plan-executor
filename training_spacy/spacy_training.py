@@ -208,7 +208,38 @@ train_custom_entity("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/t
                     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/entities/")
 """
 
+"""
+train_custom_entity("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/entity_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/entities/")
+"""
+
+
 ## Train All Intent Models
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_drink_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_drink_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_size_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_size_intents/")
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_payment_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_payment_intents/")
+
+train_custom_intent(
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_liquor_intent_data.xlsx",
+    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_liquor_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_mixer_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_mixer_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_glass_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_glass_intents/")
+
+train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_descriptors_intent_data.xlsx",
+                    "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/bartender/share_descriptors_intents/")
+
+## Train All Intent Models
+"""
 train_custom_intent("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intent_data.xlsx",
                     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/confirm_intents/")
 
@@ -219,7 +250,6 @@ train_custom_intent(
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_account_intent_data.xlsx",
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_account_intents/")
 
-## high losses for this guy -- check!!
 train_custom_intent(
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_bill_intent_data.xlsx",
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_bill_intents/")
@@ -242,7 +272,7 @@ train_custom_intent(
 train_custom_intent(
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intent_data.xlsx",
     "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/training_spacy/banking/share_transfer_settings_intents/")
-
+"""
 
 """
 ## Train All Intent Models

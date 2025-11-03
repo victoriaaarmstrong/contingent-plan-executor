@@ -104,7 +104,6 @@
     "filled_utterances": [
       "yes",
       "yeah",
-      "Y",
       "mhm",
       "confirm"
     ],
@@ -117,8 +116,7 @@
       "absolutely not",
       "nah",
       "no thanks",
-      "no thank you",
-      "N"
+      "no thank you"
     ],
     "possible_ac_intents": ["share_location", "share_cuisine", "share_allergies", "share_budget", "share_outing_type", "share_phone_number"]
   }

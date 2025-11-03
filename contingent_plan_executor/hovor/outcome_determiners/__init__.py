@@ -2,13 +2,32 @@ import spacy
 
 ## load all of the labels for entities-idk-where-from
 #SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
-SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
+#SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
+SPACY_LABELS = spacy.load("./training_spacy/bartender/entities/").get_pipe("ner").labels
 
 ## load entity model
 #entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
-entity_nlp = spacy.load("./training_spacy/banking/entities/")
+#entity_nlp = spacy.load("./training_spacy/banking/entities/")
+entity_nlp = spacy.load("./training_spacy/bartender/entities/")
 
+intent_nlp = spacy.load("./training_spacy/bartender/share_drink_intents/")
+share_drink_nlp = spacy.load("./training_spacy/bartender/share_drink_intents/")
+share_glass_nlp = spacy.load("./training_spacy/bartender/share_glass_intents/")
+share_liquor_nlp = spacy.load("./training_spacy/bartender/share_liquor_intents/")
+share_mixer_nlp = spacy.load("./training_spacy/bartender/share_mixer_intents/")
+share_payment_nlp = spacy.load("./training_spacy/bartender/share_payment_intents/")
+share_size_nlp = spacy.load("./training_spacy/bartender/share_size_intents/")
+share_descriptors_nlp = spacy.load("./training_spacy/bartender/share_descriptors_intents/")
 
+intent_models = [share_drink_nlp,
+                 share_glass_nlp,
+                 share_liquor_nlp,
+                 share_mixer_nlp,
+                 share_payment_nlp,
+                 share_size_nlp,
+                 share_descriptors_nlp]
+
+"""
 ## load intent models and store
 intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
 confirm_intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
@@ -30,6 +49,7 @@ intent_models = [confirm_intent_nlp,
                  share_e_transfer_nlp,
                  share_request_nlp,
                  share_transfer_settings_nlp]
+"""
 
 """
 intent_nlp = spacy.load("./training_spacy/gold-standard/confirm_intents/")

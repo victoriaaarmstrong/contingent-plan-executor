@@ -1,0 +1,146 @@
+{
+  "share_drink": {
+    "filled_utterances": [
+      "I'd like a wine.",
+      "I'd like a beer.",
+      "I'd like a cocktail.",
+      "A wine sounds nice.",
+      "A beer sounds nice.",
+      "A cocktail sounds nice.",
+      "A wine please.",
+      "A beer please.",
+      "A cocktail please.",
+      "wine",
+      "beer",
+      "cocktail"
+    ],
+    "possible_ac_intents": ["share_size", "share_liquor", "share_mixer", "share_glass", "share_payment", "share_descriptors"]
+  },
+  "share_size": {
+    "filled_utterances": [
+      "I'd like twelve ounces.",
+      "I'd like sixteen ounces.",
+      "I'd like five ounces.",
+      "I'd like eight ounces.",
+      "Can I have a twelve ounce please.",
+      "Can I have a sixteen ounce please.",
+      "Can I have a five ounce please.",
+      "Can I have a eight ounce please.",
+      "The twelve ounce.",
+      "The sixteen ounce.",
+      "The five ounce.",
+      "The eight ounce."
+    ],
+    "possible_ac_intents": ["share_drink", "share_liquor", "share_mixer", "share_glass", "share_payment", "share_descriptors"]
+  },
+  "share_liquor": {
+    "filled_utterances": [
+      "Can I have rum.",
+      "Can I have tequila.",
+      "Can I have vodka.",
+      "Can I have gin.",
+      "rum",
+      "tequila",
+      "vodka",
+      "gin",
+      "rum sounds good!",
+      "tequila sounds good!",
+      "vodka sounds good!",
+      "gin sounds good!"
+    ],
+    "possible_ac_intents": ["share_drink", "share_size", "share_mixer", "share_glass", "share_payment", "share_descriptors"]
+  },
+  "share_mixer": {
+    "filled_utterances": [
+      "Can I have grapefruit juice.",
+      "Can I have sprite.",
+      "Can I have soda water.",
+      "Can I have coke.",
+      "Can I have tonic water.",
+      "grapefruit juice",
+      "sprite",
+      "soda water",
+      "coke",
+      "tonic water",
+      "grapefruit juice sounds good!",
+      "sprite sounds good!",
+      "soda water sounds good!",
+      "coke sounds good!",
+      "tonic water sounds good!"
+    ],
+    "possible_ac_intents": ["share_drink", "share_size", "share_liquor", "share_glass", "share_payment", "share_descriptors"]
+  },
+  "share_glass": {
+    "filled_utterances": [
+      "Can I have a tall glass.",
+      "Can I have a short glass.",
+      "A tall glass.",
+      "A short glass.",
+      "Do you have a tall glass?",
+      "Do you have a short glass?"
+    ],
+    "possible_ac_intents": ["share_drink", "share_size", "share_liquor", "share_mixer", "share_payment", "share_descriptors"]
+  },
+  "share_payment": {
+    "filled_utterances": [
+      "Can I use credit?",
+      "Can I use debit?",
+      "Can I use cash?",
+      "I'd like to pay with credit.",
+      "I'd like to pay with debit.",
+      "I'd like to pay with cash.",
+      "credit",
+      "debit",
+      "cash"
+    ],
+    "possible_ac_intents": ["share_drink", "share_size", "share_liquor", "share_mixer", "share_glass", "share_descriptors"]
+  },
+  "share_descriptors": {
+    "filled_utterances": [
+      "I like something light.",
+      "I like something fruity.",
+      "I normally go for a light drink.",
+      "I normally go for a fruity drink.",
+      "Can I do light?",
+      "Can I do fruity?"
+    ],
+    "possible_ac_intents": ["share_drink", "share_size", "share_liquor", "share_mixer", "share_glass", "share_payment"]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

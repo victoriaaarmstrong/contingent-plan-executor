@@ -1,0 +1,1228 @@
+{
+    "name": "bartender",
+    "context_variables": {
+        "drink": {
+            "type": "enum",
+            "config": [
+                "wine",
+                "beer",
+                "cocktail"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "size": {
+            "type": "enum",
+            "config": [
+                "twelve",
+                "sixteen",
+                "five",
+                "eight"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "liquor": {
+            "type": "enum",
+            "config": [
+                "rum",
+                "tequila",
+                "vodka",
+                "gin"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "mixer": {
+            "type": "enum",
+            "config": [
+                "grapefruit juice",
+                "sprite",
+                "soda water",
+                "coke",
+                "tonic water"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "glass": {
+            "type": "enum",
+            "config": [
+                "short",
+                "tall"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "payment": {
+            "type": "enum",
+            "config": [
+                "credit",
+                "debit",
+                "cash"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "descriptors": {
+            "type": "enum",
+            "config": [
+                "light",
+                "fruity"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "beverage": {
+            "type": "enum",
+            "config": [
+                "red",
+                "white",
+                "lager",
+                "radler"
+            ],
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "drink_preferences": {
+            "type": "flag",
+            "config": false,
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "drink_ingredients": {
+            "type": "flag",
+            "config": false,
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "informed": {
+            "type": "flag",
+            "config": false
+        },
+        "goal": {
+            "type": "flag",
+            "config": false,
+            "known": {
+                "type": "flag",
+                "init": false
+            }
+        },
+        "force-statement": {
+            "type": "flag",
+            "config": false
+        }
+    },
+    "intents": {
+        "share_drink": {
+            "entities": [
+                "$drink"
+            ],
+            "utterances": [
+                "I'd like a $drink.",
+                "A $drink sounds nice.",
+                "A $drink please.",
+                "$drink"
+            ],
+            "type": "regular"
+        },
+        "share_size": {
+            "entities": [
+                "$size"
+            ],
+            "utterances": [
+                "I'd like $size ounces.",
+                "Can I have a $size ounce please.",
+                "The $size ounce."
+            ],
+            "type": "regular"
+        },
+        "share_liquor": {
+            "entities": [
+                "$liquor"
+            ],
+            "utterances": [
+                "Can I have $liquor.",
+                "$liquor.",
+                "$liquor sounds good!"
+            ],
+            "type": "regular"
+        },
+        "share_mixer": {
+            "entities": [
+                "$mixer"
+            ],
+            "utterances": [
+                "Can I have $mixer.",
+                "$mixer.",
+                "$mixer would be nice!"
+            ],
+            "type": "regular"
+        },
+        "share_glass": {
+            "entities": [
+                "$glass"
+            ],
+            "utterances": [
+                "Can I have a $glass glass?",
+                "A $glass glass.",
+                "Do you have a $glass glass?"
+            ],
+            "type": "regular"
+        },
+        "share_payment": {
+            "entities": [
+                "$payment"
+            ],
+            "utterances": [
+                "Can I use $payment?",
+                "I'd like to pay with $payment.",
+                "$payment."
+            ],
+            "type": "regular"
+        },
+        "share_descriptors": {
+            "entities": [
+                "$descriptors"
+            ],
+            "utterances": [
+                "I like something $descriptors.",
+                "I normally go for a $descriptors drink.",
+                "Can I do $descriptors?"
+            ],
+            "type": "regular"
+        },
+        "fallback": {
+            "entities": [],
+            "utterances": [],
+            "type": "fallback"
+        },
+        "utter_msg": {
+            "entities": [],
+            "utterances": [],
+            "type": "regular"
+        }
+    },
+    "actions": {
+        "set-beverage": {
+            "type": "system",
+            "subtype": "Context dependent determination",
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "beverage",
+                    "Unknown"
+                ],
+                [
+                    "descriptors",
+                    "Known"
+                ],
+                [
+                    "drink_preferences",
+                    "Known"
+                ],
+                [
+                    "drink_preferences",
+                    true
+                ],
+                [
+                    "drink_ingredients",
+                    "Known"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "set-beverage__assign_beverage",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "beverage": {
+                                "value": "red wine",
+                                "variable": "beverage",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": false,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "wine"
+                            },
+                            "descriptors": {
+                                "value": "fruity"
+                            }
+                        },
+                        "name": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-red-wine",
+                        "intent": null,
+                        "assignments": {
+                            "$beverage": "found",
+                            "$drink_preferences": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "beverage": {
+                                "value": "white wine",
+                                "variable": "beverage",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": false,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "wine"
+                            },
+                            "descriptors": {
+                                "value": "light"
+                            }
+                        },
+                        "name": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-white-wine",
+                        "intent": null,
+                        "assignments": {
+                            "$beverage": "found",
+                            "$drink_preferences": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "beverage": {
+                                "value": "lager",
+                                "variable": "beverage",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": false,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "beer"
+                            },
+                            "descriptors": {
+                                "value": "light"
+                            }
+                        },
+                        "name": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-lager",
+                        "intent": null,
+                        "assignments": {
+                            "$beverage": "found",
+                            "$drink_preferences": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "beverage": {
+                                "value": "radler",
+                                "variable": "beverage",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": false,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "beer"
+                            },
+                            "descriptors": {
+                                "value": "fruity"
+                            }
+                        },
+                        "name": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-radler",
+                        "intent": null,
+                        "assignments": {
+                            "$beverage": "found",
+                            "$drink_preferences": "found"
+                        }
+                    }
+                ]
+            }
+        },
+        "set-drink-ingredients": {
+            "type": "system",
+            "subtype": "Context dependent determination",
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "descriptors",
+                    "Unknown"
+                ],
+                [
+                    "beverage",
+                    "Unknown"
+                ],
+                [
+                    "drink_ingredients",
+                    "Unknown"
+                ],
+                [
+                    "drink_preferences",
+                    "Unknown"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "set-drink-ingredients__assign_drink_ingredients",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "drink_ingredients": {
+                                "value": true,
+                                "variable": "drink_ingredients",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": false,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "cocktail"
+                            }
+                        },
+                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-cocktail",
+                        "intent": null,
+                        "assignments": {
+                            "$drink_ingredients": "found",
+                            "$drink_preferences": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "drink_ingredients": {
+                                "value": false,
+                                "variable": "drink_ingredients",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": true,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "wine"
+                            }
+                        },
+                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-wine",
+                        "intent": null,
+                        "assignments": {
+                            "$drink_ingredients": "found",
+                            "$drink_preferences": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "drink_ingredients": {
+                                "value": false,
+                                "variable": "drink_ingredients",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_preferences": {
+                                "value": true,
+                                "variable": "drink_preferences",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "context": {
+                            "drink": {
+                                "value": "beer"
+                            }
+                        },
+                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-beer",
+                        "intent": null,
+                        "assignments": {
+                            "$drink_ingredients": "found",
+                            "$drink_preferences": "found"
+                        }
+                    }
+                ]
+            }
+        },
+        "get-liquor": {
+            "type": "dialogue",
+            "message_variants": [
+                "What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila."
+            ],
+            "fallback_message_variants": [
+                "Sorry, I only have rum, gin, vodka, or tequila."
+            ],
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "liquor",
+                    "Unknown"
+                ],
+                [
+                    "drink_ingredients",
+                    "Known"
+                ],
+                [
+                    "drink_ingredients",
+                    true
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "get-liquor__set-liquor",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "liquor": {
+                                "value": "$liquor",
+                                "variable": "liquor",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_liquor",
+                        "name": "get-liquor_DETDUP_get-liquor__set-liquor-EQ-update_liquor",
+                        "assignments": {
+                            "$liquor": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "get-liquor_DETDUP_get-liquor__set-liquor-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_liquor": {
+                    "entities": [
+                        "$liquor"
+                    ],
+                    "utterances": [
+                        "Can I have $liquor.",
+                        "$liquor.",
+                        "$liquor sounds good!"
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "get-mixer": {
+            "type": "dialogue",
+            "message_variants": [
+                "What would you like to mix your drink with?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, I don't have that. I have grapefruit juice, sprite, soda water, coke, tonic water."
+            ],
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "liquor",
+                    "Known"
+                ],
+                [
+                    "drink_ingredients",
+                    "Known"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "get-mixer__set-mixer",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "mixer": {
+                                "value": "$mixer",
+                                "variable": "mixer",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "drink_ingredients": {
+                                "value": false,
+                                "variable": "drink_ingredients",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_mixer",
+                        "name": "get-mixer_DETDUP_get-mixer__set-mixer-EQ-update_mixer",
+                        "assignments": {
+                            "$mixer": "found",
+                            "$drink_ingredients": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "get-mixer_DETDUP_get-mixer__set-mixer-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_mixer": {
+                    "entities": [
+                        "$mixer"
+                    ],
+                    "utterances": [
+                        "Can I have $mixer.",
+                        "$mixer.",
+                        "$mixer would be nice!"
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "get-descriptors": {
+            "type": "dialogue",
+            "message_variants": [
+                "What flavour profile do you usually go for (e.g. light, fruity)?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, I don't have that. Use a word like light or fruity."
+            ],
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "descriptors",
+                    "Unknown"
+                ],
+                [
+                    "drink_preferences",
+                    "Known"
+                ],
+                [
+                    "drink_preferences",
+                    true
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "get-descriptors__set-descriptors",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "descriptors": {
+                                "value": "$descriptors",
+                                "variable": "descriptors",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_descriptors",
+                        "name": "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-update_descriptors",
+                        "assignments": {
+                            "$descriptors": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_descriptors": {
+                    "entities": [
+                        "$descriptors"
+                    ],
+                    "utterances": [
+                        "I like something $descriptors.",
+                        "I normally go for a $descriptors drink.",
+                        "Can I do $descriptors?"
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "inform": {
+            "type": "system",
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "size",
+                    "Known"
+                ],
+                [
+                    "glass",
+                    "Known"
+                ],
+                [
+                    "payment",
+                    "Unknown"
+                ],
+                [
+                    "informed",
+                    false
+                ],
+                [
+                    "drink_ingredients",
+                    "Known"
+                ],
+                [
+                    "drink_ingredients",
+                    false
+                ],
+                [
+                    "drink_preferences",
+                    "Known"
+                ],
+                [
+                    "drink_preferences",
+                    false
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "inform__finish",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "informed": {
+                                "value": true,
+                                "variable": "informed",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "response_variants": [
+                            "Excellent thanks! I've sent your order for a $drink to the bartender."
+                        ],
+                        "name": "inform_DETDUP_inform__finish-EQ-finish",
+                        "intent": null,
+                        "assignments": {}
+                    }
+                ]
+            }
+        },
+        "complete": {
+            "type": "system",
+            "condition": [
+                [
+                    "informed",
+                    true
+                ],
+                [
+                    "payment",
+                    "Known"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "complete__finish",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "goal": {
+                                "value": true,
+                                "variable": "goal",
+                                "interpretation": "json"
+                            }
+                        },
+                        "name": "complete_DETDUP_complete__finish-EQ-finish",
+                        "intent": null,
+                        "assignments": {}
+                    }
+                ]
+            }
+        },
+        "dialogue_statement": {
+            "type": "dialogue",
+            "condition": [
+                [
+                    "force-statement",
+                    true
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "dialogue_statement__reset",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": false,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "utter_msg",
+                        "name": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "message_variants": [
+                ""
+            ],
+            "disable-fallback": true,
+            "intents": {
+                "utter_msg": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "regular"
+                }
+            }
+        },
+        "slot-fill__get-drink": {
+            "type": "dialogue",
+            "message_variants": [
+                "What kind of drink would you like? I have wine, beer, or cocktails.",
+                "What would you like to drink?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, that isn't a valid drink."
+            ],
+            "condition": [
+                [
+                    "drink",
+                    null
+                ],
+                [
+                    "drink",
+                    "Unknown"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "slot-fill__get-drink__validate-slot-fill",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "drink": {
+                                "value": "$drink",
+                                "variable": "drink",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_drink",
+                        "response_variants": [
+                            "Great, tailoring your options based on a $drink..."
+                        ],
+                        "name": "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-drink_found",
+                        "assignments": {
+                            "$drink": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_drink": {
+                    "entities": [
+                        "$drink"
+                    ],
+                    "utterances": [
+                        "I'd like a $drink.",
+                        "A $drink sounds nice.",
+                        "A $drink please.",
+                        "$drink"
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "slot-fill__get-size": {
+            "type": "dialogue",
+            "message_variants": [
+                "How many ounces would you like?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, that isn't a valid number of ounces."
+            ],
+            "condition": [
+                [
+                    "size",
+                    null
+                ],
+                [
+                    "size",
+                    "Unknown"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "slot-fill__get-size__validate-slot-fill",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "size": {
+                                "value": "$size",
+                                "variable": "size",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_size",
+                        "response_variants": [
+                            "Size preference has been logged."
+                        ],
+                        "name": "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-size_found",
+                        "assignments": {
+                            "$size": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_size": {
+                    "entities": [
+                        "$size"
+                    ],
+                    "utterances": [
+                        "I'd like $size ounces.",
+                        "Can I have a $size ounce please.",
+                        "The $size ounce."
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "slot-fill__get-glass": {
+            "type": "dialogue",
+            "message_variants": [
+                "Would you like a tall or short glass?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, that is an invalid glass type. Please say either tall or short."
+            ],
+            "condition": [
+                [
+                    "glass",
+                    null
+                ],
+                [
+                    "glass",
+                    "Unknown"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "slot-fill__get-glass__validate-slot-fill",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "glass": {
+                                "value": "$glass",
+                                "variable": "glass",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_glass",
+                        "response_variants": [
+                            "Glass preference has been logged."
+                        ],
+                        "name": "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-glass_found",
+                        "assignments": {
+                            "$glass": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_glass": {
+                    "entities": [
+                        "$glass"
+                    ],
+                    "utterances": [
+                        "Can I have a $glass glass?",
+                        "A $glass glass.",
+                        "Do you have a $glass glass?"
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        },
+        "slot-fill__get-payment": {
+            "type": "dialogue",
+            "message_variants": [
+                "How would you like to pay?"
+            ],
+            "fallback_message_variants": [
+                "Sorry, that is an invalid payment type."
+            ],
+            "condition": [
+                [
+                    "payment",
+                    null
+                ],
+                [
+                    "payment",
+                    "Unknown"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "slot-fill__get-payment__validate-slot-fill",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "payment": {
+                                "value": "$payment",
+                                "variable": "payment",
+                                "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "share_payment",
+                        "response_variants": [
+                            "Great, you'll pay by $payment."
+                        ],
+                        "name": "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-payment_found",
+                        "assignments": {
+                            "$payment": "found"
+                        }
+                    },
+                    {
+                        "updates": {
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "intent": "fallback",
+                        "name": "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-fallback",
+                        "assignments": {}
+                    }
+                ]
+            },
+            "intents": {
+                "share_payment": {
+                    "entities": [
+                        "$payment"
+                    ],
+                    "utterances": [
+                        "Can I use $payment?",
+                        "I'd like to pay with $payment.",
+                        "$payment."
+                    ],
+                    "type": "regular"
+                },
+                "fallback": {
+                    "entities": [],
+                    "utterances": [],
+                    "type": "fallback"
+                }
+            }
+        }
+    }
+}

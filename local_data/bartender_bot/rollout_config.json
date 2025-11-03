@@ -1,0 +1,248 @@
+{
+    "actions": {
+        "set-beverage": {
+            "condition": [
+                "(not (know__beverage))",
+                "(know__drink_ingredients)",
+                "(drink_preferences)",
+                "(not (force-statement))",
+                "(know__descriptors)",
+                "(know__drink_preferences)",
+                "(know__drink)"
+            ],
+            "effect": {
+                "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-red-wine": [
+                    "(know__beverage)",
+                    "(not (drink_preferences))"
+                ],
+                "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-white-wine": [
+                    "(know__beverage)",
+                    "(not (drink_preferences))"
+                ],
+                "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-lager": [
+                    "(know__beverage)",
+                    "(not (drink_preferences))"
+                ],
+                "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-radler": [
+                    "(know__beverage)",
+                    "(not (drink_preferences))"
+                ]
+            }
+        },
+        "set-drink-ingredients": {
+            "condition": [
+                "(not (know__beverage))",
+                "(not (know__descriptors))",
+                "(not (know__drink_preferences))",
+                "(not (force-statement))",
+                "(not (know__drink_ingredients))",
+                "(know__drink)"
+            ],
+            "effect": {
+                "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-cocktail": [
+                    "(know__drink_preferences)",
+                    "(know__drink_ingredients)",
+                    "(not (drink_preferences))",
+                    "(drink_ingredients)"
+                ],
+                "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-wine": [
+                    "(know__drink_preferences)",
+                    "(know__drink_ingredients)",
+                    "(drink_preferences)",
+                    "(not (drink_ingredients))"
+                ],
+                "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-beer": [
+                    "(know__drink_preferences)",
+                    "(know__drink_ingredients)",
+                    "(drink_preferences)",
+                    "(not (drink_ingredients))"
+                ]
+            }
+        },
+        "get-liquor": {
+            "condition": [
+                "(know__drink_ingredients)",
+                "(not (force-statement))",
+                "(not (know__liquor))",
+                "(drink_ingredients)",
+                "(know__drink)"
+            ],
+            "effect": {
+                "get-liquor_DETDUP_get-liquor__set-liquor-EQ-update_liquor": [
+                    "(know__liquor)"
+                ],
+                "get-liquor_DETDUP_get-liquor__set-liquor-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "get-mixer": {
+            "condition": [
+                "(not (force-statement))",
+                "(know__drink_ingredients)",
+                "(know__liquor)",
+                "(know__drink)"
+            ],
+            "effect": {
+                "get-mixer_DETDUP_get-mixer__set-mixer-EQ-update_mixer": [
+                    "(know__mixer)",
+                    "(not (drink_ingredients))"
+                ],
+                "get-mixer_DETDUP_get-mixer__set-mixer-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "get-descriptors": {
+            "condition": [
+                "(not (know__descriptors))",
+                "(drink_preferences)",
+                "(not (force-statement))",
+                "(know__drink_preferences)",
+                "(know__drink)"
+            ],
+            "effect": {
+                "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-update_descriptors": [
+                    "(know__descriptors)"
+                ],
+                "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "inform": {
+            "condition": [
+                "(know__glass)",
+                "(know__drink_ingredients)",
+                "(not (force-statement))",
+                "(not (know__payment))",
+                "(not (drink_preferences))",
+                "(know__size)",
+                "(not (informed))",
+                "(know__drink_preferences)",
+                "(know__drink)",
+                "(not (drink_ingredients))"
+            ],
+            "effect": {
+                "inform_DETDUP_inform__finish-EQ-finish": [
+                    "(force-statement)",
+                    "(informed)"
+                ]
+            }
+        },
+        "complete": {
+            "condition": [
+                "(not (force-statement))",
+                "(know__payment)",
+                "(informed)"
+            ],
+            "effect": {
+                "complete_DETDUP_complete__finish-EQ-finish": [
+                    "(goal)"
+                ]
+            }
+        },
+        "dialogue_statement": {
+            "condition": [
+                "(force-statement)"
+            ],
+            "effect": {
+                "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock": [
+                    "(not (force-statement))"
+                ]
+            }
+        },
+        "slot-fill__get-drink": {
+            "condition": [
+                "(not (know__drink))",
+                "(not (force-statement))"
+            ],
+            "effect": {
+                "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-drink_found": [
+                    "(force-statement)",
+                    "(know__drink)"
+                ],
+                "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "slot-fill__get-size": {
+            "condition": [
+                "(not (force-statement))",
+                "(not (know__size))"
+            ],
+            "effect": {
+                "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-size_found": [
+                    "(force-statement)",
+                    "(know__size)"
+                ],
+                "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "slot-fill__get-glass": {
+            "condition": [
+                "(not (force-statement))",
+                "(not (know__glass))"
+            ],
+            "effect": {
+                "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-glass_found": [
+                    "(force-statement)",
+                    "(know__glass)"
+                ],
+                "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        },
+        "slot-fill__get-payment": {
+            "condition": [
+                "(not (force-statement))",
+                "(not (know__payment))"
+            ],
+            "effect": {
+                "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-payment_found": [
+                    "(force-statement)",
+                    "(know__payment)"
+                ],
+                "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-fallback": [
+                    "(force-statement)"
+                ]
+            }
+        }
+    },
+    "initial_state": [
+        "(not (know__beverage))",
+        "(not (know__descriptors))",
+        "(not (know__drink_preferences))",
+        "(not (force-statement))",
+        "(not (know__payment))",
+        "(not (drink_preferences))",
+        "(not (know__goal))",
+        "(not (goal))",
+        "(not (know__glass))",
+        "(not (know__drink))",
+        "(not (know__liquor))",
+        "(not (know__mixer))",
+        "(not (informed))",
+        "(not (know__size))",
+        "(not (know__drink_ingredients))",
+        "(not (drink_ingredients))"
+    ],
+    "partial": {
+        "set-beverage": [],
+        "set-drink-ingredients": [],
+        "get-liquor": [],
+        "get-mixer": [],
+        "get-descriptors": [],
+        "inform": [],
+        "complete": [],
+        "dialogue_statement": [],
+        "slot-fill__get-drink": [],
+        "slot-fill__get-size": [],
+        "slot-fill__get-glass": [],
+        "slot-fill__get-payment": []
+    }
+}
