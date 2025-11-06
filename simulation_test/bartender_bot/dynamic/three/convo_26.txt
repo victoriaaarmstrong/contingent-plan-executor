@@ -1,0 +1,7 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  gin A beer sounds nice. Can I have grapefruit juice. I'd like to pay with cash.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  The sixteen ounce. cash A short glass. I normally go for a light drink.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by cash.

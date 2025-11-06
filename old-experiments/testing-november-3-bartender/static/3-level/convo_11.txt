@@ -1,0 +1,15 @@
+AGENT: What would you like to drink?
+USER:  Can I use cash? I'd like a wine. Can I have tequila. I like something light.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Would you like a tall or short glass?
+USER:  grapefruit juice tequila sounds good! Can I do fruity? Do you have a tall glass?
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  The eight ounce. gin sprite wine
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  soda water sounds good! Can I do fruity? Can I have a tall glass. credit
+AGENT: Excellent thanks! I've sent your order for a wine to the bartender.
+AGENT: How would you like to pay?
+USER:  Can I use credit? Can I have sprite. A beer please. vodka sounds good!
+AGENT: Great, you'll pay by credit.

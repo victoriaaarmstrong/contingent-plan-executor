@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to go to a low-energy place. 263-749-0563 I am located in k-town. I can do activities with a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I have to eat dairy-free. 263-547-8152 I am located in Toronto. I want to go to a low-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  What is the most high-energy place in the city? My number is 263-547-8152. I have to eat gluten-free. I live in Kingston.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I have to eat gluten-free. yes My number is 263-749-0563. I have a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to go to a low-energy place. I am operating within a high budget. I live in Toronto. I can only eat foods that are dairy-free.
+AGENT: Where are you located?
+USER:  I would prefer a high-energy atmosphere today. I am located in k-town. I can only eat foods that are dairy-free. I can do activities with a low budget.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am located in k-town. My phone number is 263-547-8152. I would prefer a high-energy atmosphere today. Are there any Italian restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in k-town.

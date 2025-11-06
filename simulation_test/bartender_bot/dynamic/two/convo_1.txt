@@ -1,0 +1,7 @@
+AGENT: What would you like to drink?
+USER:  Can I have vodka. I'd like to pay with debit. beer
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I have a sixteen ounce please. Can I do fruity? A short glass.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by debit.

@@ -1,0 +1,11 @@
+AGENT: What would you like to drink?
+USER:  A beer please. Can I do fruity?
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: Would you like a tall or short glass?
+USER:  Do you have a tall glass? I like something light.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  I'd like twelve ounces. I'd like to pay with credit.
+AGENT: Great, you'll pay by credit.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by credit.

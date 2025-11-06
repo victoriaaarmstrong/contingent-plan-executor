@@ -1,0 +1,17 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  I normally go for a fruity drink. The twelve ounce. Can I have rum. cocktail
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  Can I have tonic water. I'd like a wine. I'd like to pay with credit. Can I do light?
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  I'd like twelve ounces. Do you have a tall glass? cash Can I have grapefruit juice.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  vodka sounds good! Can I do light? The twelve ounce. I'd like a cocktail.
+AGENT: Size preference has been logged.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  tonic water sounds good! Do you have a tall glass? debit gin sounds good!
+AGENT: What would you like to mix your drink with?
+USER:  I'd like five ounces. I'd like a cocktail. sprite sounds good! I'd like to pay with cash.
+AGENT: Excellent thanks! I've sent your order for a cocktail to the bartender.

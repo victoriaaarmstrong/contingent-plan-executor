@@ -1,0 +1,15 @@
+AGENT: What would you like to drink?
+USER:  cocktail I'd like sixteen ounces. I'd like to pay with debit. grapefruit juice
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  A beer sounds nice. A short glass. Can I have vodka. Can I have coke.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  I'd like eight ounces. Can I have a short glass. I like something fruity. I'd like a beer.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  debit I'd like a beer. Can I have a twelve ounce please. Can I have rum.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  debit tequila The sixteen ounce. Can I do fruity?
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.

@@ -1,0 +1,13 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A wine sounds nice. sprite sounds good!
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  The eight ounce. Can I do fruity?
+AGENT: Would you like a tall or short glass?
+USER:  A cocktail please. Can I have a short glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  I'd like to pay with cash. Can I have a five ounce please.
+AGENT: Great, you'll pay by cash.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by cash.

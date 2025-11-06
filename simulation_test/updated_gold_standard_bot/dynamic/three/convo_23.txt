@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My number is 613-399-2081. I would prefer a low-energy atmosphere today. I can do activities with a high budget. I live in k-town.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am allergic to any foods that are not gluten-free Do you have restaurants of type Italian? My number is 213-758-4930. I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  263-547-8152 Are there any Chinese restaurants in the area? I would prefer a high-energy atmosphere today. I can do activities with a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yeah I want to eat Mexican. I am allergic to any foods that are not gluten-free What is the most low-energy place in the city?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  My number is 263-749-0563. I would prefer a high-energy atmosphere today. Do you have restaurants of type Chinese? I am allergic to any foods that are not gluten-free
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in k-town.

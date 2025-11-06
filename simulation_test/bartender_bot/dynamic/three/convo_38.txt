@@ -1,0 +1,7 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  rum sounds good! I'd like eight ounces. wine Do you have a short glass?
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  grapefruit juice cash The twelve ounce. I like something fruity.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by cash.

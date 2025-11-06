@@ -1,0 +1,14 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Can you help me find things to do in downtown? I have a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I have a high budget. What is the most high-energy place in the city?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  213-758-4930 I am operating within a low budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  nah I can do activities with a high budget.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I can do activities with a high budget. Do you have restaurants of type Italian?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Smith's Golfing Club in downtown.

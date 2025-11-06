@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in downtown. I would prefer a low-energy atmosphere today. I want to eat Italian. My phone number is 263-547-8152.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  Can you help me find things to do in Kingston? 263-749-0563 I am operating within a low budget. I am allergic to any foods that are not gluten-free
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I can do activities with a low budget. I would prefer a low-energy atmosphere today. Are there any Italian restaurants in the area? 613-399-2081
+AGENT: Do you have any allergies? (Y/N)
+USER:  nah I am allergic to any foods that are not gluten-free What is the most high-energy place in the city? I am operating within a high budget.
+AGENT: Where are you located?
+USER:  I want to go to a high-energy place. I can only eat foods that are gluten-free. Can you help me find things to do in Toronto? 263-749-0563
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Italian restaurants in the area? I am operating within a low budget. I would prefer a high-energy atmosphere today. Can you help me find things to do in Toronto?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stauffer Library in Toronto.

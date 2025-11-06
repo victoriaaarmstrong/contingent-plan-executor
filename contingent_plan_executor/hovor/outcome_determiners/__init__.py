@@ -2,14 +2,14 @@ import spacy
 
 ## load all of the labels for entities-idk-where-from
 #SPACY_LABELS = spacy.load("./training_spacy/gold-standard/entities/").get_pipe("ner").labels
-#SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
-SPACY_LABELS = spacy.load("./training_spacy/bartender/entities/").get_pipe("ner").labels
+SPACY_LABELS = spacy.load("./training_spacy/banking/entities/").get_pipe("ner").labels
+#SPACY_LABELS = spacy.load("./training_spacy/bartender/entities/").get_pipe("ner").labels
 
 ## load entity model
 #entity_nlp = spacy.load("./training_spacy/gold-standard/entities/")
-#entity_nlp = spacy.load("./training_spacy/banking/entities/")
-entity_nlp = spacy.load("./training_spacy/bartender/entities/")
-
+entity_nlp = spacy.load("./training_spacy/banking/entities/")
+#entity_nlp = spacy.load("./training_spacy/bartender/entities/")
+"""
 intent_nlp = spacy.load("./training_spacy/bartender/share_drink_intents/")
 share_drink_nlp = spacy.load("./training_spacy/bartender/share_drink_intents/")
 share_glass_nlp = spacy.load("./training_spacy/bartender/share_glass_intents/")
@@ -26,7 +26,6 @@ intent_models = [share_drink_nlp,
                  share_payment_nlp,
                  share_size_nlp,
                  share_descriptors_nlp]
-
 """
 ## load intent models and store
 intent_nlp = spacy.load("./training_spacy/banking/confirm_intents/")
@@ -49,7 +48,6 @@ intent_models = [confirm_intent_nlp,
                  share_e_transfer_nlp,
                  share_request_nlp,
                  share_transfer_settings_nlp]
-"""
 
 """
 intent_nlp = spacy.load("./training_spacy/gold-standard/confirm_intents/")

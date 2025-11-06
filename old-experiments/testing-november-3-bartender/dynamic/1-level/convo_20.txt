@@ -1,0 +1,13 @@
+AGENT: What would you like to drink?
+USER:  I'd like a beer. I'd like twelve ounces.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Would you like a tall or short glass?
+USER:  Do you have a tall glass? Can I do fruity?
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  I'd like eight ounces. A tall glass.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.
+AGENT: How would you like to pay?
+USER:  A wine please. debit
+AGENT: Great, you'll pay by debit.

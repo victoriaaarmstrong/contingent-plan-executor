@@ -1,0 +1,12 @@
+AGENT: What would you like to drink?
+USER:  Can I use debit? A cocktail sounds nice. Can I have tonic water.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  A wine sounds nice. A tall glass. Can I have a sixteen ounce please.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  soda water A wine sounds nice. The eight ounce.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  vodka A tall glass. I normally go for a light drink.
+AGENT: Excellent thanks! I've sent your order for a wine to the bartender.

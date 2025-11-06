@@ -1,0 +1,18 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Can you help me find things to do in k-town? I can only eat foods that are gluten-free. What is the most low-energy place in the city? Do you have restaurants of type Italian?
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I can do activities with a high budget. Do you have restaurants of type dessert? I am located in downtown. What is the most low-energy place in the city?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a high budget. I am located in k-town. I can only eat foods that are gluten-free. 613-399-2081
+AGENT: Do you have any allergies? (Y/N)
+USER:  confirm I want to go to a low-energy place. 613-399-2081 Are there any Mexican restaurants in the area?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I am located in downtown. 263-547-8152 I am allergic to any foods that are not gluten-free I would prefer a high-energy atmosphere today.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  My number is 263-547-8152. I am operating within a high budget. I would prefer a low-energy atmosphere today. yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Are there any Italian restaurants in the area? I live in k-town. I would prefer a high-energy atmosphere today. I am allergic to any foods that are not gluten-free
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in k-town.

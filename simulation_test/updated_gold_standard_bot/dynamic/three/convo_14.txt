@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have to eat gluten-free. I am located in Toronto. What is the most high-energy place in the city? Do you have restaurants of type Chinese?
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I am operating within a high budget. I am allergic to any foods that are not gluten-free I would prefer a low-energy atmosphere today. My number is 263-749-0563.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I want to eat Chinese. My number is 213-758-4930. Can you help me find things to do in Kingston? I have to eat gluten-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I can do activities with a high budget. I am allergic to any foods that are not gluten-free yeah Do you have restaurants of type dessert?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. I want to eat Italian. I would prefer a high-energy atmosphere today. My number is 263-749-0563.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in Kingston.

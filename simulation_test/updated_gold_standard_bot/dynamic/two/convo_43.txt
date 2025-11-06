@@ -1,0 +1,25 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My phone number is 263-749-0563. I can do activities with a high budget and I want to find the most high-energy place in the city. Are there any Chinese restaurants in the area?
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Do you have restaurants of type Italian? Can you help me find things to do in k-town? 263-749-0563
+AGENT: Do you have any allergies? (Y/N)
+USER:  mhm Are there any dessert restaurants in the area? I am allergic to any foods that are not dairy-free
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  My number is 213-758-4930. I have to eat gluten-free. I want to go to a high-energy place.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  mhm I can only eat foods that are gluten-free. I live in Kingston.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I have a high budget. I want to go to a high-energy place. I have to eat dairy-free.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  My number is 263-749-0563. Do you have restaurants of type Mexican? I want to go to a low-energy place.
+AGENT: Cuisine preference has been logged.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I live in Kingston. I am allergic to any foods that are not gluten-free mhm
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  263-547-8152 I am allergic to any foods that are not gluten-free I want to go to a low-energy place.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am allergic to any foods that are not dairy-free Do you have restaurants of type Mexican? I am operating within a low budget.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Smith's Golfing Club in Kingston.

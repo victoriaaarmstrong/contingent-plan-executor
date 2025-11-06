@@ -1,0 +1,21 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  debit cocktail
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  A cocktail please. Can I have soda water.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  A wine please. tequila sounds good!
+AGENT: What would you like to mix your drink with?
+USER:  debit soda water
+AGENT: Would you like a tall or short glass?
+USER:  A tall glass. rum
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  debit I'd like five ounces.
+AGENT: Great, you'll pay by debit.
+AGENT: How many ounces would you like?
+USER:  The twelve ounce. Can I use credit?
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a rum with soda water to the bartender, and you'll pay by credit.

@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Do you have restaurants of type dessert? I live in downtown. I have a high budget. My phone number is 213-758-4930.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am operating within a low budget. I have to eat gluten-free. I want to eat Italian. I want to go to a low-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  263-749-0563 I have a high budget. Can you help me find things to do in downtown? I have to eat dairy-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I can do activities with a high budget. I am located in k-town. no Are there any Italian restaurants in the area?
+AGENT: Where are you located?
+USER:  I have a high budget. 263-749-0563 Can you help me find things to do in Kingston? I am allergic to any foods that are not dairy-free
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  613-399-2081 I would prefer a low-energy atmosphere today. I am located in Kingston. I want to eat Mexican.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stauffer Library in Kingston.

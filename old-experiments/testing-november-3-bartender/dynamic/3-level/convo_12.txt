@@ -1,0 +1,15 @@
+AGENT: What would you like to drink?
+USER:  Can I have a tall glass. cash Can I have a eight ounce please. cocktail
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  I'd like to pay with credit. The twelve ounce. tequila I'd like a beer.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  Can I have a short glass. I normally go for a fruity drink. tonic water rum sounds good!
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  Can I have a eight ounce please. A beer sounds nice. Can I do fruity? Can I have rum.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I normally go for a light drink. The sixteen ounce. tequila A tall glass.
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.

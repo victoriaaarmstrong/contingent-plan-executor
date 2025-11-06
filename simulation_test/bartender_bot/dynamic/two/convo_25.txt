@@ -1,0 +1,11 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  Can I do fruity? Can I have gin. A wine please.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: Would you like a tall or short glass?
+USER:  A tall glass. The sixteen ounce. cocktail
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  wine rum debit
+AGENT: Great, you'll pay by debit.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by debit.

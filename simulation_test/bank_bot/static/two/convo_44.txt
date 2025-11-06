@@ -1,0 +1,25 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  I want to transfer 12 to Bob. confirm I need to use savings
+AGENT: What account type would you like to create?
+USER:  I want to create a retirement fund account for my son. Please create a college fund account. I don't want to do anything else.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please select chequing. I want to pay off my car bill. I want to transfer 50 from chequing to college fund.
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from savings.
+AGENT: Would you like to send any funds to a contact today?
+USER:  Nancy is expecting 5000 from me. I want to transfer 5000 from chequing to retirement fund. no
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to transfer 16 from savings to retirement fund. no Please create a college fund account.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  yes I want to pay off my mortgage bill. I want to create a retirement fund account for my son.
+AGENT: Which contact would you like to request money from and how much?
+USER:  I want to send 44 to retirement fund from savings. Please request my contact Mark to send the 34 they owe. Please create a retirement fund account.
+AGENT: Ok, I'm requesting a payment of 16 from Nancy. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  mhm I really need a college fund account please create one. I need to request that Mark pays me 47.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  exit Can I transfer 67 from chequing to college fund? I want to send 16 to college fund from chequing.
+AGENT: Got it. I've completed the transfer of 47 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

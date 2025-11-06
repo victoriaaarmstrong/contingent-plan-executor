@@ -1,0 +1,10 @@
+AGENT: What would you like to drink?
+USER:  beer The eight ounce. cash I normally go for a light drink.
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  Do you have a short glass? soda water I'd like a cocktail. The five ounce.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I use cash? sprite vodka sounds good! Can I do fruity?
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by cash.

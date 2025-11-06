@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am operating within a low budget. I can only eat foods that are gluten-free. Do you have restaurants of type dessert? What is the most low-energy place in the city?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  What is the most low-energy place in the city? I live in Toronto. I am allergic to any foods that are not gluten-free I am operating within a high budget.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have to eat gluten-free. I would prefer a low-energy atmosphere today. I am located in downtown. My phone number is 213-758-4930.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not gluten-free I am operating within a high budget. I am located in k-town. yeah
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Are there any Chinese restaurants in the area? I have to eat gluten-free. I can do activities with a low budget. What is the most low-energy place in the city?
+AGENT: Where are you located?
+USER:  I have to eat dairy-free. Can you help me find things to do in k-town? Are there any Chinese restaurants in the area? What is the most high-energy place in the city?
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I can do activities with a high budget. 263-547-8152 Do you have restaurants of type dessert? I have to eat gluten-free.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in k-town.

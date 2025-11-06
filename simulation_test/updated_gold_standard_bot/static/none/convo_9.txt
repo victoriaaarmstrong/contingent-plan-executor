@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to go to a low-energy place.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I have a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  613-399-2081
+AGENT: Do you have any allergies? (Y/N)
+USER:  not at all
+AGENT: Where are you located?
+USER:  I live in Kingston.
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Do you have restaurants of type dessert?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stauffer Library in Kingston.

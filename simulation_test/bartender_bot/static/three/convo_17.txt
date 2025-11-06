@@ -1,0 +1,16 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  debit Can I have a sixteen ounce please. I'd like a beer. Can I have coke.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  The sixteen ounce. Can I have tequila. Can I do fruity? sprite sounds good!
+AGENT: Would you like a tall or short glass?
+USER:  cocktail I'd like twelve ounces. I'd like to pay with credit. Can I have a tall glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I use debit? I'd like twelve ounces. Can I do fruity? Can I have vodka.
+AGENT: Great, you'll pay by credit.
+AGENT: How many ounces would you like?
+USER:  Can I have gin. I'd like a beer. I'd like twelve ounces. Can I have tonic water.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by credit.

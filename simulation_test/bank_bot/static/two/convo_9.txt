@@ -1,0 +1,27 @@
+AGENT: Would you like to create a new account?
+USER:  I want to transfer 30 to Sandra. mhm I'm finished
+AGENT: What type of account would you like me to make for you?
+USER:  Please create a college fund account. I want to send 9 to retirement fund from savings. Use savings
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  I want to create a retirement fund account for my son. Can I transfer 87 to Bob? I want to use savings for this.
+AGENT: A retirement fund account was successfully created with starter funds transferred from savings.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  yeah I want to pay off my gas payment. I don't want to do anything else today.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  Can I transfer 23 from savings to college fund? Bob is expecting 47 from me. Please send 91 to Nancy.
+AGENT: Which account would you like to select for this task?
+USER:  Can I transfer 23 to Mark? I'm finished chequing
+AGENT: E-transferring 23 to Mark from savings... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  i'm good not at all Please select savings.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  Please send 45 to Mark. confirm I want to create a retirement fund account for my son.
+AGENT: How much money would you like to request and from who?
+USER:  Please pay my gas payment. I don't want to do anything else. I need to request that Bob pays me 91.
+AGENT: Ok, I asked Mark to send you 45. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I've done everything i want to do no thank you I want to pay off my electricity payment.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

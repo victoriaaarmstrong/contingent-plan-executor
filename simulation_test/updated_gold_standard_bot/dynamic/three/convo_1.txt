@@ -1,0 +1,16 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I can only eat foods that are gluten-free. I want to go to a low-energy place. I want to eat Chinese. My phone number is 263-749-0563.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I am allergic to any foods that are not gluten-free I would prefer a low-energy atmosphere today. Are there any Chinese restaurants in the area? I have a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  263-749-0563 I want to go to a low-energy place. I can only eat foods that are dairy-free. Are there any dessert restaurants in the area?
+AGENT: Do you have any allergies? (Y/N)
+USER:  What is the most high-energy place in the city? mhm I can do activities with a low budget. I can only eat foods that are dairy-free.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  263-547-8152 Can you help me find things to do in Toronto? I can only eat foods that are gluten-free. What is the most low-energy place in the city?
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  Are there any Chinese restaurants in the area? I want to go to a low-energy place. I am allergic to any foods that are not dairy-free not at all
+AGENT: Booked a reservation at Mandarin as well as a spot at Stauffer Library in Toronto.

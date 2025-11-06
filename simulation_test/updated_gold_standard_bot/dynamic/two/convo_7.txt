@@ -1,0 +1,11 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have a high budget. I am located in k-town. Do you have restaurants of type dessert?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I want to eat dessert. I can only eat foods that are dairy-free. I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am allergic to any foods that are not gluten-free Are there any dessert restaurants in the area? My phone number is 263-547-8152.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not gluten-free no Can you help me find things to do in Toronto?
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Smith's Golfing Club in Toronto.

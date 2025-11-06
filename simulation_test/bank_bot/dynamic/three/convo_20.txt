@@ -1,0 +1,16 @@
+AGENT: Would you like to create a new account?
+USER:  no thank you Please request my contact Mark to send the 47 they owe. I want to create a retirement fund account. chequing
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I need to request that Sandra pays me 5000. i don't have anything else i want to do Sandra is expecting 91 from me. absolutely not
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please send 21 to Mark. I've done everything i want to do N Please request my contact Bob to send the 87 they owe.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  yeah I want to pay off my internet bill. Please request that Sandra to send me 43 dollars. chequing
+AGENT: Ok, I asked Sandra to send you 43. I'll notify you when the payment is received.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I want to transfer 16 from chequing to college fund. I really need a retirement fund account please create one. Please select chequing. not at all
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

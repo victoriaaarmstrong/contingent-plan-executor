@@ -1,0 +1,16 @@
+AGENT: What would you like to drink?
+USER:  Can I have a sixteen ounce please. Do you have a tall glass? A beer please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I normally go for a light drink. I'd like sixteen ounces. credit
+AGENT: Would you like a tall or short glass?
+USER:  Can I do fruity? Can I have coke. A tall glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I have a short glass. The eight ounce. I'd like to pay with credit.
+AGENT: Great, you'll pay by credit.
+AGENT: How many ounces would you like?
+USER:  Can I have a sixteen ounce please. gin cocktail
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by credit.

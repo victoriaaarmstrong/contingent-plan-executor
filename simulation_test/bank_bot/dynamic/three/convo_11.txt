@@ -1,0 +1,23 @@
+AGENT: Would you like to create a new account?
+USER:  I really need a college fund account please create one. Y bye Please request my contact Bob to send the 13 they owe.
+AGENT: What type of account would you like me to make for you?
+USER:  I don't want to do anything else today. I want to use chequing for this. I want to create a college fund account. Please request that Bob to send me 43 dollars.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  exit Please create a retirement fund account. I want to pay off my gas bill. yes
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I'm good to go thanks Nancy is expecting 47 from me. Can I transfer 67 from savings to retirement fund? I want to create a retirement fund account for my son.
+AGENT: Which account would you like to select for this task?
+USER:  savings I really need a college fund account please create one. I'm good to go thanks Please pay my gas payment.
+AGENT: All done! I just e-transferred 43 to Bob from savings.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to pay off my mortgage bill. Please request that Sandra to send me 47 dollars. Please create a retirement fund account. not at all
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  I want to create a retirement fund account for my son. yes Please request my contact Sandra to send the 13 they owe. I need to use chequing
+AGENT: Ok, I'm requesting a payment of 13 from Sandra. I will let you know when the transfer goes through.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  N Please request my contact Bob to send the 87 they owe. i'm good use savings for this task
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

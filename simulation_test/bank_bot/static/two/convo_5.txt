@@ -1,0 +1,27 @@
+AGENT: Would you like to create a new account?
+USER:  I really need a retirement fund account please create one. Can I transfer 1 from savings to retirement fund? confirm
+AGENT: What account type would you like to create?
+USER:  I need to use chequing Please create a retirement fund account. Please request my contact Bob to send the 87 they owe.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Can I transfer 34 to Mark? Please select chequing. I want to pay off my gas payment.
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Can I transfer 67 from chequing to retirement fund? yes I want to pay off my internet payment.
+AGENT: Ok. How much money do you want to send and to who?
+USER:  Can I transfer 5 to Mark? I want to pay off my credit card payment. Please request my contact Sandra to send the 5000 they owe.
+AGENT: Which account would you like to use?
+USER:  use savings for this task i don't have anything else i want to do I want to create a retirement fund account.
+AGENT: E-transferring 67 to Mark from chequing... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  N Please pay my utility payment. I need to use chequing
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  Can I transfer 1 from savings to retirement fund? Y use chequing for this task
+AGENT: How much money would you like to request and from who?
+USER:  Please request my contact Mark to send the 87 they owe. I want to pay off my lights bill. I really need a college fund account please create one.
+AGENT: Ok, I'm requesting a payment of 1 from Mark. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  no thank you exit I want to transfer 23 from savings to college fund.
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

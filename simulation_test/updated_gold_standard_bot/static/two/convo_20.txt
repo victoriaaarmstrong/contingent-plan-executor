@@ -1,0 +1,21 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I can only eat foods that are gluten-free. I am operating within a high budget and I want to go to a low-energy place. My phone number is 263-547-8152.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a low budget. I am located in Kingston. 263-749-0563
+AGENT: Do you have any allergies? (Y/N)
+USER:  My phone number is 213-758-4930. yes I want to go to a high-energy place.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Are there any Mexican restaurants in the area? I live in Toronto. I have to eat gluten-free.
+AGENT: Where are you located?
+USER:  I can only eat foods that are gluten-free. I am operating within a low budget. I am located in downtown.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I want to go to a low-energy place. Can you help me find things to do in Toronto? Do you have restaurants of type Chinese?
+AGENT: Cuisine preference has been logged.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  no thank you I am operating within a high budget. I would prefer a low-energy atmosphere today.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am allergic to any foods that are not gluten-free Are there any Mexican restaurants in the area? What is the most low-energy place in the city?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Broadway Theater in Toronto.

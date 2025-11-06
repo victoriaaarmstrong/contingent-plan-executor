@@ -1,0 +1,14 @@
+AGENT: What would you like to drink?
+USER:  Can I use credit? sprite sounds good! A wine sounds nice. Can I have a short glass.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Would you like a tall or short glass?
+USER:  Can I have a five ounce please. A beer please. A tall glass. Can I have gin.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  The five ounce. A cocktail sounds nice. Do you have a short glass? soda water sounds good!
+AGENT: Size preference has been logged.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  sprite sounds good! I'd like sixteen ounces. rum A tall glass.
+AGENT: What would you like to mix your drink with?
+USER:  Can I have coke. The eight ounce. Can I have tequila. I'd like a cocktail.
+AGENT: Excellent thanks! I've sent your order for a cocktail to the bartender.

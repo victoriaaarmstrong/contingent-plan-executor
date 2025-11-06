@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I would prefer a high-energy atmosphere today. I can do activities with a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I want to go to a high-energy place. I live in downtown.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a high budget. 613-399-2081
+AGENT: Do you have any allergies? (Y/N)
+USER:  I have a low budget. yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Are there any Chinese restaurants in the area? I have to eat gluten-free.
+AGENT: Where are you located?
+USER:  I would prefer a low-energy atmosphere today. I am located in Toronto.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I would prefer a high-energy atmosphere today. Are there any dessert restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stages in downtown.

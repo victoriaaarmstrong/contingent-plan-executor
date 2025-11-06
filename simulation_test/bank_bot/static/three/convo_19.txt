@@ -1,0 +1,24 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  not at all Use savings I want to create a college fund account. I want to transfer 89 from chequing to retirement fund.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  Y Please select chequing. I want to pay off my utility bill. Please request that Mark to send me 91 dollars.
+AGENT: Ok! How much would you like to send and to who?
+USER:  I really need a college fund account please create one. I want to send 9 to retirement fund from chequing. Sandra is expecting 5000 from me. I need to request that Bob pays me 91.
+AGENT: Which account would you like to select for this task?
+USER:  Please pay my utility payment. Please select chequing. Mark is expecting 47 from me. I want to create a retirement fund account for my son.
+AGENT: All done! I just e-transferred 47 to Mark from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  mhm Please request that Sandra to send me 5000 dollars. I want to transfer 23 from savings to retirement fund. I want to pay off my utility payment.
+AGENT: Which bill would you like to pay off?
+USER:  I've done everything i want to do I want to pay off my mortgage payment. use savings for this task I want to pay off my utility payment.
+AGENT: Which account would you like to use?
+USER:  I want to use savings for this. Please create a retirement fund account. Please request that Bob to send me 47 dollars. Bob is expecting 13 from me.
+AGENT: Ok, I'm paying your utility bill from your savings account.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  Please request that Mark to send me 43 dollars. N I really need a college fund account please create one. I've done everything i want to do
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  Can I transfer 5000 to Nancy? nah Please request that Sandra to send me 76 dollars. Use savings
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

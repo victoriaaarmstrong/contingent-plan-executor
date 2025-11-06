@@ -1,0 +1,11 @@
+AGENT: What would you like to drink?
+USER:  I'd like a beer. soda water sounds good! Can I do fruity?
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: Would you like a tall or short glass?
+USER:  Do you have a short glass? Can I use debit? Can I do fruity?
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  Can I use debit? A beer please. I'd like twelve ounces.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by debit.

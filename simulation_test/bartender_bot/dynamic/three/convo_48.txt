@@ -1,0 +1,13 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A tall glass. Can I use cash? beer soda water sounds good!
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  Can I have rum. A cocktail please. tonic water Can I use cash?
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I do light? I'd like to pay with debit. gin Can I have a tall glass.
+AGENT: How many ounces would you like?
+USER:  I'd like to pay with cash. I'd like twelve ounces. Can I have tonic water. Do you have a tall glass?
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by cash.

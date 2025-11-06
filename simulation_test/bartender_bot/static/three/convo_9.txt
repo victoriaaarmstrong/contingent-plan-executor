@@ -1,0 +1,19 @@
+AGENT: What would you like to drink?
+USER:  beer I'd like twelve ounces. A tall glass. I normally go for a fruity drink.
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  gin sounds good! A cocktail sounds nice. Can I do light? I'd like five ounces.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I use cash? I normally go for a fruity drink. Can I have a short glass. Can I have coke.
+AGENT: Would you like a tall or short glass?
+USER:  I'd like to pay with credit. I like something fruity. Can I have a short glass. Can I have a eight ounce please.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  gin soda water sounds good! I'd like to pay with cash. Can I have a twelve ounce please.
+AGENT: Great, you'll pay by credit.
+AGENT: How many ounces would you like?
+USER:  gin sounds good! Can I have a five ounce please. Do you have a tall glass? wine
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by credit.

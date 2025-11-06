@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am allergic to any foods that are not gluten-free I have a high budget. Can you help me find things to do in k-town? My number is 213-758-4930.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am allergic to any foods that are not gluten-free Are there any dessert restaurants in the area? I am operating within a low budget. What is the most low-energy place in the city?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I can only eat foods that are dairy-free. I want to go to a low-energy place. My phone number is 213-758-4930. I am operating within a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  213-758-4930 yeah I have a high budget. I live in downtown.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. I live in k-town. My number is 263-749-0563. I can do activities with a low budget.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  not at all I am allergic to any foods that are not dairy-free My phone number is 263-547-8152. I would prefer a low-energy atmosphere today.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am operating within a low budget. Do you have restaurants of type Italian? I am located in Toronto. My number is 213-758-4930.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stauffer Library in Toronto.

@@ -1,0 +1,15 @@
+AGENT: What would you like to drink?
+USER:  Can I use credit? I'd like a cocktail. sprite sounds good!
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  I'd like a beer. coke sounds good! A tall glass.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  grapefruit juice sounds good! I'd like sixteen ounces. I normally go for a fruity drink.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I like something fruity. I'd like sixteen ounces. soda water sounds good!
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.
+AGENT: How would you like to pay?
+USER:  A cocktail sounds nice. cash I like something fruity.
+AGENT: Great, you'll pay by credit.

@@ -1,0 +1,11 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I can only eat foods that are dairy-free. Can you help me find things to do in downtown? I am operating within a high budget. Do you have restaurants of type Italian?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  What is the most low-energy place in the city? I am operating within a high budget. 263-547-8152 I want to eat Mexican.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have to eat gluten-free. I want to go to a low-energy place. My phone number is 263-547-8152. I live in downtown.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I would prefer a low-energy atmosphere today. I can do activities with a high budget. I live in Kingston. not at all
+AGENT: Booked a reservation at Guac Grill as well as a spot at Broadway Theater in Kingston.

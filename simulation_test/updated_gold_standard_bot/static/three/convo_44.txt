@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Are there any Mexican restaurants in the area? I am located in downtown. I can only eat foods that are gluten-free. I can do activities with a low budget and I want to find the most high-energy place in the city.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I would prefer a high-energy atmosphere today. I can do activities with a high budget. 213-758-4930 Can you help me find things to do in Kingston?
+AGENT: Do you have any allergies? (Y/N)
+USER:  I have to eat dairy-free. nah My number is 263-749-0563. I am located in Toronto.
+AGENT: Where are you located?
+USER:  I have to eat gluten-free. I am located in downtown. I would prefer a low-energy atmosphere today. Do you have restaurants of type dessert?
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  My number is 263-749-0563. I am operating within a low budget. I can only eat foods that are gluten-free. I want to eat Italian.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stages in Toronto.

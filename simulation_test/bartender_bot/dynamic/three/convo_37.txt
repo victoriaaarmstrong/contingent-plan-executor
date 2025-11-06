@@ -1,0 +1,9 @@
+AGENT: What would you like to drink?
+USER:  I'd like to pay with debit. A cocktail please. vodka sounds good! Can I do fruity?
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  tequila sounds good! sprite sounds good! Can I have a eight ounce please. I normally go for a fruity drink.
+AGENT: What would you like to mix your drink with?
+USER:  Can I use debit? sprite sounds good! I normally go for a light drink. Can I have a tall glass.
+AGENT: Excellent thanks! I've sent your order for a vodka with sprite to the bartender, and you'll pay by debit.

@@ -1,0 +1,18 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  N Please select chequing.
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  absolutely not Can I transfer 5000 to Sandra?
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  yes savings
+AGENT: Which bill would you like to pay off?
+USER:  I want to send 76 to college fund from savings. Please pay my internet payment.
+AGENT: Ok, I'm paying your internet bill from your savings account.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  I want to create a retirement fund account for my son. no
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  no thanks Please request that Nancy to send me 91 dollars.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

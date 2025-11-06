@@ -1,0 +1,27 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  Please request that Sandra to send me 91 dollars. Use chequing i'm all done here yes
+AGENT: What account type would you like to create?
+USER:  I really need a college fund account please create one. Can I transfer 1 from chequing to retirement fund? Sandra is expecting 91 from me. Please pay my utility payment.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to select for this task?
+USER:  Please pay my electricity payment. Please request that Nancy to send me 5000 dollars. use chequing for this task Nancy is expecting 91 from me.
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from chequing.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  I want to send 12 to college fund from chequing. Can I transfer 5 to Nancy? Please create a college fund account. mhm
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  Can I transfer 67 from chequing to college fund? Can I transfer 34 to Bob? Please send 21 to Sandra. I need to use savings
+AGENT: Which account would you like to select for this task?
+USER:  I want to transfer 67 from savings to college fund. I've done everything i want to do chequing Can I transfer 34 to Bob?
+AGENT: E-transferring 34 to Bob from savings... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  no Nancy is expecting 91 from me. Please select savings. Please pay my gas payment.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  confirm Can I transfer 87 to Nancy? Please request my contact Mark to send the 5000 they owe. use savings for this task
+AGENT: Which contact would you like to request money from and how much?
+USER:  I need to request that Nancy pays me 5000. I want to pay off my electricity bill. I need to request that Mark pays me 37. I'm all done.
+AGENT: Ok, I asked Mark to send you 5000. I'll notify you when the payment is received.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  no thank you Can I transfer 67 from savings to retirement fund? i'm all done here Please select chequing.
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

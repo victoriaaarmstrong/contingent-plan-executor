@@ -1,0 +1,18 @@
+AGENT: Would you like to create a new account?
+USER:  I want to transfer 43 from chequing to retirement fund. not at all
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Please select chequing. no
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please request my contact Sandra to send the 34 they owe. no
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  yes Please create a college fund account.
+AGENT: How much money would you like to request and from who?
+USER:  I want to send 12 to retirement fund from chequing. Please request that Bob to send me 13 dollars.
+AGENT: Ok, I asked Sandra to send you 34. I'll notify you when the payment is received.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  I want to pay off my lights payment. no thank you
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

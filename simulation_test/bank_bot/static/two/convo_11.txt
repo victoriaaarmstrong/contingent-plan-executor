@@ -1,0 +1,31 @@
+AGENT: Would you like to create a new account?
+USER:  Can I transfer 23 from savings to college fund? no thank you I need to request that Nancy pays me 37.
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  yeah I want to pay off my electricity payment. I want to transfer 23 from chequing to college fund.
+AGENT: Ok! How much would you like to send and to who?
+USER:  I want to pay off my car payment. savings I want to transfer 23 to Mark.
+AGENT: Please specify the account you want to select.
+USER:  Please create a college fund account. savings Please request my contact Mark to send the 12 they owe.
+AGENT: Sorry, that isn't a valid account.
+AGENT: Which account would you like to use?
+USER:  Please pay my car payment. savings i don't have anything else i want to do
+AGENT: Sorry, that isn't a valid account.
+AGENT: Which account would you like to select for this task?
+USER:  Please pay my car payment. chequing Bob is expecting 47 from me.
+AGENT: Sorry, that isn't a valid account.
+AGENT: Which account would you like to use?
+USER:  Please select savings. I want to send 5000 to retirement fund from savings. Please request my contact Bob to send the 12 they owe.
+AGENT: All done! I just e-transferred 12 to Bob from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  nah I want to pay off my mortgage bill. Please send 91 to Bob.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  I want to send 89 to retirement fund from chequing. I really need a retirement fund account please create one. nah
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I want to transfer 65 to Mark. mhm I want to create a retirement fund account for my son.
+AGENT: Ok! Please specify the funds you which to transfer and the accounts to transfer between.
+USER:  I want to create a college fund account for my son. I want to pay off my utility bill. Can I transfer 16 from savings to college fund?
+AGENT: Ok! I successfully transferred your requested amount of 65 from chequing to retirement fund.
+AGENT: All done. Have a nice day!

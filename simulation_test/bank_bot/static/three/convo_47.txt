@@ -1,0 +1,26 @@
+AGENT: Would you like to create a new account?
+USER:  Can I transfer 30 to Bob? no thank you I want to pay off my electricity bill. chequing
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  Please pay my utility payment. I want to use chequing for this. Can I transfer 23 to Bob? yeah
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I want to use chequing for this. Please send 91 to Sandra. Please pay my credit card payment. I've done everything i want to do
+AGENT: Which account would you like to select for this task?
+USER:  I really need a college fund account please create one. bye I want to use chequing for this. I need to request that Mark pays me 23.
+AGENT: E-transferring 23 to Mark from chequing... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  done Sandra is expecting 91 from me. Y Please select chequing.
+AGENT: Which bill would you like to pay off?
+USER:  i'm all done here I want to pay off my internet payment. Use savings I want to send 5000 to retirement fund from chequing.
+AGENT: Which account would you like to use?
+USER:  I want to pay off my electricity payment. Can I transfer 67 from chequing to retirement fund? Use savings I don't want to do anything else.
+AGENT: Ok, I'm paying your electricity bill from your chequing account.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please pay my internet payment. I need to use savings Please create a college fund account. mhm
+AGENT: How much money would you like to request and from who?
+USER:  I need to request that Mark pays me 5000. I need to request that Bob pays me 23. I need to use savings exit
+AGENT: Ok, I asked Sandra to send you 67. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I've done everything i want to do not at all Nancy is expecting 91 from me. I want to create a retirement fund account for my son.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

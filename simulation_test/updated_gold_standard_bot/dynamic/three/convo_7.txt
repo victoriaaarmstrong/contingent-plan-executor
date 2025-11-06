@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My number is 263-749-0563. Do you have restaurants of type dessert? What is the most low-energy place in the city? I am operating within a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am located in k-town. I want to eat Italian. I am operating within a high budget. I want to go to a low-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a low budget. Can you help me find things to do in k-town? 213-758-4930 What is the most low-energy place in the city?
+AGENT: Do you have any allergies? (Y/N)
+USER:  mhm Can you help me find things to do in k-town? I want to go to a high-energy place. I have to eat gluten-free.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  What is the most low-energy place in the city? I am allergic to any foods that are not gluten-free 263-547-8152 I can do activities with a low budget.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in k-town.

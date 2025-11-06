@@ -1,0 +1,18 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am operating within a high budget. I want to go to a low-energy place. I want to eat dessert. I am located in Kingston.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  My phone number is 213-758-4930. I want to eat Chinese. Can you help me find things to do in downtown? I want to go to a low-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have a high budget. My phone number is 213-758-4930. Do you have restaurants of type dessert? I would prefer a high-energy atmosphere today.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I have a low budget. My number is 613-399-2081. yes What is the most low-energy place in the city?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are dairy-free. I have a low budget. Can you help me find things to do in downtown? My phone number is 263-547-8152.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yeah My number is 613-399-2081. I am located in Toronto. I am operating within a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Chinese. I can only eat foods that are gluten-free. I live in downtown. I am operating within a low budget.
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in downtown.

@@ -1,0 +1,9 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A cocktail sounds nice. I normally go for a light drink. I'd like eight ounces. debit
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  tequila Can I have coke. I'd like five ounces. I'd like to pay with credit.
+AGENT: What would you like to mix your drink with?
+USER:  A short glass. I'd like to pay with credit. I like something fruity. grapefruit juice sounds good!
+AGENT: Excellent thanks! I've sent your order for a tequila with coke to the bartender, and you'll pay by credit.

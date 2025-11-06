@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I would prefer a low-energy atmosphere today. I am located in downtown.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I am operating within a low budget. I have to eat gluten-free.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have to eat dairy-free. 263-547-8152
+AGENT: Do you have any allergies? (Y/N)
+USER:  Do you have restaurants of type dessert? yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I am allergic to any foods that are not gluten-free I can do activities with a low budget.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  263-749-0563 nah
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Mexican restaurants in the area? I live in k-town.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stauffer Library in k-town.

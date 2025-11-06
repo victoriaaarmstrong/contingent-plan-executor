@@ -1,0 +1,18 @@
+AGENT: Would you like to create a new account?
+USER:  no thank you
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  nah
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  absolutely not
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  no
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  yes
+AGENT: Ok, how much money do you want to send and between which accounts?
+USER:  I want to send 76 to college fund from savings.
+AGENT: Got it. I've completed the transfer of 76 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

@@ -1,0 +1,16 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  exit I want to transfer 12 to Sandra. not at all I want to use savings for this.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  I want to pay off my lights payment. i'm all done here I want to use chequing for this. no
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please send 45 to Mark. Please pay my internet payment. absolutely not Can I transfer 67 from savings to retirement fund?
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  I want to create a retirement fund account for my son. Please request my contact Nancy to send the 13 they owe. nah Please pay my electricity payment.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  Please create a retirement fund account. Can I transfer 23 to Nancy? no thank you Please request that Bob to send me 13 dollars.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

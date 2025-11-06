@@ -1,0 +1,12 @@
+AGENT: What would you like to drink?
+USER:  I normally go for a fruity drink. A cocktail please.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  Can I have a five ounce please. Can I have rum.
+AGENT: What would you like to mix your drink with?
+USER:  sprite cash
+AGENT: Would you like a tall or short glass?
+USER:  A tall glass. Can I use debit?
+AGENT: Glass preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a rum with sprite to the bartender, and you'll pay by debit.

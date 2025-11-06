@@ -1,0 +1,16 @@
+AGENT: Would you like to create a new account?
+USER:  savings no thank you done
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Please send 12 to Sandra. I want to use savings for this. not at all
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please request my contact Mark to send the 5000 they owe. Please pay my credit card payment. no
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  Use savings Can I transfer 23 from savings to college fund? N
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  Y Please create a college fund account. exit
+AGENT: Got it. I've completed the transfer of 23 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

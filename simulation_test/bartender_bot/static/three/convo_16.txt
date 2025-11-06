@@ -1,0 +1,27 @@
+AGENT: What would you like to drink?
+USER:  gin sounds good! Can I have a twelve ounce please. I'd like to pay with debit. beer
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  Can I have grapefruit juice. The twelve ounce. cocktail I'd like to pay with debit.
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  The sixteen ounce. cocktail cash I normally go for a fruity drink.
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  Can I have a twelve ounce please. Can I have a short glass. rum sounds good! A wine sounds nice.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  A wine sounds nice. vodka I normally go for a fruity drink. soda water
+AGENT: What would you like to mix your drink with?
+USER:  Can I have a short glass. rum soda water sounds good! The sixteen ounce.
+AGENT: Would you like a tall or short glass?
+USER:  The eight ounce. I'd like a wine. Can I do fruity? Do you have a tall glass?
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I have a eight ounce please. A tall glass. Can I have sprite. credit
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  A wine sounds nice. I'd like eight ounces. gin sounds good! I normally go for a light drink.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a gin with sprite to the bartender, and you'll pay by cash.

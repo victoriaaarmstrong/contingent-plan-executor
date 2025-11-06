@@ -1,0 +1,16 @@
+AGENT: What would you like to drink?
+USER:  The twelve ounce. A beer please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I like something fruity. coke sounds good!
+AGENT: Would you like a tall or short glass?
+USER:  A beer sounds nice. A tall glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  credit wine
+AGENT: Great, you'll pay by credit.
+AGENT: How many ounces would you like?
+USER:  Can I have a five ounce please. I'd like to pay with cash.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by cash.

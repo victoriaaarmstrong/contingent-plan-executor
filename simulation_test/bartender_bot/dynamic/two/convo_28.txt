@@ -1,0 +1,10 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  beer The eight ounce. Do you have a short glass?
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  A short glass. A beer please. Can I use debit?
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I'd like to pay with debit. Do you have a tall glass? I normally go for a light drink.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by debit.

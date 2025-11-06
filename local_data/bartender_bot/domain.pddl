@@ -12,10 +12,10 @@
         (know__payment)
         (know__descriptors)
         (know__beverage)
-        (know__drink_preferences)
-        (drink_preferences)
-        (know__drink_ingredients)
-        (drink_ingredients)
+        (know__require_drink_preferences)
+        (require_drink_preferences)
+        (know__require_drink_ingredients)
+        (require_drink_ingredients)
         (informed)
         (know__goal)
         (goal)
@@ -25,77 +25,77 @@
         :parameters()
         :precondition
             (and
+                (require_drink_preferences)
                 (not (know__beverage))
-                (know__drink_ingredients)
-                (drink_preferences)
-                (not (force-statement))
                 (know__descriptors)
-                (know__drink_preferences)
                 (know__drink)
+                (not (force-statement))
+                (know__require_drink_preferences)
             )
         :effect
             (labeled-oneof set-beverage__assign_beverage
                 (outcome set-red-wine
                     (and
+                        (not (require_drink_preferences))
                         (know__beverage)
-                        (not (drink_preferences))
                     )
                 )
                 (outcome set-white-wine
                     (and
+                        (not (require_drink_preferences))
                         (know__beverage)
-                        (not (drink_preferences))
                     )
                 )
                 (outcome set-lager
                     (and
+                        (not (require_drink_preferences))
                         (know__beverage)
-                        (not (drink_preferences))
                     )
                 )
                 (outcome set-radler
                     (and
+                        (not (require_drink_preferences))
                         (know__beverage)
-                        (not (drink_preferences))
                     )
                 )
             )
     )
-    (:action set-drink-ingredients
+    (:action set-drink-requirements
         :parameters()
         :precondition
             (and
-                (not (know__beverage))
+                (not (require_drink_preferences))
+                (not (require_drink_ingredients))
+                (not (know__require_drink_preferences))
                 (not (know__descriptors))
-                (not (know__drink_preferences))
-                (not (force-statement))
-                (not (know__drink_ingredients))
+                (not (know__require_drink_ingredients))
                 (know__drink)
+                (not (force-statement))
             )
         :effect
-            (labeled-oneof set-drink-ingredients__assign_drink_ingredients
+            (labeled-oneof set-drink-requirements__assign_requirements
                 (outcome set-cocktail
                     (and
-                        (know__drink_preferences)
-                        (know__drink_ingredients)
-                        (not (drink_preferences))
-                        (drink_ingredients)
+                        (force-statement)
+                        (require_drink_ingredients)
+                        (know__require_drink_ingredients)
+                        (know__require_drink_preferences)
                     )
                 )
                 (outcome set-wine
                     (and
-                        (know__drink_preferences)
-                        (know__drink_ingredients)
-                        (drink_preferences)
-                        (not (drink_ingredients))
+                        (force-statement)
+                        (require_drink_preferences)
+                        (know__require_drink_ingredients)
+                        (know__require_drink_preferences)
                     )
                 )
                 (outcome set-beer
                     (and
-                        (know__drink_preferences)
-                        (know__drink_ingredients)
-                        (drink_preferences)
-                        (not (drink_ingredients))
+                        (force-statement)
+                        (require_drink_preferences)
+                        (know__require_drink_ingredients)
+                        (know__require_drink_preferences)
                     )
                 )
             )
@@ -104,11 +104,10 @@
         :parameters()
         :precondition
             (and
-                (know__drink_ingredients)
-                (not (force-statement))
                 (not (know__liquor))
-                (drink_ingredients)
                 (know__drink)
+                (require_drink_ingredients)
+                (not (force-statement))
             )
         :effect
             (labeled-oneof get-liquor__set-liquor
@@ -129,16 +128,16 @@
         :precondition
             (and
                 (not (force-statement))
-                (know__drink_ingredients)
-                (know__liquor)
                 (know__drink)
+                (require_drink_ingredients)
+                (know__liquor)
             )
         :effect
             (labeled-oneof get-mixer__set-mixer
                 (outcome update_mixer
                     (and
                         (know__mixer)
-                        (not (drink_ingredients))
+                        (not (require_drink_ingredients))
                     )
                 )
                 (outcome fallback
@@ -152,11 +151,9 @@
         :parameters()
         :precondition
             (and
-                (not (know__descriptors))
-                (drink_preferences)
-                (not (force-statement))
-                (know__drink_preferences)
                 (know__drink)
+                (not (force-statement))
+                (require_drink_preferences)
             )
         :effect
             (labeled-oneof get-descriptors__set-descriptors
@@ -172,23 +169,47 @@
                 )
             )
     )
-    (:action inform
+    (:action inform_beverage
         :parameters()
         :precondition
             (and
+                (know__payment)
+                (not (require_drink_preferences))
                 (know__glass)
-                (know__drink_ingredients)
-                (not (force-statement))
-                (not (know__payment))
-                (not (drink_preferences))
                 (know__size)
                 (not (informed))
-                (know__drink_preferences)
+                (know__beverage)
                 (know__drink)
-                (not (drink_ingredients))
+                (not (force-statement))
+                (know__require_drink_preferences)
             )
         :effect
-            (labeled-oneof inform__finish
+            (labeled-oneof inform_beverage__finish
+                (outcome finish
+                    (and
+                        (force-statement)
+                        (informed)
+                    )
+                )
+            )
+    )
+    (:action inform_cocktail
+        :parameters()
+        :precondition
+            (and
+                (know__payment)
+                (not (require_drink_ingredients))
+                (know__require_drink_ingredients)
+                (know__glass)
+                (know__mixer)
+                (know__size)
+                (know__liquor)
+                (not (informed))
+                (know__drink)
+                (not (force-statement))
+            )
+        :effect
+            (labeled-oneof inform_cocktail__finish
                 (outcome finish
                     (and
                         (force-statement)
@@ -201,9 +222,8 @@
         :parameters()
         :precondition
             (and
-                (not (force-statement))
-                (know__payment)
                 (informed)
+                (not (force-statement))
             )
         :effect
             (labeled-oneof complete__finish
@@ -233,15 +253,15 @@
         :parameters()
         :precondition
             (and
-                (not (know__drink))
                 (not (force-statement))
+                (not (know__drink))
             )
         :effect
             (labeled-oneof slot-fill__get-drink__validate-slot-fill
                 (outcome drink_found
                     (and
-                        (force-statement)
                         (know__drink)
+                        (force-statement)
                     )
                 )
                 (outcome fallback
@@ -299,15 +319,15 @@
         :parameters()
         :precondition
             (and
-                (not (force-statement))
                 (not (know__payment))
+                (not (force-statement))
             )
         :effect
             (labeled-oneof slot-fill__get-payment__validate-slot-fill
                 (outcome payment_found
                     (and
-                        (force-statement)
                         (know__payment)
+                        (force-statement)
                     )
                 )
                 (outcome fallback

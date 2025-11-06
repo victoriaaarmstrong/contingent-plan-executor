@@ -1,0 +1,15 @@
+AGENT: What would you like to drink?
+USER:  I'd like to pay with debit. A short glass. A beer please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Would you like a tall or short glass?
+USER:  Can I have a short glass. I normally go for a light drink. Can I use debit?
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  Can I have grapefruit juice. The five ounce. I like something fruity.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  cash I'd like sixteen ounces. Can I do light?
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.
+AGENT: How would you like to pay?
+USER:  Can I have tonic water. I'd like sixteen ounces. credit
+AGENT: Great, you'll pay by cash.

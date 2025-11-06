@@ -1,0 +1,16 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  tequila beer
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I like something fruity. rum sounds good!
+AGENT: Would you like a tall or short glass?
+USER:  A tall glass. Can I have tequila.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  soda water Can I use cash?
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  cash I'd like sixteen ounces.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by cash.

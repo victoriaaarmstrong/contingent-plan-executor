@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Are there any Chinese restaurants in the area? What is the most high-energy place in the city? I have to eat dairy-free.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I have to eat dairy-free. I want to go to a low-energy place. I am operating within a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I live in Toronto. I have a high budget. 263-749-0563
+AGENT: Do you have any allergies? (Y/N)
+USER:  What is the most high-energy place in the city? Can you help me find things to do in k-town? yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  What is the most low-energy place in the city? I am operating within a low budget. I can only eat foods that are gluten-free.
+AGENT: Booked a reservation at Mandarin as well as a spot at Broadway Theater in k-town.

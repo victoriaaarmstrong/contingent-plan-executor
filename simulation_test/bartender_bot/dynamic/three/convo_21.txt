@@ -1,0 +1,10 @@
+AGENT: What would you like to drink?
+USER:  Can I have tonic water. I'd like a beer. I like something light. A short glass.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  grapefruit juice Can I do light? A short glass. Can I have gin.
+AGENT: How would you like to pay?
+USER:  wine I normally go for a fruity drink. Can I have a eight ounce please. I'd like to pay with credit.
+AGENT: Great, you'll pay by credit.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by credit.

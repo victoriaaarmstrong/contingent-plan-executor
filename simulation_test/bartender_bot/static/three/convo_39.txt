@@ -1,0 +1,18 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A cocktail please. Can I have a short glass. Can I use cash? Can I have tonic water.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  rum Do you have a short glass? debit Can I have a twelve ounce please.
+AGENT: What would you like to mix your drink with?
+USER:  cash I'd like a cocktail. Can I have a eight ounce please. Can I have tonic water.
+AGENT: Would you like a tall or short glass?
+USER:  beer I'd like to pay with cash. Do you have a short glass? gin
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I have grapefruit juice. Can I have a sixteen ounce please. Can I have tequila. debit
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  I'd like sixteen ounces. wine tonic water Can I use cash?
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a tequila with tonic water to the bartender, and you'll pay by cash.

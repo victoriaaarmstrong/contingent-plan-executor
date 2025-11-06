@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am operating within a low budget. I can only eat foods that are gluten-free. I want to go to a low-energy place.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am operating within a high budget. I would prefer a high-energy atmosphere today. I live in Kingston.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Can you help me find things to do in k-town? My phone number is 263-749-0563. I can only eat foods that are dairy-free.
+AGENT: Do you have any allergies? (Y/N)
+USER:  confirm I can only eat foods that are gluten-free. I can do activities with a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. I want to eat dessert. My phone number is 213-758-4930.
+AGENT: Where are you located?
+USER:  Do you have restaurants of type dessert? Can you help me find things to do in k-town? 263-547-8152
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Chinese restaurants in the area? I am operating within a high budget. I would prefer a high-energy atmosphere today.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Broadway Theater in k-town.

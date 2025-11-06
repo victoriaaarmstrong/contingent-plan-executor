@@ -1,0 +1,25 @@
+AGENT: Would you like to create a new account?
+USER:  chequing Please request my contact Nancy to send the 47 they owe. confirm
+AGENT: What type of account would you like me to make for you?
+USER:  I want to create a retirement fund account. I want to pay off my internet bill. I need to use savings
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please create a retirement fund account. I need to use savings I need to request that Nancy pays me 5000.
+AGENT: A retirement fund account was successfully created with starter funds transferred from savings.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  Please select chequing. I want to create a retirement fund account for my son. no thanks
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Can I transfer 5 to Sandra? I want to pay off my credit card payment. N
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  Can I transfer 11 to Nancy? yes I'm good to go thanks
+AGENT: How much money would you like to request and from who?
+USER:  Please request that Nancy to send me 91 dollars. I want to transfer 43 from savings to retirement fund. savings
+AGENT: Ok, I'm requesting a payment of 11 from Nancy. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  done confirm Mark is expecting 37 from me.
+AGENT: Ok, how much money do you want to send and between which accounts?
+USER:  I want to transfer 50 from savings to college fund. I want to create a retirement fund account for my son. Please request my contact Mark to send the 12 they owe.
+AGENT: Got it. I've completed the transfer of 37 from savings to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My phone number is 263-547-8152. I am operating within a high budget and I want to go to a high-energy place. I want to eat Mexican.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My phone number is 613-399-2081. Do you have restaurants of type dessert? I want to go to a low-energy place.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I want to eat Mexican. no I have a low budget.
+AGENT: Where are you located?
+USER:  263-547-8152 I want to eat Chinese. I am located in downtown.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I want to eat dessert. 213-758-4930 Can you help me find things to do in Kingston?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Smith's Golfing Club in Kingston.

@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  What is the most low-energy place in the city? I can only eat foods that are gluten-free. I want to eat Mexican. I can do activities with a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I can do activities with a low budget. I can only eat foods that are dairy-free. 213-758-4930 What is the most high-energy place in the city?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I would prefer a high-energy atmosphere today. My number is 613-399-2081. I live in downtown. I want to eat dessert.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I can do activities with a low budget. My phone number is 263-749-0563. I want to go to a low-energy place. not at all
+AGENT: Where are you located?
+USER:  I am located in Toronto. What is the most high-energy place in the city? I have to eat gluten-free. My number is 263-749-0563.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am allergic to any foods that are not gluten-free Do you have restaurants of type Mexican? I have a high budget. Can you help me find things to do in k-town?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stauffer Library in k-town.

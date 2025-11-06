@@ -1,0 +1,21 @@
+AGENT: Would you like to create a new account?
+USER:  I want to pay off my car payment. Y I want to create a retirement fund account for my son. Please request that Mark to send me 5000 dollars.
+AGENT: What account type would you like to create?
+USER:  Can I transfer 23 to Sandra? Please create a retirement fund account. I really need a retirement fund account please create one. I want to send 11 to retirement fund from savings.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  I want to pay off my gas payment. I want to create a college fund account for my son. I want to transfer 90 to Nancy. Please select savings.
+AGENT: A college fund account was successfully created with starter funds transferred from savings.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I want to use chequing for this. Please send 53 to Nancy. Please pay my credit card payment. no
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Bob is expecting 37 from me. I really need a retirement fund account please create one. I want to pay off my internet payment. mhm
+AGENT: Paying your internet bill from your chequing account...
+AGENT: Would you like to request money from a contact?
+USER:  I want to pay off my credit card bill. I want to send 12 to college fund from savings. yes Nancy is expecting 37 from me.
+AGENT: Ok, I asked Nancy to send you 37. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I want to send 45 to college fund from chequing. Y use savings for this task I want to transfer 90 to Mark.
+AGENT: Got it. I've completed the transfer of 90 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

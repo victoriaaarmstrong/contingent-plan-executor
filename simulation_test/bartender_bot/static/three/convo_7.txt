@@ -1,0 +1,16 @@
+AGENT: What would you like to drink?
+USER:  I'd like five ounces. sprite credit A wine sounds nice.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  gin sounds good! The five ounce. Can I use debit? I normally go for a fruity drink.
+AGENT: Would you like a tall or short glass?
+USER:  Can I do light? A beer please. vodka sounds good! Can I have a short glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  A wine sounds nice. Can I have a tall glass. Can I have a eight ounce please. credit
+AGENT: Great, you'll pay by debit.
+AGENT: How many ounces would you like?
+USER:  Do you have a short glass? Can I have a twelve ounce please. tequila sounds good! I like something light.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by debit.

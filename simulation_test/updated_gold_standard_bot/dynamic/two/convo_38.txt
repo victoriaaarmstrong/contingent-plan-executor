@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to eat dessert. I have a low budget and I would prefer a low-energy atmosphere today. I have to eat gluten-free.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My number is 213-758-4930. I want to eat Mexican. I can do activities with a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  mhm Are there any Mexican restaurants in the area? 263-749-0563
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  263-547-8152 I have a low budget. I am allergic to any foods that are not dairy-free
+AGENT: Where are you located?
+USER:  I can only eat foods that are gluten-free. I have a high budget. I live in Toronto.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  My phone number is 263-749-0563. Do you have restaurants of type Mexican? yeah
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I have to eat gluten-free. Are there any dessert restaurants in the area? My number is 613-399-2081.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stauffer Library in Toronto.

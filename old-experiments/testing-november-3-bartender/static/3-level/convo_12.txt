@@ -1,0 +1,18 @@
+AGENT: What would you like to drink?
+USER:  cocktail A short glass. debit Can I do fruity?
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  I'd like a beer. A tall glass. I'd like to pay with cash. Can I have tequila.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  coke sounds good! The twelve ounce. I'd like a beer. Do you have a tall glass?
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  cash soda water Can I do fruity? I'd like five ounces.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I like something fruity. rum tonic water Can I use credit?
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.
+AGENT: How would you like to pay?
+USER:  soda water sounds good! I'd like sixteen ounces. I'd like a wine. cash
+AGENT: Great, you'll pay by credit.

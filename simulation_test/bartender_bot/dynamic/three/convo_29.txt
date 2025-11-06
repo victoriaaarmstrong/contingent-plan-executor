@@ -1,0 +1,12 @@
+AGENT: What would you like to drink?
+USER:  Can I have tonic water. The sixteen ounce. cocktail Do you have a short glass?
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  gin sounds good! A wine please. Can I use credit? Can I have a short glass.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  Can I have coke. I'd like a cocktail. Can I have vodka. The eight ounce.
+AGENT: What would you like to mix your drink with?
+USER:  Can I do light? Can I have grapefruit juice. A wine please. A short glass.
+AGENT: Excellent thanks! I've sent your order for a gin with coke to the bartender, and you'll pay by credit.

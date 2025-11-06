@@ -1,0 +1,33 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  chequing yes Can I transfer 34 to Bob?
+AGENT: What type of account would you like me to make for you?
+USER:  Please request my contact Sandra to send the 13 they owe. Please create a college fund account. i'm good
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to select for this task?
+USER:  I want to transfer 5000 from savings to retirement fund. Please pay my utility payment. Use chequing
+AGENT: A retirement fund account was successfully created with starter funds transferred from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I want to create a college fund account. Please request that Sandra to send me 47 dollars. mhm
+AGENT: Ok. How much money do you want to send and to who?
+USER:  Please pay my internet payment. Mark is expecting 23 from me. I don't want to do anything else.
+AGENT: Which account would you like to use?
+USER:  I need to use savings done I want to pay off my internet payment.
+AGENT: All done! I just e-transferred 47 to Sandra from savings.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please request my contact Mark to send the 87 they owe. mhm use chequing for this task
+AGENT: Which bill would you like to pay off?
+USER:  Please pay my utility payment. Please request that Bob to send me 5000 dollars. I want to pay off my internet bill.
+AGENT: Which account would you like to select for this task?
+USER:  I want to pay off my gas bill. Please request that Mark to send me 13 dollars. use chequing for this task
+AGENT: Paying your gas bill from your chequing account...
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please select chequing. I need to request that Nancy pays me 23. confirm
+AGENT: How much money would you like to request and from who?
+USER:  Can I transfer 30 to Mark? use chequing for this task Please request my contact Bob to send the 47 they owe.
+AGENT: Ok, I'm requesting a payment of 23 from Nancy. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I'm finished yeah Please request that Sandra to send me 47 dollars.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  I want to pay off my gas bill. I want to create a college fund account. I want to send 9 to college fund from chequing.
+AGENT: Ok! I successfully transferred your requested amount of 47 from chequing to college fund.
+AGENT: All done. Have a nice day!

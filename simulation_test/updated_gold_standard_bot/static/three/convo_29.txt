@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am operating within a high budget. I would prefer a high-energy atmosphere today. I am allergic to any foods that are not gluten-free Are there any Chinese restaurants in the area?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I am allergic to any foods that are not dairy-free I have a low budget. Do you have restaurants of type dessert? What is the most high-energy place in the city?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Do you have restaurants of type Chinese? I am located in Toronto. My number is 263-749-0563. I want to go to a high-energy place.
+AGENT: Do you have any allergies? (Y/N)
+USER:  Can you help me find things to do in Toronto? Do you have restaurants of type Mexican? nah My phone number is 263-749-0563.
+AGENT: Where are you located?
+USER:  Are there any Mexican restaurants in the area? 263-749-0563 Can you help me find things to do in Toronto? I would prefer a high-energy atmosphere today.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Can you help me find things to do in Kingston? Do you have restaurants of type Italian? I want to go to a high-energy place. I can do activities with a low budget.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stages in Kingston.

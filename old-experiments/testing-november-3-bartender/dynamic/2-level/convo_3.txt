@@ -1,0 +1,12 @@
+AGENT: What would you like to drink?
+USER:  debit I'd like a wine. I normally go for a light drink.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Would you like a tall or short glass?
+USER:  grapefruit juice tequila Can I have a tall glass.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  A tall glass. I'd like a beer. I'd like eight ounces.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  sprite sounds good! I normally go for a light drink. I'd like twelve ounces.
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.

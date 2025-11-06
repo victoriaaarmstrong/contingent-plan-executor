@@ -1,0 +1,16 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  I need to request that Sandra pays me 47. Nancy is expecting 13 from me. N Please pay my electricity payment.
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Bob is expecting 37 from me. I'm good to go thanks not at all I want to use chequing for this.
+AGENT: No problem! No e-transfers will be sent.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please request that Mark to send me 5000 dollars. Y I want to create a college fund account. I want to transfer 5000 from savings to college fund.
+AGENT: Ok, I'm paying your electricity bill from your savings account.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  Please request that Mark to send me 43 dollars. yes I'm good to go thanks Nancy is expecting 25 from me.
+AGENT: Ok, I'm requesting a payment of 25 from Nancy. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  Can I transfer 30 to Nancy? Please pay my internet payment. Can I transfer 3 from chequing to retirement fund? N
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

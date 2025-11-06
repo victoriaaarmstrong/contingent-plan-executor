@@ -1,0 +1,10 @@
+AGENT: What would you like to drink?
+USER:  debit wine Can I have grapefruit juice.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Do you have a tall glass? gin sounds good! I like something fruity.
+AGENT: How many ounces would you like?
+USER:  I like something fruity. I'd like sixteen ounces. A tall glass.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by debit.

@@ -1,0 +1,7 @@
+AGENT: What would you like to drink?
+USER:  grapefruit juice Do you have a tall glass? Can I have vodka. beer
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I have a tall glass. The five ounce. Can I use credit? I normally go for a light drink.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by credit.

@@ -1,0 +1,9 @@
+AGENT: What would you like to drink?
+USER:  tonic water I normally go for a fruity drink. A cocktail sounds nice. Can I use cash?
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  I normally go for a fruity drink. Can I have rum. I'd like twelve ounces. Can I have a tall glass.
+AGENT: What would you like to mix your drink with?
+USER:  coke debit I'd like a beer. I'd like five ounces.
+AGENT: Excellent thanks! I've sent your order for a rum with tonic water to the bartender, and you'll pay by debit.

@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have a high budget and I would prefer a low-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My phone number is 213-758-4930.
+AGENT: Do you have any allergies? (Y/N)
+USER:  absolutely not
+AGENT: Where are you located?
+USER:  I am located in k-town.
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Italian restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in k-town.

@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in Toronto. I can do activities with a low budget and I want to find the most high-energy place in the city. I have to eat gluten-free. Do you have restaurants of type Mexican?
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I can do activities with a high budget. My phone number is 613-399-2081. Do you have restaurants of type Mexican? I am located in Kingston.
+AGENT: Do you have any allergies? (Y/N)
+USER:  What is the most low-energy place in the city? yes I have a low budget. 263-749-0563
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can do activities with a high budget. I can only eat foods that are dairy-free. 613-399-2081 Can you help me find things to do in k-town?
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  My phone number is 613-399-2081. mhm I have a high budget. I have to eat dairy-free.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I would prefer a high-energy atmosphere today. Are there any dessert restaurants in the area? I live in k-town. I can only eat foods that are gluten-free.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not gluten-free I want to eat Mexican. I would prefer a low-energy atmosphere today. not at all
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stages in k-town.

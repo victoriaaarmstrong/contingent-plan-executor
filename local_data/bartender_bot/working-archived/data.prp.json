@@ -1,0 +1,761 @@
+{
+    "plan": {
+        "init": "24",
+        "goal": "0",
+        "nodes": {
+            "0": {
+                "expected_successor": false,
+                "action": "---",
+                "state": "0xf1d1bf0",
+                "distance": 0,
+                "is_relevant": 1,
+                "is_goal": 1,
+                "is_sc": 1,
+                "successors": []
+            },
+            "1": {
+                "expected_successor": "0",
+                "action": "complete",
+                "state": "0xf1d5e60",
+                "distance": 1,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "complete_DETDUP_complete__finish-EQ-finish",
+                        "successor_id": "0"
+                    }
+                ]
+            },
+            "2": {
+                "expected_successor": "1",
+                "action": "dialogue_statement",
+                "state": "0xf1d5fe0",
+                "distance": 2,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "1"
+                    }
+                ]
+            },
+            "3": {
+                "expected_successor": "2",
+                "action": "slot-fill__get-payment",
+                "state": "0xf1d6aa0",
+                "distance": 3,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-fallback",
+                        "successor_id": "4"
+                    },
+                    {
+                        "outcome_label": "slot-fill__get-payment_DETDUP_slot-fill__get-payment__validate-slot-fill-EQ-payment_found",
+                        "successor_id": "2"
+                    }
+                ]
+            },
+            "4": {
+                "expected_successor": "3",
+                "action": "dialogue_statement",
+                "state": "0xf1d5f60",
+                "distance": 4,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "3"
+                    }
+                ]
+            },
+            "5": {
+                "expected_successor": "4",
+                "action": "inform",
+                "state": "0xf1d8690",
+                "distance": 5,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "inform_DETDUP_inform__finish-EQ-finish",
+                        "successor_id": "4"
+                    }
+                ]
+            },
+            "6": {
+                "expected_successor": "5",
+                "action": "set-beverage",
+                "state": "0xf1d87d0",
+                "distance": 6,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-lager",
+                        "successor_id": "5"
+                    },
+                    {
+                        "outcome_label": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-radler",
+                        "successor_id": "5"
+                    },
+                    {
+                        "outcome_label": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-red-wine",
+                        "successor_id": "5"
+                    },
+                    {
+                        "outcome_label": "set-beverage_DETDUP_set-beverage__assign_beverage-EQ-set-white-wine",
+                        "successor_id": "5"
+                    }
+                ]
+            },
+            "7": {
+                "expected_successor": "6",
+                "action": "get-descriptors",
+                "state": "0xf1d88f0",
+                "distance": 7,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-fallback",
+                        "successor_id": "15"
+                    },
+                    {
+                        "outcome_label": "get-descriptors_DETDUP_get-descriptors__set-descriptors-EQ-update_descriptors",
+                        "successor_id": "6"
+                    }
+                ]
+            },
+            "15": {
+                "expected_successor": "7",
+                "action": "dialogue_statement",
+                "state": "0xf1dfa20",
+                "distance": 8,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "7"
+                    }
+                ]
+            },
+            "22": {
+                "expected_successor": "21",
+                "action": "slot-fill__get-glass",
+                "state": "0xf1e4370",
+                "distance": 12,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-fallback",
+                        "successor_id": "23"
+                    },
+                    {
+                        "outcome_label": "slot-fill__get-glass_DETDUP_slot-fill__get-glass__validate-slot-fill-EQ-glass_found",
+                        "successor_id": "21"
+                    }
+                ]
+            },
+            "21": {
+                "expected_successor": "20",
+                "action": "dialogue_statement",
+                "state": "0xf1e42c0",
+                "distance": 11,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "20"
+                    }
+                ]
+            },
+            "20": {
+                "expected_successor": "19",
+                "action": "slot-fill__get-size",
+                "state": "0xf1e4210",
+                "distance": 10,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-fallback",
+                        "successor_id": "21"
+                    },
+                    {
+                        "outcome_label": "slot-fill__get-size_DETDUP_slot-fill__get-size__validate-slot-fill-EQ-size_found",
+                        "successor_id": "19"
+                    }
+                ]
+            },
+            "19": {
+                "expected_successor": "18",
+                "action": "dialogue_statement",
+                "state": "0xf1e4160",
+                "distance": 9,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "18"
+                    }
+                ]
+            },
+            "18": {
+                "expected_successor": "7",
+                "action": "set-drink-ingredients",
+                "state": "0xf1d6160",
+                "distance": 8,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-beer",
+                        "successor_id": "7"
+                    },
+                    {
+                        "outcome_label": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-cocktail",
+                        "successor_id": "17"
+                    },
+                    {
+                        "outcome_label": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-wine",
+                        "successor_id": "7"
+                    }
+                ]
+            },
+            "17": {
+                "expected_successor": "16",
+                "action": "get-liquor",
+                "state": "0xf1e2370",
+                "distance": 7,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "get-liquor_DETDUP_get-liquor__set-liquor-EQ-fallback",
+                        "successor_id": "26"
+                    },
+                    {
+                        "outcome_label": "get-liquor_DETDUP_get-liquor__set-liquor-EQ-update_liquor",
+                        "successor_id": "16"
+                    }
+                ]
+            },
+            "16": {
+                "expected_successor": "5",
+                "action": "get-mixer",
+                "state": "0xf1e38a0",
+                "distance": 6,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "get-mixer_DETDUP_get-mixer__set-mixer-EQ-fallback",
+                        "successor_id": "25"
+                    },
+                    {
+                        "outcome_label": "get-mixer_DETDUP_get-mixer__set-mixer-EQ-update_mixer",
+                        "successor_id": "5"
+                    }
+                ]
+            },
+            "23": {
+                "expected_successor": "22",
+                "action": "dialogue_statement",
+                "state": "0xf1e44d0",
+                "distance": 13,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "22"
+                    }
+                ]
+            },
+            "24": {
+                "expected_successor": "23",
+                "action": "slot-fill__get-drink",
+                "state": "0xf1e46f0",
+                "distance": 14,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-drink_found",
+                        "successor_id": "23"
+                    },
+                    {
+                        "outcome_label": "slot-fill__get-drink_DETDUP_slot-fill__get-drink__validate-slot-fill-EQ-fallback",
+                        "successor_id": "27"
+                    }
+                ]
+            },
+            "25": {
+                "expected_successor": "16",
+                "action": "dialogue_statement",
+                "state": "0xf1e4990",
+                "distance": 7,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "16"
+                    }
+                ]
+            },
+            "26": {
+                "expected_successor": "17",
+                "action": "dialogue_statement",
+                "state": "0xf1e6f40",
+                "distance": 8,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "17"
+                    }
+                ]
+            },
+            "27": {
+                "expected_successor": "24",
+                "action": "dialogue_statement",
+                "state": "0xf1e7b10",
+                "distance": 15,
+                "is_relevant": 0,
+                "is_goal": 0,
+                "is_sc": 1,
+                "successors": [
+                    {
+                        "outcome_label": "dialogue_statement_DETDUP_dialogue_statement__reset-EQ-lock",
+                        "successor_id": "24"
+                    }
+                ]
+            }
+        },
+        "edges": [
+            [
+                "1",
+                ">",
+                "0"
+            ],
+            [
+                "2",
+                ">",
+                "1"
+            ],
+            [
+                "3",
+                ">",
+                "4"
+            ],
+            [
+                "3",
+                ">",
+                "2"
+            ],
+            [
+                "4",
+                ">",
+                "3"
+            ],
+            [
+                "5",
+                ">",
+                "4"
+            ],
+            [
+                "6",
+                ">",
+                "5"
+            ],
+            [
+                "6",
+                ">",
+                "5"
+            ],
+            [
+                "6",
+                ">",
+                "5"
+            ],
+            [
+                "6",
+                ">",
+                "5"
+            ],
+            [
+                "7",
+                ">",
+                "15"
+            ],
+            [
+                "7",
+                ">",
+                "6"
+            ],
+            [
+                "15",
+                ">",
+                "7"
+            ],
+            [
+                "22",
+                ">",
+                "23"
+            ],
+            [
+                "22",
+                ">",
+                "21"
+            ],
+            [
+                "21",
+                ">",
+                "20"
+            ],
+            [
+                "20",
+                ">",
+                "21"
+            ],
+            [
+                "20",
+                ">",
+                "19"
+            ],
+            [
+                "19",
+                ">",
+                "18"
+            ],
+            [
+                "18",
+                ">",
+                "7"
+            ],
+            [
+                "18",
+                ">",
+                "17"
+            ],
+            [
+                "18",
+                ">",
+                "7"
+            ],
+            [
+                "17",
+                ">",
+                "26"
+            ],
+            [
+                "17",
+                ">",
+                "16"
+            ],
+            [
+                "16",
+                ">",
+                "25"
+            ],
+            [
+                "16",
+                ">",
+                "5"
+            ],
+            [
+                "23",
+                ">",
+                "22"
+            ],
+            [
+                "24",
+                ">",
+                "23"
+            ],
+            [
+                "24",
+                ">",
+                "27"
+            ],
+            [
+                "25",
+                ">",
+                "16"
+            ],
+            [
+                "26",
+                ">",
+                "17"
+            ],
+            [
+                "27",
+                ">",
+                "24"
+            ]
+        ],
+        "states": {
+            "0xf1d1bf0": [
+                "Atom goal()"
+            ],
+            "0xf1d5e60": [
+                "Atom know__payment()",
+                "Atom informed()",
+                "NegatedAtom force-statement()"
+            ],
+            "0xf1d5fe0": [
+                "Atom know__payment()",
+                "Atom informed()",
+                "Atom force-statement()"
+            ],
+            "0xf1d6aa0": [
+                "NegatedAtom know__payment()",
+                "Atom informed()",
+                "NegatedAtom force-statement()"
+            ],
+            "0xf1d5f60": [
+                "NegatedAtom know__payment()",
+                "Atom informed()",
+                "Atom force-statement()"
+            ],
+            "0xf1d8690": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_ingredients()",
+                "NegatedAtom drink_preferences()"
+            ],
+            "0xf1d87d0": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "Atom know__descriptors()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_ingredients()",
+                "NegatedAtom know__beverage()",
+                "Atom drink_preferences()"
+            ],
+            "0xf1d88f0": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_ingredients()",
+                "NegatedAtom know__beverage()",
+                "Atom drink_preferences()"
+            ],
+            "0xf1dfa20": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "Atom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_ingredients()",
+                "NegatedAtom know__beverage()",
+                "Atom drink_preferences()"
+            ],
+            "0xf1e4370": [
+                "Atom know__drink()",
+                "NegatedAtom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e42c0": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "Atom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e4210": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e4160": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "Atom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1d6160": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e2370": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "Atom know__drink_preferences()",
+                "Atom drink_ingredients()",
+                "NegatedAtom drink_preferences()"
+            ],
+            "0xf1e38a0": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "Atom know__liquor()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_preferences()"
+            ],
+            "0xf1e44d0": [
+                "Atom know__drink()",
+                "NegatedAtom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "Atom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e46f0": [
+                "NegatedAtom know__drink()",
+                "NegatedAtom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "NegatedAtom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ],
+            "0xf1e4990": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "Atom know__liquor()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "Atom force-statement()",
+                "Atom know__drink_preferences()",
+                "NegatedAtom drink_preferences()"
+            ],
+            "0xf1e6f40": [
+                "Atom know__drink()",
+                "Atom know__glass()",
+                "NegatedAtom know__payment()",
+                "Atom know__size()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "Atom know__drink_ingredients()",
+                "Atom force-statement()",
+                "Atom know__drink_preferences()",
+                "Atom drink_ingredients()",
+                "NegatedAtom drink_preferences()"
+            ],
+            "0xf1e7b10": [
+                "NegatedAtom know__drink()",
+                "NegatedAtom know__glass()",
+                "NegatedAtom know__payment()",
+                "NegatedAtom know__size()",
+                "NegatedAtom know__descriptors()",
+                "NegatedAtom know__liquor()",
+                "NegatedAtom informed()",
+                "NegatedAtom know__drink_ingredients()",
+                "Atom force-statement()",
+                "NegatedAtom know__drink_preferences()",
+                "NegatedAtom know__beverage()"
+            ]
+        }
+    }
+}

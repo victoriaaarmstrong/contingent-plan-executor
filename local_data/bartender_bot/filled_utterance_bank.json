@@ -104,7 +104,7 @@
       "Can I do light?",
       "Can I do fruity?"
     ],
-    "possible_ac_intents": ["share_drink", "share_size", "share_liquor", "share_mixer", "share_glass", "share_payment"]
+    "possible_ac_intents": ["share_size", "share_liquor", "share_mixer", "share_glass", "share_payment"]
   }
 }
 

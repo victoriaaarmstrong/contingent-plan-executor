@@ -1,0 +1,18 @@
+AGENT: Would you like to create a new account?
+USER:  Sandra is expecting 91 from me. absolutely not
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to send any funds to a contact today?
+USER:  N use chequing for this task
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to send 56 to retirement fund from chequing. no thanks
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  I really need a retirement fund account please create one. no
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  confirm Use savings
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  I want to create a retirement fund account. I want to send 44 to retirement fund from savings.
+AGENT: Got it. I've completed the transfer of 56 from savings to retirement fund.
+AGENT: All done. Have a nice day!

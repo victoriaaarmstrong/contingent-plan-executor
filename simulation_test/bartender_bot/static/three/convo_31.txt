@@ -1,0 +1,16 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  I'd like a beer. debit A tall glass. grapefruit juice
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I'd like five ounces. tequila sounds good! sprite sounds good! Can I do fruity?
+AGENT: Would you like a tall or short glass?
+USER:  Can I use cash? grapefruit juice Can I have tequila. Can I have a short glass.
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I do light? Can I have a short glass. cash A beer please.
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  I like something fruity. I'd like sixteen ounces. A short glass. tonic water
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by cash.

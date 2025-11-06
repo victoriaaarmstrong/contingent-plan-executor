@@ -1,0 +1,16 @@
+AGENT: What would you like to drink?
+USER:  vodka sounds good! I'd like to pay with debit. A beer please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I have a tall glass. Can I do light? vodka sounds good!
+AGENT: Would you like a tall or short glass?
+USER:  cash Can I have a five ounce please. Do you have a tall glass?
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  The eight ounce. debit I'd like a cocktail.
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  I'd like five ounces. credit rum sounds good!
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a lager to the bartender, and you'll pay by credit.

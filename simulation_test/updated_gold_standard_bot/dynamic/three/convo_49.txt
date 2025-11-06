@@ -1,0 +1,11 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in k-town. Do you have restaurants of type Mexican? I can do activities with a high budget. I would prefer a low-energy atmosphere today.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I would prefer a high-energy atmosphere today. I am operating within a low budget. My number is 613-399-2081. Do you have restaurants of type dessert?
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am operating within a low budget. My number is 213-758-4930. I want to go to a high-energy place. Do you have restaurants of type Mexican?
+AGENT: Do you have any allergies? (Y/N)
+USER:  Do you have restaurants of type Mexican? My number is 613-399-2081. nah Can you help me find things to do in Kingston?
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stauffer Library in Kingston.

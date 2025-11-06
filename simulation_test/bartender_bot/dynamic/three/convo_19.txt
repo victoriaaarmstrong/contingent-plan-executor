@@ -1,0 +1,12 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  I'd like to pay with cash. I like something fruity. A cocktail please. tonic water sounds good!
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  Can I have tequila. Can I have a tall glass. Can I do light? coke
+AGENT: What would you like to mix your drink with?
+USER:  Can I have vodka. A wine sounds nice. Can I have soda water. I normally go for a fruity drink.
+AGENT: How many ounces would you like?
+USER:  Can I do fruity? Can I have a sixteen ounce please. soda water Can I have tequila.
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a tequila with soda water to the bartender, and you'll pay by cash.

@@ -1,0 +1,25 @@
+AGENT: Would you like to create a new account?
+USER:  Use chequing yeah Can I transfer 23 to Nancy?
+AGENT: What account type would you like to create?
+USER:  I want to create a college fund account. I want to create a college fund account. I want to transfer 67 from savings to retirement fund.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: A retirement fund account was successfully created with starter funds transferred from savings.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  Nancy is expecting 47 from me. Y I want to pay off my utility bill.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  Please pay my gas payment. I want to transfer 12 to Nancy. I want to send 5000 to retirement fund from chequing.
+AGENT: Which account would you like to use?
+USER:  I want to transfer 67 from chequing to college fund. savings Can I transfer 5 to Sandra?
+AGENT: E-transferring 5 to Sandra from chequing... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please request that Bob to send me 91 dollars. confirm I really need a retirement fund account please create one.
+AGENT: Which bill would you like to pay off?
+USER:  Please send 12 to Bob. Please pay my car payment. Please select chequing.
+AGENT: Ok, I'm paying your gas bill from your chequing account.
+AGENT: Would you like to request money from a contact?
+USER:  N I need to use savings I need to request that Sandra pays me 65.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I really need a college fund account please create one. yes i don't have anything else i want to do
+AGENT: Got it. I've completed the transfer of 65 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

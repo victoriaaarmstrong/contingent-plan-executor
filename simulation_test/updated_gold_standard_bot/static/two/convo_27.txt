@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have to eat gluten-free. I can do activities with a low budget. 263-547-8152
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I want to eat Mexican. I am allergic to any foods that are not gluten-free I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have a low budget. Can you help me find things to do in k-town? 263-749-0563
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am operating within a high budget. mhm Do you have restaurants of type Mexican?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  Do you have restaurants of type Italian? I am allergic to any foods that are not gluten-free I am operating within a low budget.
+AGENT: Where are you located?
+USER:  I live in Kingston. My phone number is 613-399-2081. I have to eat dairy-free.
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I have to eat dairy-free. Do you have restaurants of type dessert? 263-749-0563
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stages in k-town.

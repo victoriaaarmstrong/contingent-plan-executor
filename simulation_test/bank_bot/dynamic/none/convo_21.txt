@@ -1,0 +1,27 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  confirm
+AGENT: What account type would you like to create?
+USER:  I want to create a college fund account.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Use chequing
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  absolutely not
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  confirm
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my electricity payment.
+AGENT: Which account would you like to use?
+USER:  Use chequing
+AGENT: Paying your electricity bill from your chequing account...
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  no
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  yeah
+AGENT: Ok! Please specify the funds you which to transfer and the accounts to transfer between.
+USER:  I want to transfer 23 from savings to college fund.
+AGENT: Ok! I successfully transferred your requested amount of 23 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

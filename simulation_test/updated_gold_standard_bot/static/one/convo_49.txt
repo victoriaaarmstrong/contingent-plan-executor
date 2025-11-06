@@ -1,0 +1,15 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My number is 213-758-4930. I am operating within a high budget and I want to go to a high-energy place.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  213-758-4930 I am operating within a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yeah Do you have restaurants of type Mexican?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are dairy-free. Are there any dessert restaurants in the area?
+AGENT: Where are you located?
+USER:  I want to eat Italian. I live in downtown.
+AGENT: Tailoring your results to what's available in downtown...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am allergic to any foods that are not dairy-free Are there any Mexican restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Smith's Golfing Club in downtown.

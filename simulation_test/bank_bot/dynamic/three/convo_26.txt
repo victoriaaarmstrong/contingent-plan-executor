@@ -1,0 +1,23 @@
+AGENT: Would you like to create a new account?
+USER:  Please request that Nancy to send me 43 dollars. Use chequing i'm all done here Y
+AGENT: What type of account would you like me to make for you?
+USER:  I want to create a college fund account for my son. use chequing for this task I want to create a college fund account for my son. I want to transfer 12 to Sandra.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Please request that Sandra to send me 76 dollars. Use chequing Please pay my credit card payment. yes
+AGENT: Ok! How much would you like to send and to who?
+USER:  Nancy is expecting 5000 from me. I want to create a college fund account. I want to pay off my electricity payment. Please select chequing.
+AGENT: Which account would you like to select for this task?
+USER:  I want to create a college fund account. I need to request that Nancy pays me 23. use chequing for this task I want to send 11 to retirement fund from savings.
+AGENT: All done! I just e-transferred 11 to Nancy from chequing.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  confirm Can I transfer 87 to Bob? Please request that Mark to send me 25 dollars. I want to use chequing for this.
+AGENT: Ok, I'm paying your electricity bill from your chequing account.
+AGENT: Would you like to request money from a contact?
+USER:  Please pay my internet payment. I want to transfer 16 from chequing to college fund. I need to use savings nah
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I want to create a college fund account for my son. I'm finished confirm Can I transfer 87 to Nancy?
+AGENT: Got it. I've completed the transfer of 87 from savings to college fund.
+AGENT: All done. Have a nice day!

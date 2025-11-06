@@ -1,0 +1,8 @@
+AGENT: What would you like to drink?
+USER:  vodka Can I do fruity? A wine sounds nice. tonic water sounds good!
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: Would you like a tall or short glass?
+USER:  Can I have a tall glass. cash A beer sounds nice. The eight ounce.
+AGENT: Glass preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by cash.

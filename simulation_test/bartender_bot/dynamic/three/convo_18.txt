@@ -1,0 +1,10 @@
+AGENT: What would you like to drink?
+USER:  vodka Can I have tonic water. wine A tall glass.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  gin A short glass. debit Can I do fruity?
+AGENT: How many ounces would you like?
+USER:  Can I have a sixteen ounce please. I normally go for a light drink. cash soda water sounds good!
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a red wine to the bartender, and you'll pay by cash.

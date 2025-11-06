@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I have a high budget and I would prefer a high-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My number is 263-547-8152.
+AGENT: Do you have any allergies? (Y/N)
+USER:  absolutely not
+AGENT: Where are you located?
+USER:  I am located in Kingston.
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Chinese restaurants in the area?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Smith's Golfing Club in Kingston.

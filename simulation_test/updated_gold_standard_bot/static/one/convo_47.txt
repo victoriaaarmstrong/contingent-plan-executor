@@ -1,0 +1,15 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I am located in k-town. I have a low budget and I would prefer a low-energy atmosphere today.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Do you have restaurants of type Italian? 213-758-4930
+AGENT: Do you have any allergies? (Y/N)
+USER:  My phone number is 613-399-2081. yeah
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  What is the most low-energy place in the city? I have to eat gluten-free.
+AGENT: Where are you located?
+USER:  I live in downtown. My phone number is 613-399-2081.
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  What is the most low-energy place in the city? Do you have restaurants of type dessert?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stauffer Library in k-town.

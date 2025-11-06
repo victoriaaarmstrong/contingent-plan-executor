@@ -1,0 +1,7 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A short glass. beer Can I have tequila. I normally go for a fruity drink.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Do you have a tall glass? Can I have a twelve ounce please. Can I use credit? I like something light.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by credit.

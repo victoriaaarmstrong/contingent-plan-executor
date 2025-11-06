@@ -1,0 +1,18 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  i'm all done here I want to send 44 to retirement fund from savings. not at all
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I don't want to do anything else. no thanks Please create a retirement fund account.
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  not at all I want to send 12 to retirement fund from savings. I don't want to do anything else.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please request that Bob to send me 76 dollars. Please pay my gas payment. yeah
+AGENT: Which contact would you like to request money from and how much?
+USER:  use savings for this task Please request that Bob to send me 47 dollars. Please request that Bob to send me 76 dollars.
+AGENT: Ok, I asked Bob to send you 76. I'll notify you when the payment is received.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  i'm all done here I want to create a college fund account. nah
+AGENT: Ok, no problem!
+AGENT: Completed all bank actions for today. Thank you!

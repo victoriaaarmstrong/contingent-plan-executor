@@ -1,0 +1,10 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  I'd like a cocktail. Can I have tequila. I like something fruity.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What would you like to mix your drink with?
+USER:  I'd like to pay with credit. The eight ounce. Can I have soda water.
+AGENT: Would you like a tall or short glass?
+USER:  Do you have a short glass? I like something fruity. credit
+AGENT: Glass preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a tequila with soda water to the bartender, and you'll pay by credit.

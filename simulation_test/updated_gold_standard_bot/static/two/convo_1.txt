@@ -1,0 +1,27 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to go to a low-energy place. 213-758-4930 I have to eat dairy-free.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I live in Toronto. I have to eat dairy-free. I can do activities with a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I am allergic to any foods that are not gluten-free My phone number is 263-749-0563. I would prefer a low-energy atmosphere today.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yeah I can do activities with a low budget. I am located in Kingston.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Italian. I want to go to a low-energy place. I can only eat foods that are dairy-free.
+AGENT: Where are you located?
+USER:  I can only eat foods that are dairy-free. I am located in Kingston. I want to eat dessert.
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  What is the most low-energy place in the city? I want to eat Mexican. I am located in Kingston.
+AGENT: Cuisine preference has been logged.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I want to eat Mexican. yeah I am operating within a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are gluten-free. What is the most low-energy place in the city? My phone number is 213-758-4930.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  My number is 263-749-0563. I have to eat dairy-free. I want to eat Italian.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stauffer Library in Kingston.

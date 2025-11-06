@@ -1,0 +1,9 @@
+AGENT: What would you like to drink?
+USER:  A tall glass. A cocktail please. Can I do light? The five ounce.
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  vodka sounds good! Can I have a tall glass. A cocktail sounds nice. Can I have a eight ounce please.
+AGENT: What would you like to mix your drink with?
+USER:  Can I have a tall glass. I'd like a cocktail. soda water sounds good! Can I use cash?
+AGENT: Excellent thanks! I've sent your order for a vodka with soda water to the bartender, and you'll pay by cash.

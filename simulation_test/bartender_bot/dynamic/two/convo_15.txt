@@ -1,0 +1,12 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  I normally go for a light drink. A cocktail please. sprite sounds good!
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  I normally go for a light drink. Can I have a short glass. vodka
+AGENT: What would you like to mix your drink with?
+USER:  tonic water Do you have a tall glass? The sixteen ounce.
+AGENT: Would you like a tall or short glass?
+USER:  credit Can I have a tall glass. Can I do light?
+AGENT: Glass preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a vodka with sprite to the bartender, and you'll pay by credit.

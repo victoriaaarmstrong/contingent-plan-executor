@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I can only eat foods that are dairy-free. I can do activities with a low budget. I live in k-town. I would prefer a high-energy atmosphere today.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I would prefer a high-energy atmosphere today. Can you help me find things to do in downtown? I can do activities with a low budget. I can only eat foods that are gluten-free.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  263-749-0563 Do you have restaurants of type Chinese? I have to eat gluten-free. I want to go to a low-energy place.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yeah I am allergic to any foods that are not gluten-free My number is 613-399-2081. I have a low budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I have to eat dairy-free. I have a low budget. Do you have restaurants of type Chinese? My number is 213-758-4930.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stages in downtown.

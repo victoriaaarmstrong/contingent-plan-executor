@@ -1,0 +1,9 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  A cocktail please. I'd like five ounces. soda water sounds good!
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Okay, I'll take that into account.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  tequila sounds good! grapefruit juice A wine sounds nice.
+AGENT: What would you like to mix your drink with?
+USER:  grapefruit juice sounds good! credit Do you have a tall glass?
+AGENT: Excellent thanks! I've sent your order for a tequila with grapefruit juice to the bartender, and you'll pay by credit.

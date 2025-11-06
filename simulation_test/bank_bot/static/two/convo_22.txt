@@ -1,0 +1,28 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  absolutely not I want to transfer 5000 to Sandra. use chequing for this task
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  I want to create a college fund account for my son. I want to transfer 5000 to Bob. Y
+AGENT: Ok! How much would you like to send and to who?
+USER:  I want to create a retirement fund account. I want to transfer 12 to Bob. Mark is expecting 47 from me.
+AGENT: Which account would you like to select for this task?
+USER:  Can I transfer 3 from chequing to retirement fund? I want to create a college fund account for my son. Please select savings.
+AGENT: E-transferring 3 to Bob from chequing... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  use savings for this task confirm I want to pay off my credit card bill.
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my electricity bill. I want to create a college fund account. Please request that Nancy to send me 91 dollars.
+AGENT: Please specify the account you want to select.
+USER:  I need to use savings Please send 91 to Bob. I want to send 12 to retirement fund from chequing.
+AGENT: Paying your credit card bill from your savings account...
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please send 91 to Nancy. I need to request that Bob pays me 91. confirm
+AGENT: How much money would you like to request and from who?
+USER:  Please pay my electricity payment. Please request that Bob to send me 47 dollars. I want to create a retirement fund account.
+AGENT: Ok, I'm requesting a payment of 91 from Bob. I will let you know when the transfer goes through.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  yes I want to pay off my internet bill. I'm finished
+AGENT: Ok, how much money do you want to send and between which accounts?
+USER:  Can I transfer 23 from chequing to retirement fund? I want to pay off my lights bill. I need to request that Sandra pays me 23.
+AGENT: Got it. I've completed the transfer of 23 from chequing to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

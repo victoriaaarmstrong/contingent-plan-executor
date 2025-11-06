@@ -5,7 +5,7 @@ from hovor import DEBUG
 
 import time
 
-MODE = "static"
+MODE = "dynamic"
 
 class InMemorySession(SessionBase):
     def __init__(self, configuration_provider):

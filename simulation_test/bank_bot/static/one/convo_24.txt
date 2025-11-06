@@ -1,0 +1,31 @@
+AGENT: Would you like to create a new account?
+USER:  Can I transfer 23 to Sandra? confirm
+AGENT: What type of account would you like me to make for you?
+USER:  I want to create a college fund account. i don't have anything else i want to do
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please pay my car payment. Use chequing
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  Y Please request that Sandra to send me 76 dollars.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I want to create a retirement fund account. Can I transfer 34 to Bob?
+AGENT: Please specify the account you want to select.
+USER:  I want to pay off my lights bill. I need to use chequing
+AGENT: All done! I just e-transferred 76 to Sandra from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  yes Can I transfer 16 from chequing to retirement fund?
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my car bill. I want to transfer 16 from savings to retirement fund.
+AGENT: Please specify the account you want to select.
+USER:  Can I transfer 87 to Mark? Please select savings.
+AGENT: Ok, I'm paying your lights bill from your savings account.
+AGENT: Would you like to request money from a contact?
+USER:  N I want to create a retirement fund account for my son.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer any money between your existing accounts?
+USER:  I want to send 65 to college fund from chequing. Y
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  Can I transfer 1 from savings to college fund? i'm all done here
+AGENT: Got it. I've completed the transfer of 65 from chequing to college fund.
+AGENT: Completed all bank actions for today. Thank you!

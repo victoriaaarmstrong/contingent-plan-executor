@@ -1,0 +1,17 @@
+AGENT: What would you like to drink?
+USER:  A cocktail sounds nice. debit coke
+AGENT: Great, tailoring your options based on a cocktail...
+AGENT: Would you like a tall or short glass?
+USER:  I'd like a cocktail. A short glass. Can I have grapefruit juice.
+AGENT: Glass preference has been logged.
+AGENT: How many ounces would you like?
+USER:  Can I have vodka. The five ounce. debit
+AGENT: Size preference has been logged.
+AGENT: What liquor would you like as the base for your cocktail? I've got rum, gin, vodka, or tequila.
+USER:  Can I have a eight ounce please. Can I have vodka. A wine sounds nice.
+AGENT: What would you like to mix your drink with?
+USER:  tonic water tequila I'd like a cocktail.
+AGENT: Excellent thanks! I've sent your order for a cocktail to the bartender.
+AGENT: How would you like to pay?
+USER:  I'd like to pay with debit. The five ounce. I like something light.
+AGENT: Great, you'll pay by debit.

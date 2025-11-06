@@ -64,6 +64,12 @@ class Plan(PlanBase):
         for key, value in only_known_entities.items():
             know_atom = 'Atom know__' + key + '()'
             atoms += [know_atom]
+            #if key != "force-statement":
+                #know_atom = 'Atom know__' + key + '()'
+                #atoms += [know_atom]
+            #else:
+                #know_atom = 'Atom ' + key + '()'
+                #atoms += [know_atom]
 
         return set(atoms)
 
@@ -89,6 +95,13 @@ class Plan(PlanBase):
 
         return candidate
 
+    def display_diffs(self, node, subset_state):
+
+        print(f"\n\n\tIn node_fluents and updated_complete_state: {node.intersection(subset_state)}")
+        print(f"\tIn updated_complete_state but not in node_fluents: {subset_state.difference(node)}")
+        print(f"\tIn node_fluents but not in updated_complete_state: {node.difference(subset_state)}")
+
+        return
 
     def get_better_node(self, progress, mode):
         """
@@ -110,6 +123,7 @@ class Plan(PlanBase):
         new_EM_candidates = {}
         for node in self.nodes:
             node_fluents = set(node.partial_state.fluents)
+            #self.display_diffs(node_fluents, set(updated_complete_states.fluents))
             if node_fluents.issubset(set(updated_complete_states.fluents)):
                 new_EM_candidates.update({node:node._distance})
 

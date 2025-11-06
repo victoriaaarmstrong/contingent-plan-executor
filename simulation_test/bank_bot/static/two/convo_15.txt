@@ -1,0 +1,29 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  Please send 12 to Mark. confirm Please request my contact Sandra to send the 47 they owe.
+AGENT: What account type would you like to create?
+USER:  I want to pay off my car payment. I really need a college fund account please create one. Nancy is expecting 23 from me.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please pay my gas payment. Please request my contact Bob to send the 13 they owe. chequing
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  I want to pay off my credit card payment. yes Please send 5000 to Sandra.
+AGENT: Ok! How much would you like to send and to who?
+USER:  I want to create a retirement fund account. Please send 5000 to Sandra. Please request my contact Sandra to send the 12 they owe.
+AGENT: Which account would you like to select for this task?
+USER:  I need to request that Bob pays me 37. use chequing for this task Can I transfer 30 to Sandra?
+AGENT: E-transferring 30 to Sandra from chequing... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  Please create a retirement fund account. use savings for this task yeah
+AGENT: Which bill would you like to pay off?
+USER:  I want to create a retirement fund account for my son. I want to send 67 to college fund from savings. I want to pay off my internet bill.
+AGENT: Please specify the account you want to select.
+USER:  I want to create a college fund account. Please send 5000 to Sandra. I want to use chequing for this.
+AGENT: Paying your credit card bill from your savings account...
+AGENT: Would you like to request money from a contact?
+USER:  not at all Can I transfer 23 to Nancy? I want to create a retirement fund account.
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  I need to request that Sandra pays me 13. absolutely not I want to create a retirement fund account.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

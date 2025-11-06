@@ -1,0 +1,31 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  Please pay my gas payment. yes
+AGENT: What account type would you like to create?
+USER:  I want to create a college fund account. Please select chequing.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to select for this task?
+USER:  use chequing for this task I'm finished
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  yes use savings for this task
+AGENT: Ok! How much would you like to send and to who?
+USER:  I want to transfer 12 to Nancy. I want to transfer 90 to Bob.
+AGENT: Please specify the account you want to select.
+USER:  bye chequing
+AGENT: E-transferring 90 to Bob from savings... All done!
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  I want to pay off my internet bill. confirm
+AGENT: Which bill would you like to pay off?
+USER:  I want to pay off my credit card payment. Please pay my lights payment.
+AGENT: Which account would you like to select for this task?
+USER:  Use savings I need to request that Nancy pays me 23.
+AGENT: Ok, I'm paying your internet bill from your savings account.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  Please create a college fund account. no thank you
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  yes Please request that Sandra to send me 25 dollars.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  Can I transfer 23 from chequing to retirement fund? I want to transfer 23 from savings to college fund.
+AGENT: Ok! I successfully transferred your requested amount of 25 from savings to college fund.
+AGENT: All done. Have a nice day!

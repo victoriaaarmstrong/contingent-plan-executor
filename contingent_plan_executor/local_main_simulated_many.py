@@ -14,11 +14,11 @@ def simulate_local_conversation(output_files_path, sample_convos_out):
 
 
 if __name__ == "__main__":
-    out = "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/simulation_test/"
-    for i in range(1):#20):
+    out = "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/simulation_test/bank_bot/dynamic/none"
+    for i in range(50):
         print(i)
         simulate_local_conversation(
-            "./local_data/bartender_bot",
+            "./local_data/bank_bot",
             out
             )
         time.sleep(1)

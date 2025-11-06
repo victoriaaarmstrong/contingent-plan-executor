@@ -1,0 +1,9 @@
+AGENT: What would you like to drink?
+USER:  soda water I'd like a beer. Do you have a tall glass?
+AGENT: Great, tailoring your options based on a beer...
+AGENT: How many ounces would you like?
+USER:  I'd like sixteen ounces. sprite A beer please.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I like something fruity. Can I use debit? Can I have coke.
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.

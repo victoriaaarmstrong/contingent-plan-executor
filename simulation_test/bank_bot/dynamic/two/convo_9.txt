@@ -1,0 +1,25 @@
+AGENT: Would you like to create a new account?
+USER:  bye yeah I want to pay off my car bill.
+AGENT: What account type would you like to create?
+USER:  I want to pay off my gas payment. I want to use chequing for this. I really need a college fund account please create one.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  exit Bob is expecting 37 from me. Please select savings.
+AGENT: A college fund account was successfully created with starter funds transferred from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  I want to pay off my car payment. yes Please request that Nancy to send me 76 dollars.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I want to create a retirement fund account for my son. Can I transfer 30 to Nancy? I want to use savings for this.
+AGENT: Which account would you like to select for this task?
+USER:  I need to use chequing Please create a retirement fund account. I don't want to do anything else today.
+AGENT: All done! I just e-transferred 76 to Nancy from savings.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please request that Nancy to send me 76 dollars. confirm I want to send 89 to retirement fund from chequing.
+AGENT: Ok, I'm paying your car bill from your chequing account.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  not at all Please request that Nancy to send me 47 dollars. Can I transfer 1 from chequing to retirement fund?
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  Please pay my internet payment. I need to request that Bob pays me 65. no thanks
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

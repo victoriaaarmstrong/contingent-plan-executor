@@ -1,0 +1,22 @@
+AGENT: Would you like to create a new account?
+USER:  I want to send 5000 to college fund from savings. no thank you I want to pay off my electricity bill. I want to create a retirement fund account for my son.
+AGENT: Ok! No accounts will be created.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  Please request that Nancy to send me 13 dollars. I want to transfer 23 from savings to retirement fund. Please select chequing. confirm
+AGENT: Ok. How much money do you want to send and to who?
+USER:  Please request my contact Nancy to send the 12 they owe. i'm good I want to transfer 54 to Nancy. I want to create a college fund account.
+AGENT: Please specify the account you want to select.
+USER:  Please select savings. I really need a retirement fund account please create one. I need to request that Mark pays me 91. Can I transfer 5 to Nancy?
+AGENT: E-transferring 5 to Nancy from chequing... All done!
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Please pay my utility payment. not at all Use savings Can I transfer 16 from chequing to retirement fund?
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  i don't have anything else i want to do confirm Please pay my lights payment. I really need a retirement fund account please create one.
+AGENT: How much money would you like to request and from who?
+USER:  Please request my contact Bob to send the 34 they owe. I need to request that Bob pays me 65. i don't have anything else i want to do I want to pay off my electricity payment.
+AGENT: Ok, I asked Bob to send you 16. I'll notify you when the payment is received.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I want to transfer 12 to Bob. confirm Please create a retirement fund account. use savings for this task
+AGENT: Got it. I've completed the transfer of 12 from savings to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

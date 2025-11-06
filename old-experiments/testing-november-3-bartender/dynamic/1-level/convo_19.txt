@@ -1,0 +1,12 @@
+AGENT: What would you like to drink?
+USER:  Can I have a tall glass. A beer please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: How many ounces would you like?
+USER:  The twelve ounce. Can I have rum.
+AGENT: Size preference has been logged.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I normally go for a light drink. The eight ounce.
+AGENT: Excellent thanks! I've sent your order for a beer to the bartender.
+AGENT: How would you like to pay?
+USER:  cash tequila sounds good!
+AGENT: Great, you'll pay by cash.

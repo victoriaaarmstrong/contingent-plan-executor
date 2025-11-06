@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Can you help me find things to do in Kingston? I am allergic to any foods that are not dairy-free I would prefer a high-energy atmosphere today. Do you have restaurants of type Chinese?
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I have a high budget. Do you have restaurants of type dessert? I have to eat gluten-free. I would prefer a low-energy atmosphere today.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Can you help me find things to do in Toronto? 263-749-0563 I would prefer a high-energy atmosphere today. I am operating within a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  yes My phone number is 213-758-4930. I am operating within a high budget. Do you have restaurants of type dessert?
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Mexican. 613-399-2081 I want to go to a high-energy place. I have to eat dairy-free.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  no thank you I am operating within a high budget. 263-749-0563 I would prefer a high-energy atmosphere today.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Do you have restaurants of type dessert? I am allergic to any foods that are not gluten-free My number is 213-758-4930. I have a low budget.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Broadway Theater in Toronto.

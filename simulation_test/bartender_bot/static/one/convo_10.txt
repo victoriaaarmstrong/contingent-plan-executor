@@ -1,0 +1,16 @@
+AGENT: What would you like to drink?
+USER:  I'd like a beer. Can I have a twelve ounce please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  Can I have coke. Can I do fruity?
+AGENT: Would you like a tall or short glass?
+USER:  Can I have a short glass. tonic water sounds good!
+AGENT: Glass preference has been logged.
+AGENT: How would you like to pay?
+USER:  Can I do light? Can I use cash?
+AGENT: Great, you'll pay by cash.
+AGENT: How many ounces would you like?
+USER:  The eight ounce. sprite
+AGENT: Size preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by cash.

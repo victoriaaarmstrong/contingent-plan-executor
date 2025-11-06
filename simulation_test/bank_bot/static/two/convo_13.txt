@@ -1,0 +1,27 @@
+AGENT: Would you like to create a new account?
+USER:  yes Please pay my electricity payment. I really need a retirement fund account please create one.
+AGENT: What account type would you like to create?
+USER:  I really need a college fund account please create one. I want to transfer 23 from savings to college fund. use chequing for this task
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please send 53 to Mark. Please pay my electricity payment. I need to use savings
+AGENT: A retirement fund account was successfully created with starter funds transferred from chequing.
+AGENT: Would you like to send any funds to a contact today?
+USER:  Please send 45 to Sandra. Please select savings. mhm
+AGENT: Ok. How much money do you want to send and to who?
+USER:  Can I transfer 3 from chequing to retirement fund? I need to request that Sandra pays me 23. Sandra is expecting 23 from me.
+AGENT: Which account would you like to use?
+USER:  Please select chequing. Can I transfer 3 from savings to college fund? Please send 91 to Mark.
+AGENT: All done! I just e-transferred 91 to Mark from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to create a college fund account for my son. nah Please request my contact Sandra to send the 87 they owe.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  confirm Please create a retirement fund account. I'm finished
+AGENT: How much money would you like to request and from who?
+USER:  Please send 91 to Mark. I want to pay off my lights payment. Please request that Nancy to send me 25 dollars.
+AGENT: Ok, I asked Sandra to send you 87. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  Can I transfer 3 from savings to retirement fund? I really need a retirement fund account please create one. no
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

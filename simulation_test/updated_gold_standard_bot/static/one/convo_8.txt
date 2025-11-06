@@ -1,0 +1,19 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  Can you help me find things to do in k-town? I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I am operating within a low budget. Are there any Mexican restaurants in the area?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My phone number is 263-547-8152. I am allergic to any foods that are not gluten-free
+AGENT: Do you have any allergies? (Y/N)
+USER:  confirm I want to eat Chinese.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I can only eat foods that are dairy-free. 263-547-8152
+AGENT: Where are you located?
+USER:  I am located in k-town. I can only eat foods that are gluten-free.
+AGENT: Tailoring your results to what's available in k-town...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  Are there any Italian restaurants in the area? My phone number is 263-547-8152.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Mandarin as well as a spot at Stages in k-town.

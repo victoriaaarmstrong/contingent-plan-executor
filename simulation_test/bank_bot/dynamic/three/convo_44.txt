@@ -1,0 +1,22 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  confirm I want to send 11 to retirement fund from savings. Please select savings. I really need a retirement fund account please create one.
+AGENT: A retirement fund account was successfully created with starter funds transferred from savings.
+AGENT: Would you like to send any funds to a contact today?
+USER:  yeah I need to request that Mark pays me 37. I want to pay off my credit card bill. I want to send 89 to college fund from chequing.
+AGENT: Ok. How much money do you want to send and to who?
+USER:  I want to transfer 54 to Mark. I really need a retirement fund account please create one. I want to pay off my internet bill. I want to transfer 90 to Sandra.
+AGENT: Please specify the account you want to select.
+USER:  use savings for this task Can I transfer 34 to Bob? I want to pay off my internet bill. I want to send 56 to retirement fund from savings.
+AGENT: All done! I just e-transferred 56 to Bob from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  N Please request my contact Nancy to send the 87 they owe. I want to transfer 5000 from savings to retirement fund. i'm all done here
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  Please request my contact Mark to send the 12 they owe. yes use chequing for this task Please pay my gas payment.
+AGENT: Ok, I asked Mark to send you 12. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  bye I want to pay off my lights bill. Y I really need a retirement fund account please create one.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  Please request that Bob to send me 25 dollars. Can I transfer 34 to Nancy? I want to create a college fund account for my son. I want to send 9 to college fund from chequing.
+AGENT: Ok! I successfully transferred your requested amount of 9 from chequing to retirement fund.
+AGENT: Completed all bank actions for today. Thank you!

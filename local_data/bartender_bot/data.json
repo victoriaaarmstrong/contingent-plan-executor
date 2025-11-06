@@ -100,7 +100,7 @@
                 "init": false
             }
         },
-        "drink_preferences": {
+        "require_drink_preferences": {
             "type": "flag",
             "config": false,
             "known": {
@@ -108,7 +108,7 @@
                 "init": false
             }
         },
-        "drink_ingredients": {
+        "require_drink_ingredients": {
             "type": "flag",
             "config": false,
             "known": {
@@ -241,16 +241,12 @@
                     "Known"
                 ],
                 [
-                    "drink_preferences",
+                    "require_drink_preferences",
                     "Known"
                 ],
                 [
-                    "drink_preferences",
+                    "require_drink_preferences",
                     true
-                ],
-                [
-                    "drink_ingredients",
-                    "Known"
                 ],
                 [
                     "force-statement",
@@ -269,9 +265,9 @@
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": false,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             }
@@ -288,7 +284,7 @@
                         "intent": null,
                         "assignments": {
                             "$beverage": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_preferences": "found"
                         }
                     },
                     {
@@ -299,9 +295,9 @@
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": false,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             }
@@ -318,7 +314,7 @@
                         "intent": null,
                         "assignments": {
                             "$beverage": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_preferences": "found"
                         }
                     },
                     {
@@ -329,9 +325,9 @@
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": false,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             }
@@ -348,7 +344,7 @@
                         "intent": null,
                         "assignments": {
                             "$beverage": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_preferences": "found"
                         }
                     },
                     {
@@ -359,9 +355,9 @@
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": false,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             }
@@ -378,13 +374,13 @@
                         "intent": null,
                         "assignments": {
                             "$beverage": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_preferences": "found"
                         }
                     }
                 ]
             }
         },
-        "set-drink-ingredients": {
+        "set-drink-requirements": {
             "type": "system",
             "subtype": "Context dependent determination",
             "condition": [
@@ -397,16 +393,20 @@
                     "Unknown"
                 ],
                 [
-                    "beverage",
+                    "require_drink_ingredients",
                     "Unknown"
                 ],
                 [
-                    "drink_ingredients",
+                    "require_drink_ingredients",
+                    false
+                ],
+                [
+                    "require_drink_preferences",
                     "Unknown"
                 ],
                 [
-                    "drink_preferences",
-                    "Unknown"
+                    "require_drink_preferences",
+                    false
                 ],
                 [
                     "force-statement",
@@ -414,88 +414,112 @@
                 ]
             ],
             "effect": {
-                "global-outcome-name": "set-drink-ingredients__assign_drink_ingredients",
+                "global-outcome-name": "set-drink-requirements__assign_requirements",
                 "type": "oneof",
                 "outcomes": [
                     {
                         "updates": {
-                            "drink_ingredients": {
+                            "require_drink_ingredients": {
                                 "value": true,
-                                "variable": "drink_ingredients",
+                                "variable": "require_drink_ingredients",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": false,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
                                 "interpretation": "json"
                             }
                         },
+                        "response_variants": [
+                            "Okay, I'll take that into account."
+                        ],
                         "context": {
                             "drink": {
                                 "value": "cocktail"
                             }
                         },
-                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-cocktail",
+                        "name": "set-drink-requirements_DETDUP_set-drink-requirements__assign_requirements-EQ-set-cocktail",
                         "intent": null,
                         "assignments": {
-                            "$drink_ingredients": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_ingredients": "found",
+                            "$require_drink_preferences": "found"
                         }
                     },
                     {
                         "updates": {
-                            "drink_ingredients": {
+                            "require_drink_ingredients": {
                                 "value": false,
-                                "variable": "drink_ingredients",
+                                "variable": "require_drink_ingredients",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": true,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
                                 "interpretation": "json"
                             }
                         },
+                        "response_variants": [
+                            "Okay, I'll take that into account."
+                        ],
                         "context": {
                             "drink": {
                                 "value": "wine"
                             }
                         },
-                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-wine",
+                        "name": "set-drink-requirements_DETDUP_set-drink-requirements__assign_requirements-EQ-set-wine",
                         "intent": null,
                         "assignments": {
-                            "$drink_ingredients": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_ingredients": "found",
+                            "$require_drink_preferences": "found"
                         }
                     },
                     {
                         "updates": {
-                            "drink_ingredients": {
+                            "require_drink_ingredients": {
                                 "value": false,
-                                "variable": "drink_ingredients",
+                                "variable": "require_drink_ingredients",
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_preferences": {
+                            "require_drink_preferences": {
                                 "value": true,
-                                "variable": "drink_preferences",
+                                "variable": "require_drink_preferences",
                                 "certainty": "Known",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
                                 "interpretation": "json"
                             }
                         },
+                        "response_variants": [
+                            "Okay, I'll take that into account."
+                        ],
                         "context": {
                             "drink": {
                                 "value": "beer"
                             }
                         },
-                        "name": "set-drink-ingredients_DETDUP_set-drink-ingredients__assign_drink_ingredients-EQ-set-beer",
+                        "name": "set-drink-requirements_DETDUP_set-drink-requirements__assign_requirements-EQ-set-beer",
                         "intent": null,
                         "assignments": {
-                            "$drink_ingredients": "found",
-                            "$drink_preferences": "found"
+                            "$require_drink_ingredients": "found",
+                            "$require_drink_preferences": "found"
                         }
                     }
                 ]
@@ -519,11 +543,7 @@
                     "Unknown"
                 ],
                 [
-                    "drink_ingredients",
-                    "Known"
-                ],
-                [
-                    "drink_ingredients",
+                    "require_drink_ingredients",
                     true
                 ],
                 [
@@ -601,8 +621,8 @@
                     "Known"
                 ],
                 [
-                    "drink_ingredients",
-                    "Known"
+                    "require_drink_ingredients",
+                    true
                 ],
                 [
                     "force-statement",
@@ -621,18 +641,16 @@
                                 "certainty": "Known",
                                 "interpretation": "json"
                             },
-                            "drink_ingredients": {
+                            "require_drink_ingredients": {
                                 "value": false,
-                                "variable": "drink_ingredients",
-                                "certainty": "Known",
+                                "variable": "require_drink_ingredients",
                                 "interpretation": "json"
                             }
                         },
                         "intent": "share_mixer",
                         "name": "get-mixer_DETDUP_get-mixer__set-mixer-EQ-update_mixer",
                         "assignments": {
-                            "$mixer": "found",
-                            "$drink_ingredients": "found"
+                            "$mixer": "found"
                         }
                     },
                     {
@@ -682,15 +700,7 @@
                     "Known"
                 ],
                 [
-                    "descriptors",
-                    "Unknown"
-                ],
-                [
-                    "drink_preferences",
-                    "Known"
-                ],
-                [
-                    "drink_preferences",
+                    "require_drink_preferences",
                     true
                 ],
                 [
@@ -750,7 +760,7 @@
                 }
             }
         },
-        "inform": {
+        "inform_beverage": {
             "type": "system",
             "condition": [
                 [
@@ -767,27 +777,23 @@
                 ],
                 [
                     "payment",
-                    "Unknown"
+                    "Known"
                 ],
                 [
                     "informed",
                     false
                 ],
                 [
-                    "drink_ingredients",
+                    "beverage",
                     "Known"
                 ],
                 [
-                    "drink_ingredients",
+                    "require_drink_preferences",
                     false
                 ],
                 [
-                    "drink_preferences",
+                    "require_drink_preferences",
                     "Known"
-                ],
-                [
-                    "drink_preferences",
-                    false
                 ],
                 [
                     "force-statement",
@@ -795,7 +801,7 @@
                 ]
             ],
             "effect": {
-                "global-outcome-name": "inform__finish",
+                "global-outcome-name": "inform_beverage__finish",
                 "type": "oneof",
                 "outcomes": [
                     {
@@ -812,9 +818,80 @@
                             }
                         },
                         "response_variants": [
-                            "Excellent thanks! I've sent your order for a $drink to the bartender."
+                            "Excellent thanks! I've sent your order for a $beverage to the bartender, and you'll pay by $payment."
                         ],
-                        "name": "inform_DETDUP_inform__finish-EQ-finish",
+                        "name": "inform_beverage_DETDUP_inform_beverage__finish-EQ-finish",
+                        "intent": null,
+                        "assignments": {}
+                    }
+                ]
+            }
+        },
+        "inform_cocktail": {
+            "type": "system",
+            "condition": [
+                [
+                    "drink",
+                    "Known"
+                ],
+                [
+                    "size",
+                    "Known"
+                ],
+                [
+                    "glass",
+                    "Known"
+                ],
+                [
+                    "payment",
+                    "Known"
+                ],
+                [
+                    "informed",
+                    false
+                ],
+                [
+                    "liquor",
+                    "Known"
+                ],
+                [
+                    "mixer",
+                    "Known"
+                ],
+                [
+                    "require_drink_ingredients",
+                    false
+                ],
+                [
+                    "require_drink_ingredients",
+                    "Known"
+                ],
+                [
+                    "force-statement",
+                    false
+                ]
+            ],
+            "effect": {
+                "global-outcome-name": "inform_cocktail__finish",
+                "type": "oneof",
+                "outcomes": [
+                    {
+                        "updates": {
+                            "informed": {
+                                "value": true,
+                                "variable": "informed",
+                                "interpretation": "json"
+                            },
+                            "force-statement": {
+                                "value": true,
+                                "variable": "force-statement",
+                                "interpretation": "json"
+                            }
+                        },
+                        "response_variants": [
+                            "Excellent thanks! I've sent your order for a $liquor with $mixer to the bartender, and you'll pay by $payment."
+                        ],
+                        "name": "inform_cocktail_DETDUP_inform_cocktail__finish-EQ-finish",
                         "intent": null,
                         "assignments": {}
                     }
@@ -827,10 +904,6 @@
                 [
                     "informed",
                     true
-                ],
-                [
-                    "payment",
-                    "Known"
                 ],
                 [
                     "force-statement",

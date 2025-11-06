@@ -3,7 +3,7 @@ import ast
 import os
 import csv
 
-POLICY_FILE_PATH = "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bank_bot/data.json"
+POLICY_FILE_PATH = "/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bartender_bot/data.json"
 ## vibe coded this, might need to change
 def count_conversation_length(file_path):
     """
@@ -133,7 +133,7 @@ def main(folder_path):
 
     paired_result_files = pair_results(folder_path)
 
-    with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bank_bot/data.json", "r", encoding="utf-8") as f:
+    with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bartender_bot/data.json", "r", encoding="utf-8") as f:
         policy_data = json.load(f)
 
     lines = []
@@ -142,11 +142,11 @@ def main(folder_path):
         with open(pair[1], "r", encoding="utf-8") as f:
             json_data = json.load(f)
 
-        lines.append(str(goal_check(json_data)) + "," + str(count_conversation_length(pair[0])) + "," + str(average_time(json_data)) + "," + str(number_jumps(json_data)) + "," + str(count_redundant_actions(policy_data, json_data, "bank-bot")))
+        lines.append(str(goal_check(json_data)) + "," + str(count_conversation_length(pair[0])) + "," + str(average_time(json_data)) + "," + str(number_jumps(json_data)) + "," + str(count_redundant_actions(policy_data, json_data, "updated-gold-standard-bot")))
     
     
     # Write to CSV
-    with open("./experiments/results-static-none.csv", "w", newline="") as f:
+    with open("./experiments/bartender_bot/results-static-none.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["goal_reached", "convo_length", "average_search_time", "number_jumps", "number_redundant"])  # header row (optional)
 
@@ -158,4 +158,4 @@ def main(folder_path):
     return
 
 #main("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/simulation_test/creating_redundant_function_test/")
-main("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/simulation_test/testing-october-23/static/none/")
+main("./simulation_test/bartender_bot/static/none/")

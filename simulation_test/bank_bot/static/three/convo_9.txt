@@ -1,0 +1,25 @@
+AGENT: Would you like to create a new account?
+USER:  I'm finished Please select savings. Please request my contact Bob to send the 34 they owe. confirm
+AGENT: What account type would you like to create?
+USER:  Please request that Mark to send me 25 dollars. I want to pay off my lights payment. I really need a college fund account please create one. savings
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Please specify the account you want to select.
+USER:  Please request my contact Sandra to send the 47 they owe. Please pay my gas payment. I want to transfer 16 from savings to college fund. use chequing for this task
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from savings.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  I want to transfer 23 to Sandra. mhm Please pay my mortgage payment. done
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  I need to request that Bob pays me 65. I want to pay off my lights bill. Can I transfer 34 to Mark? done
+AGENT: Which account would you like to use?
+USER:  I need to use savings Nancy is expecting 91 from me. I want to pay off my mortgage bill. Please request that Sandra to send me 13 dollars.
+AGENT: All done! I just e-transferred 13 to Sandra from savings.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to pay off my mortgage bill. I'm good to go thanks absolutely not Can I transfer 5 to Nancy?
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request that one of your contacts sends money to you?
+USER:  no I want to create a retirement fund account. Please pay my internet payment. done
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Are you looking to perform any transfers beween your accounts today?
+USER:  I need to use savings no thanks i don't have anything else i want to do Please create a retirement fund account.
+AGENT: Ok, no problem!
+AGENT: All done. Have a nice day!

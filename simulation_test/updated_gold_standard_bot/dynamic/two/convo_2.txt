@@ -1,0 +1,9 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I can do activities with a high budget and I want to find the most low-energy place in the city. I live in k-town. I am allergic to any foods that are not gluten-free
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have a high budget. Can you help me find things to do in Kingston? 613-399-2081
+AGENT: Do you have any allergies? (Y/N)
+USER:  Do you have restaurants of type Italian? yes I am operating within a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to go to a low-energy place. I have to eat gluten-free. Are there any Italian restaurants in the area?
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Broadway Theater in Kingston.

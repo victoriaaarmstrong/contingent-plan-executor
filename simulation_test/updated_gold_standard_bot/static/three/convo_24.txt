@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I want to go to a high-energy place. I am allergic to any foods that are not gluten-free I live in Toronto. My number is 263-749-0563.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I want to go to a high-energy place. Are there any Chinese restaurants in the area? I have a low budget. 263-547-8152
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Are there any dessert restaurants in the area? I am located in Kingston. I can only eat foods that are gluten-free. My number is 263-749-0563.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I would prefer a low-energy atmosphere today. absolutely not My number is 213-758-4930. I can only eat foods that are gluten-free.
+AGENT: Where are you located?
+USER:  I want to go to a low-energy place. I can do activities with a low budget. I live in Kingston. My number is 263-749-0563.
+AGENT: Tailoring your results to what's available in Kingston...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am operating within a low budget. My number is 213-758-4930. What is the most high-energy place in the city? I want to eat dessert.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stages in Kingston.

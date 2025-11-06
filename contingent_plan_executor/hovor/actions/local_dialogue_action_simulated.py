@@ -5,7 +5,7 @@ import json
 
 from hovor.actions.local_dialogue_action import LocalDialogueAction
 
-with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bartender_bot/filled_utterance_bank.json", "r") as file:
+with open("/Users/victoriaarmstrong/Desktop/contingent-plan-executor/local_data/bank_bot/filled_utterance_bank.json", "r") as file:
     AC_DATA = json.load(file)
 
 class LocalDialogueActionSimulated(LocalDialogueAction):

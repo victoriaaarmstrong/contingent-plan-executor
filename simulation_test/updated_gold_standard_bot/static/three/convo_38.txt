@@ -1,0 +1,17 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I would prefer a low-energy atmosphere today. I am allergic to any foods that are not dairy-free My phone number is 263-547-8152. I can do activities with a high budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I have a high budget. 263-749-0563 I can only eat foods that are dairy-free. I want to go to a high-energy place.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  My phone number is 263-547-8152. I am located in Toronto. What is the most high-energy place in the city? I can do activities with a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  no I live in Toronto. 213-758-4930 I have a high budget.
+AGENT: Where are you located?
+USER:  I want to eat Mexican. I live in Kingston. I want to go to a low-energy place. My number is 613-399-2081.
+AGENT: Tailoring your results to what's available in Toronto...
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I have a high budget. I want to go to a low-energy place. I can only eat foods that are gluten-free. Do you have restaurants of type Chinese?
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Broadway Theater in Toronto.

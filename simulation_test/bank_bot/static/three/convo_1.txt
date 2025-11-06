@@ -1,0 +1,31 @@
+AGENT: Would you like to create a new account?
+USER:  Please select savings. I need to request that Sandra pays me 47. Y I really need a college fund account please create one.
+AGENT: What type of account would you like me to make for you?
+USER:  Can I transfer 1 from savings to college fund? Please request that Nancy to send me 47 dollars. I really need a retirement fund account please create one. i'm all done here
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  Use savings I want to pay off my gas payment. I want to send 5000 to college fund from chequing. Please send 12 to Bob.
+AGENT: Ok! I just created a college fund account and transferred starter funds into it from savings.
+AGENT: Would you like to e-transfer any money to your contacts?
+USER:  bye Please request that Sandra to send me 76 dollars. mhm I want to create a retirement fund account.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  Please pay my mortgage payment. Please request that Sandra to send me 5000 dollars. Use savings I want to transfer 65 to Mark.
+AGENT: Please specify the account you want to select.
+USER:  I want to use savings for this. I really need a retirement fund account please create one. I'm finished I want to pay off my mortgage payment.
+AGENT: All done! I just e-transferred 76 to Sandra from savings.
+AGENT: Would you like to pay off your outstanding bills today?
+USER:  mhm Please select savings. I want to send 65 to retirement fund from chequing. Please request my contact Nancy to send the 34 they owe.
+AGENT: Which bill would you like to pay off?
+USER:  I want to use savings for this. I want to pay off my electricity bill. I want to pay off my mortgage bill. I want to transfer 30 to Nancy.
+AGENT: Which account would you like to select for this task?
+USER:  I want to pay off my car bill. Please request my contact Sandra to send the 87 they owe. use savings for this task I want to send 67 to college fund from chequing.
+AGENT: Ok, I'm paying your car bill from your savings account.
+AGENT: Would you like to request money from a contact?
+USER:  I'm good to go thanks Please pay my lights payment. Please select chequing. no thank you
+AGENT: Ok! I won't request money from any of your contacts today.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  yeah Can I transfer 87 to Mark? I want to create a college fund account. Please pay my gas payment.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  Please pay my internet payment. I want to transfer 43 from chequing to retirement fund. I really need a retirement fund account please create one. I've done everything i want to do
+AGENT: Got it. I've completed the transfer of 87 from chequing to college fund.
+AGENT: Completed all bank actions for today. Thank you!

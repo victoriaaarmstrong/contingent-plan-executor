@@ -1,0 +1,24 @@
+AGENT: Would you like to create a new account?
+USER:  nah use chequing for this task Nancy is expecting 47 from me. Please create a college fund account.
+AGENT: Ok! No accounts will be created.
+AGENT: Are any of your contacts expecting a payment from you today?
+USER:  confirm bye Please send 45 to Mark. I need to request that Nancy pays me 65.
+AGENT: Alright, who would you like to send funds to and how much?
+USER:  Bob is expecting 23 from me. Please request that Mark to send me 43 dollars. exit I want to pay off my electricity bill.
+AGENT: Which account would you like to use?
+USER:  chequing I need to request that Bob pays me 91. I want to create a college fund account for my son. Can I transfer 23 to Bob?
+AGENT: All done! I just e-transferred 23 to Bob from chequing.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  Can I transfer 11 to Mark? I need to request that Mark pays me 5000. I want to pay off my lights bill. not at all
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Would you like to request money from a contact?
+USER:  yes I'm all done. Please select chequing. I want to send 5000 to retirement fund from savings.
+AGENT: Which contact would you like to request money from and how much?
+USER:  Use savings I need to request that Mark pays me 37. I'm good to go thanks I want to create a retirement fund account for my son.
+AGENT: Ok, I asked Mark to send you 5000. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  yes I want to transfer 43 from savings to college fund. I really need a retirement fund account please create one. Please pay my mortgage payment.
+AGENT: Ok, how much money do you want to send and between which accounts?
+USER:  I want to transfer 67 from chequing to college fund. I really need a college fund account please create one. I want to send 76 to retirement fund from chequing. Nancy is expecting 13 from me.
+AGENT: Got it. I've completed the transfer of 43 from savings to retirement fund.
+AGENT: All done. Have a nice day!

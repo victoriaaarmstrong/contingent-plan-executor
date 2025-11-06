@@ -1,0 +1,7 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  I live in k-town. My number is 263-749-0563. I am operating within a low budget and I want to go to a high-energy place. Do you have restaurants of type Italian?
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have to eat gluten-free. I want to eat dessert. My number is 613-399-2081. I can do activities with a high budget.
+AGENT: Do you have any allergies? (Y/N)
+USER:  My number is 263-547-8152. I live in downtown. not at all I have a high budget.
+AGENT: Booked a reservation at Geneva Crepes as well as a spot at Stages in downtown.

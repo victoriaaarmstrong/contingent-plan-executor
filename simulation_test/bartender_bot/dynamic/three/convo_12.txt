@@ -1,0 +1,13 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  tequila wine I'd like to pay with cash. sprite sounds good!
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  Can I have a five ounce please. Can I do light? tonic water I'd like a beer.
+AGENT: Great, tailoring your options based on a wine...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I'd like to pay with cash. vodka sounds good! I normally go for a fruity drink. Can I have a sixteen ounce please.
+AGENT: Would you like a tall or short glass?
+USER:  Do you have a tall glass? Can I use debit? rum sounds good! I like something light.
+AGENT: Glass preference has been logged.
+AGENT: Excellent thanks! I've sent your order for a white wine to the bartender, and you'll pay by debit.

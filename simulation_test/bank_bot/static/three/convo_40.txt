@@ -1,0 +1,25 @@
+AGENT: I can also create a new account for you. Would you like to do that today?
+USER:  Can I transfer 1 from savings to retirement fund? Please request my contact Nancy to send the 5000 they owe. Can I transfer 34 to Mark? yes
+AGENT: What type of account would you like me to make for you?
+USER:  exit I want to send 11 to college fund from chequing. I really need a retirement fund account please create one. I want to use savings for this.
+AGENT: Ok. Your new account was created, but you need to transfer some funds into this new account to open it. If you specify an account, I can transfer a small amount of funds from that to your new account.
+AGENT: Which account would you like to use?
+USER:  Please create a retirement fund account. I want to pay off my utility payment. Sandra is expecting 25 from me. chequing
+AGENT: Ok! I just created a retirement fund account and transferred starter funds into it from savings.
+AGENT: Would you like to send any funds to a contact today?
+USER:  nah I'm finished I want to create a college fund account for my son. Please request that Nancy to send me 5000 dollars.
+AGENT: No problem! No e-transfers will be sent.
+AGENT: You have a few outstanding bills. Would you like to pay them off now?
+USER:  I want to pay off my car bill. no thanks Please request my contact Bob to send the 91 they owe. I want to transfer 67 from chequing to college fund.
+AGENT: Ok! I won't pay off your outstanding bills today.
+AGENT: Are you waiting for funds from any of your contacts?
+USER:  yeah I need to request that Bob pays me 13. Please send 45 to Bob. I want to send 5000 to retirement fund from savings.
+AGENT: Which contact would you like to request money from and how much?
+USER:  I want to pay off my mortgage payment. Nancy is expecting 91 from me. I want to transfer 5000 from savings to college fund. Please request my contact Nancy to send the 91 they owe.
+AGENT: Ok, I asked Bob to send you 5000. I'll notify you when the payment is received.
+AGENT: Would you like to transfer funds between accounts now?
+USER:  confirm I want to pay off my car bill. Sandra is expecting 13 from me. Please request my contact Mark to send the 13 they owe.
+AGENT: Let's do it! How much do you wish to transfer and between which accounts?
+USER:  I want to transfer 23 from savings to retirement fund. I want to transfer 5000 from savings to retirement fund. Bob is expecting 25 from me. i'm good
+AGENT: Got it. I've completed the transfer of 13 from savings to college fund.
+AGENT: Completed all bank actions for today. Thank you!

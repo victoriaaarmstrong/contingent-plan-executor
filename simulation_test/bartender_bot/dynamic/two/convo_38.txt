@@ -1,0 +1,10 @@
+AGENT: What kind of drink would you like? I have wine, beer, or cocktails.
+USER:  Can I use credit? Can I do fruity? beer
+AGENT: Sorry, that isn't a valid drink.
+AGENT: What would you like to drink?
+USER:  A cocktail sounds nice. I'd like to pay with cash. Can I have a five ounce please.
+AGENT: Great, tailoring your options based on a beer...
+AGENT: Okay, I'll take that into account.
+AGENT: What flavour profile do you usually go for (e.g. light, fruity)?
+USER:  I normally go for a fruity drink. A tall glass. I'd like to pay with debit.
+AGENT: Excellent thanks! I've sent your order for a radler to the bartender, and you'll pay by debit.

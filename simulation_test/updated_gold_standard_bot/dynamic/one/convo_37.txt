@@ -1,0 +1,13 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  What is the most high-energy place in the city? I can only eat foods that are dairy-free.
+AGENT: Great choice!
+AGENT: What is your budget preference? Please select either high or low.
+USER:  I live in Kingston. I have a low budget.
+AGENT: Ok, I'll take that into account.
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  Do you have restaurants of type Italian? 213-758-4930
+AGENT: Do you have any allergies? (Y/N)
+USER:  I live in Kingston. yes
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  I want to eat Mexican. I have to eat dairy-free.
+AGENT: Booked a reservation at Guac Grill as well as a spot at Stages in Kingston.

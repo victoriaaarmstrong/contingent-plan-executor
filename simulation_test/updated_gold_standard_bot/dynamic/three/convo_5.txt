@@ -1,0 +1,21 @@
+AGENT: What kind of outing would you like to go to? Please specify both your budget (high or low) and the type of atmosphere you're looking for (i.e. fun, relaxing, etc.)
+USER:  My phone number is 263-749-0563. I am located in Toronto. I can do activities with a high budget. What is the most high-energy place in the city?
+AGENT: Ok, I'll take that into account.
+AGENT: What is your preferred outing type? Use a descriptive adjective like fun, high-energy, relaxing, etc.
+USER:  I can do activities with a low budget. Are there any Chinese restaurants in the area? I want to go to a high-energy place. My number is 213-758-4930.
+AGENT: Great choice!
+AGENT: What is your phone number? I can use it to make reservations.
+USER:  I have a low budget. I have to eat gluten-free. I want to go to a high-energy place. My phone number is 263-749-0563.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not dairy-free yes I can do activities with a high budget. I live in Toronto.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  What is the most low-energy place in the city? I am operating within a high budget. Do you have restaurants of type dessert? I have to eat dairy-free.
+AGENT: Sorry, but there are no restaurants that match your allergy and cuisine preferences. Try entering a different set of preferences.
+AGENT: Do you have any allergies? (Y/N)
+USER:  I am allergic to any foods that are not gluten-free Can you help me find things to do in Kingston? yes I can do activities with a high budget.
+AGENT: What type of allergy do you have? (I currently account for dairy and gluten allergies).
+USER:  613-399-2081 I want to go to a high-energy place. I have a low budget. I can only eat foods that are gluten-free.
+AGENT: What is your cuisine of choice? Mexican, Italian, Chinese, and dessert restaurants are in the area.
+USER:  I am located in k-town. I want to go to a high-energy place. I want to eat Italian. I can only eat foods that are dairy-free.
+AGENT: Cuisine preference has been logged.
+AGENT: Booked a reservation at Alfredo's Pizza CafÃ© as well as a spot at Stages in k-town.
