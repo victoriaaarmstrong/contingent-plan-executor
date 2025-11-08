@@ -17,8 +17,13 @@ gold_standard_dynamic = gold_standard[gold_standard['mode'] == 'dynamic']
 static = df[df['mode'] == 'static']
 dynamic = df[df['mode'] == 'dynamic']
 
-print(dynamic.describe())
-print(static.describe())
+dynamic_none = no_none_df[no_none_df['mode'] == 'dynamic']
+dynamic_none_no_redundant = dynamic_none[dynamic_none['number_redundant'] == 0]
+static_none = no_none_df[no_none_df['mode'] == 'static']
+static_none_no_redundant = static_none[static_none['number_redundant'] == 0]
+
+print(dynamic_none_no_redundant.describe())
+print(static_none_no_redundant.describe())
 
 none_s = static[static['condition'] == 'none']
 one_s = static[static['condition'] == 'one']
